@@ -1,0 +1,60 @@
+html, body {
+
+}
+
+body {
+	font-family: 'Amatic SC', cursive;
+	background-color: white;
+	margin-left: 12%;
+	margin-right: 12%;
+}
+.main {
+	
+}
+
+.barradepesq {
+  background-color:#FFF6A1;
+  border:none;
+  border-radius:10px;
+  width:400px;
+  height: 34px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+  margin-left: -150px;
+}
+ 
+.txtpesq{
+  float:left;
+  background-color:transparent;
+  font-family: 'Amatic SC', cursive;
+  padding-left:5px;
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:350px;
+}
+.lupa {
+	width: 30px;
+}
+
+
+.main h1 {
+	font-weight: 50;
+	font-size: 100px;
+	text-align: center;
+}
+.produto {
+	text-align: center;
+	display: inline-block;
+}
+.format {
+	width: 200px;
+	text-align: center;
+}
+.format p {
+	margin-top: 2px;
+}
+.format img {
+	width: 100%;
+	border-radius: 50px;
+}
