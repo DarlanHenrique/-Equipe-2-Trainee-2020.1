@@ -19,13 +19,14 @@ body{
 	border-radius: 20px;
 }
 
-.ultimos-produtos h1{
-	font-family: 'Amatic SC', cursive;
-	color: grey;
-	margin: 20px;
-}
-
 .produto{
 	overflow: hidden;
 	border-radius: 50px;
+}
+
+.titulo{
+	font-size: 60px;
+	font-family: 'Amatic SC', cursive;
+	color: grey;
+	margin: 20px;
 }
