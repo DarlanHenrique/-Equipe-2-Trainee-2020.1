@@ -1,4 +1,4 @@
-# Equipe-2-Trainee-2020.1
+gity # Equipe-2-Trainee-2020.1
 Repositório do projeto da equipe 2 do Trainee da Code Jr. 2020.1
 
 Da Lã 
@@ -37,7 +37,7 @@ Rotina
 Adicione as alterações feitas: git add .
 
 Cheque em qual branch está e quais alterações foram adicionadas: git status
-
+git 
 Dê um commit com uma mensagem especificando as alterações realizadas: git commit -m "mensagem especificando o que foi feito"
 
 Envie o commit feito para sua branch: git push origin suabranch
