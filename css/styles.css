@@ -2,31 +2,54 @@ body{
 	text-align: center;
 	background-color: white;
 }
-
+.banner img{
+	width: 100%;
+}
 .home-main{
 	margin-top: 50px;
 }
-
 .carrossel{
 	overflow: hidden;
 	border-radius: 50px;
 }
-
 .ultimos-produtos{
 	display: inline-block;
 	margin-top: 50px;
 	background-color: #B2F7EF;
 	border-radius: 20px;
 }
-
-.produto{
-	overflow: hidden;
-	border-radius: 50px !important;
-}
-
 .titulo{
 	font-size: 60px;
 	font-family: 'Amatic SC', cursive;
 	color: grey;
 	margin: 20px;
+}
+.produto{
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 50px !important;
+	background-color: red;
+	margin: 30px;
+}
+.produto img{
+	width: 100%;
+	height: auto;
+}
+.botão{
+	background-color: #FFF6A1 !important;
+	color: grey !important;
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px !important;
+}
+
+@media (max-width: 1000px){
+
+.titulo{
+	font-size: 40px;
+}
+}
+@media (max-width: 768px){
+.carrossel{
+	border-radius: 20px;
+}
 }
