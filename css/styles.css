@@ -38,8 +38,7 @@ body{
 .botão{
 	background-color: #FFF6A1 !important;
 	color: grey !important;
-	font-family: 'Amatic SC', cursive;
-	font-size: 30px !important;
+	font-weight: 600 !important;
 }
 
 @media (max-width: 1000px){
