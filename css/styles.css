@@ -1,15 +1,11 @@
 html, body {
-
+	margin: 0px;
+	padding: 0px;
 }
 
 body {
 	font-family: 'Amatic SC', cursive;
 	background-color: white;
-	margin-left: 12%;
-	margin-right: 12%;
-}
-.main {
-	
 }
 
 .barradepesq {
@@ -20,7 +16,7 @@ body {
   height: 34px;
   padding-left: 5px;
   margin-bottom: 20px;
-  margin-left: -150px;
+  margin-left: 800px;
 }
  
 .txtpesq{
@@ -37,24 +33,38 @@ body {
 	width: 30px;
 }
 
-
-.main h1 {
-	font-weight: 50;
-	font-size: 100px;
-	text-align: center;
-}
-.produto {
-	text-align: center;
-	display: inline-block;
-}
-.format {
-	width: 200px;
-	text-align: center;
-}
-.format p {
-	margin-top: 2px;
-}
-.format img {
+.header {
 	width: 100%;
+}
+.main h2 {
+	font-weight: 50;
+	font-size: 40px;
+	text-align: left;
+	background-color: none;
+	border-radius: 50px;
+	background-size: 100%;
+	margin-left: 5%;
+	padding-left: 60px;
+	padding-top: 40px;
+}
+.card-deck {
+	text-align: center;
+	padding-top: 40px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.card {
+	display: inline-block;
+	width: 200px;
+	margin-right: 20px;
+}
+.cardimg {
+	width: 200px;
 	border-radius: 50px;
 }
+.cardtxt {
+	text-align: center;
+}
+
+
+
