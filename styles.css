@@ -1,0 +1,25 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+.fonte {
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.titulo{
+  align-content: center;
+  padding-bottom: 1rem;
+  display: flex;
+  font-family: 'Amatic SC', cursive;
+}
+
+.map{
+  height: 250px;
+  width: 100%;
+}
+
+.botao{
+  font-size: 20px;
+}
