@@ -1,0 +1,56 @@
+.all {
+    font-family:'Montserrat', sans-serif;
+    
+}
+.quemsomos {
+    
+    text-align: center;
+    font-size: 18px;
+}
+.quemsomos h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 60px;
+    text-align: center;
+    background-color: rgb(247, 166, 0);
+}
+.larg {
+   
+    margin-left: 0;
+    margin-right: 0;
+}
+.quemsomos p {
+    margin: 15px 20% 15px 20%;
+}
+.container {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container img {
+    padding: 5% 10% 0% 10%;
+    width: 100%;
+    height: 40%;
+}
+.container p {
+    padding: 5% 10% 0% 10%;
+}
+.m { 
+    margin-left: 37px;
+}
+.miss {
+    color:rgb(213, 48, 93);
+}
+.vi {
+    margin-top: 30px;
+    margin-bottom: -30px; 
+}
+.visao {
+    color: rgb(206, 137, 0);
+}
+.va {
+    margin-left: -80px;
+}
+.valor {
+    color: rgb(90, 199, 0);
+}
+
