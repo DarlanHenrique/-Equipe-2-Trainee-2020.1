@@ -3,42 +3,48 @@ html, body {
 	padding: 0px;
 }
 
-body {
-	font-family: 'Amatic SC', cursive;
-	background-color: white;
-}
-
-.psq {
-width: 222px;
-}
-
 .banner {
 	width: 100%;
 }
-.main h1 {
-	font-weight: 50;
-	font-size: 40px;
-	text-align: left;
-	background-color: none;
-	border-radius: 50px;
-	background-size: 100%;
-	margin-left: 5%;
-	padding-left: 60px;
-	padding-top: 40px;
+
+body {
+	font-family: 'Amatic SC', cursive;
 }
+
+.container h1 {
+	font-weight: 50;
+	font-size: 50px;
+	text-align: left;
+	margin-left: 15%;
+	padding-top: 5%;
+	padding-bottom: 2%;
+}
+
+.barrapsq {
+width: 90%;
+border-radius: 4px;
+padding-left: 12px;
+line-height: 32px;
+border-width: 1px;
+}
+
+.barracategoria {
+	font-size: 20px;
+	line-height: 12px;
+	padding-top: 15px;
+
+}
+
 .card-deck {
-	text-align: center;
 	padding-top: 40px;
-	margin-left: 5%;
-	margin-right: 5%;
+
 }
 .card {
-	display: inline-block;
-	width: 250px;
-	margin-right: 20px;
+	width: 100%;
+	border: 0px;
 }
 .cardimg {
-	width: 250px;
+	width: 100%;
 	border-radius: 50px;
 }
 .cardtxt {
@@ -47,4 +53,9 @@ width: 222px;
 }
 
 
-
+@media (max-width: 1000px) {
+	.card {
+		display: inline-block;
+		width: 100%;
+	}
+}
