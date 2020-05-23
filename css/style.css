@@ -1,5 +1,5 @@
  /* NAVBAR */
- header{
+header{
     background: linear-gradient(#58D3F7, #FEFEFE)!important;
     font-family:'Amatic SC', cursive;
     font-size: 50px;
@@ -8,9 +8,14 @@
 .container {   
     width: 100%;
 }
-
+@media screen and (max-width: 600px) {
+    .pesquisa {
+      display: none;
+    }
+  }
 /* FIM DO CSS NAVBAR */
 
+/* Banner Entre </header> e <main>/ */
 .banner {
     width: 100%;
 }
@@ -19,11 +24,19 @@
 footer {
     background: linear-gradient( #FEFEFE,#58D3F7 )!important;
 }
+footer p {
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    font-size: 10px; 
+    font-style: bold;   
+}
 .copyright {
-    font-family: 'Montserrat', sans-serif; 
-	color: #000000;
-	font-size: 10px;
     margin: 5px 0 5px 0;
-    text-align: center;
     padding-bottom: 10px;
+}
+.final p {
+    margin: 5px 0 10px 0;
+}
+.final a {
+    padding: 5px;
 }
