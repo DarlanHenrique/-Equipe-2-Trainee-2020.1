@@ -1,7 +1,8 @@
 body{
-	text-align: center;
+
 	background-color: white;
 }
+/* HOME */
 .banner img{
 	width: 100%;
 }
@@ -12,43 +13,119 @@ body{
 	overflow: hidden;
 	border-radius: 50px;
 }
+
 .ultimos-produtos{
-	display: inline-block;
 	margin-top: 50px;
 	background-color: #B2F7EF;
 	border-radius: 20px;
+}
+.ultimos-produtos ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.ultimos-produtos li{
+	width: 250px;
+	margin: 12px;
+	padding-bottom: 20px;
+
 }
 .titulo{
 	font-size: 60px;
 	font-family: 'Amatic SC', cursive;
 	color: grey;
 	margin: 20px;
+	padding: 20px;
 }
 .produto{
 	overflow: hidden;
 	font-family: 'Montserrat', sans-serif;
 	border-radius: 50px !important;
-	background-color: red;
-	margin: 30px;
 }
-.produto img{
-	width: 100%;
-	height: auto;
-}
-.botão{
+.botao{
 	background-color: #FFF6A1 !important;
 	color: grey !important;
 	font-weight: 600 !important;
 }
+.botao:hover{
+	background-color: #e6da6a !important;
+}
+.ver-mais{
+	font-family: 'Amatic SC', cursive;
+	font-size: 30px !important;
+	margin-bottom: 50px;
+	margin-top: 10px;
+	border-radius: 10px !important;
+	background-color: #FFF6A1 !important;
+	color: grey !important;
+	font-weight: 600 !important;
+}
+.ver-mais:hover{
+	background-color: #e6da6a !important;
+}
 
 @media (max-width: 1000px){
-
-.titulo{
+ .titulo{
 	font-size: 40px;
+ }
 }
-}
-@media (max-width: 768px){
-.carrossel{
+@media (max-width: 800px){
+ .carrossel{
 	border-radius: 20px;
+ }
 }
+@media (max-width: 1500px){
+ .ultimos-produtos li{
+	width: 200px;
+	margin: 10px;
+
+ }
 }
+@media (max-width: 800px){
+ .ultimos-produtos li{
+	width: 150px;
+	margin: 10px;
+	display: inline-block !important;
+
+ }
+}
+@media (max-width: 500px){
+ .ultimos-produtos li{
+	width: 150px;
+	margin: 10px;
+	display: inline-block !important;
+
+ }
+}
+@media (max-width: 800px){
+ .produto{
+ 	border-radius: 20px !important;
+ }
+}
+@media (max-width: 800px){
+ .nome-produto{
+ 	font-size: 16px !important;
+ 	margin: 0;
+ }
+}
+@media (max-width: 500px){
+ .nome-produto{
+ 	font-size: 14px !important;
+ 	margin: 0;
+ }
+}
+@media (max-width: 500px){
+ .botao{
+ 	font-size: 10px !important;
+ 	width: 80px !important;
+ 	padding: 4px !important;
+ }
+}
+@media (max-width: 800px){
+ .botao{
+ 	font-size: 12px !important;
+ 	width: 100px !important;
+ 	padding: 4px !important;
+ }
+}
+
