@@ -1,0 +1,28 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+.fonte {
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.titulo{
+  font-size: 45px;
+  padding-bottom: 2rem;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+
+}
+.botao{
+  font-size: 20px;
+  margin-bottom: 50px;
+  background-color: #FFF6A1 !important;
+  color: grey !important;
+}
+.botao:hover{
+	background-color: #e6da6a !important;
+}
