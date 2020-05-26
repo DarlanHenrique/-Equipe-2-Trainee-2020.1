@@ -50,31 +50,27 @@ body {
     font-family: 'Amatic SC', cursive;
 }
 
-.container h1 {
+.promfolder {
     text-align: center;
     padding-top: 5%;
     padding-bottom: 2%;
 }
 
 .prom {
-    border-radius: 50px;
-    width: 50%;
+    border-radius: 40px;
+    width: 70%;
 }
 
-.barrapsq {
-    width: 90%;
-    border-radius: 4px;
-    padding-left: 12px;
-    line-height: 32px;
-    border-width: 1px;
-    letter-spacing: 2px;
+.search {
+    background-color: lawngreen;
 }
 
 .nav-link {
     color: black;
+    padding-top: 6px;
 }
 
-.barracategoria {
+.sidebar {
     font-size: 20px;
     line-height: 12px;
     padding-top: 15px;
@@ -89,20 +85,23 @@ body {
     border: 0px;
 }
 
-.cardimg {
+.card-img-top {
     width: 100%;
     border-radius: 50px;
-    padding-bottom: 5px;
 }
 
-.cardtxt {
+.card-body {
     text-align: center;
+}
+
+.card-title a {
+    color: #000000;
     font-size: 22px;
     letter-spacing: 1px;
 }
 
-.cardtxt a {
-    color: #000000;
+.card-text {
+    font-size: 20px;
 }
 
 
@@ -127,19 +126,26 @@ footer p {
         display: inline-block;
         width: 60%;
         padding-bottom: 40px;
+        padding-left: 0px;
     }
-    .cardimg {
+    .card {
+        width: 100px;
+    }
+    .card-img-top {
         border-radius: 30px;
     }
-    .cardtxt {
-        font-size: 16px;
-        line-height: 15px;
+    .card-title a {
+        font-size: 18px;
     }
-    .barracategoria {
+    .card-text {
+        font-size: 16px;
+        line-height: 12px;
+    }
+    .sidebar {
         font-size: 100%;
         line-height: 15px;
     }
-    .colun1pv {
+    .col1pv {
         width: 50%;
     }
 }
