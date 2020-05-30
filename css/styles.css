@@ -7,53 +7,54 @@ body{
 	width: 100%;
 }
 .home-main{
+	overflow: hidden;
 	margin-top: 50px;
+	margin-bottom: 50px;
 }
-.carrossel{
+.home-carousel{
 	overflow: hidden;
 	border-radius: 50px;
 }
-
-.ultimos-produtos{
+.latest-products{
 	margin-top: 50px;
 	background-color: #DDD0E6;
 	border-radius: 20px;
 }
-.ultimos-produtos ul{
+.latest-products ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-.ultimos-produtos li{
+.latest-products li{
 	width: 250px;
 	margin: 12px;
 	padding-bottom: 20px;
 
 }
-.titulo{
+.latest-products h1{
 	font-size: 60px;
 	font-family: 'Amatic SC', cursive;
 	color: grey;
 	margin: 20px;
 	padding: 20px;
 }
-.produto{
+.product{
 	overflow: hidden;
 	font-family: 'Montserrat', sans-serif;
 	border-radius: 50px !important;
 	height: 100% !important;
 }
-.botao{
+.home-button{
 	background-color: #FFF6A1 !important;
 	color: grey !important;
 	font-weight: 600 !important;
 }
-.botao:hover{
+.home-button:hover{
 	background-color: #e6da6a !important;
 }
-.ver-mais{
+.more{
 	font-family: 'Amatic SC', cursive;
-	font-size: 30px !important;
+	font-size: 40px !important;
 	margin-bottom: 50px;
 	margin-top: 10px;
 	border-radius: 10px !important;
@@ -61,72 +62,80 @@ body{
 	color: grey !important;
 	font-weight: 600 !important;
 }
-.ver-mais:hover{
+.more:hover{
 	background-color: #e6da6a !important;
 }
 
-@media (max-width: 1000px){
- .titulo{
-	font-size: 40px;
+
+@media(min-width: 1049px){
+ .home-main{
+ 	max-height: 1300px;
  }
 }
-@media (max-width: 800px){
- .carrossel{
-	border-radius: 20px;
+
+@media (min-width: 2500px){
+ .home-main{
+ 	max-height: 1750px;
  }
 }
+
 @media (max-width: 1500px){
- .ultimos-produtos li{
+ .latest-products li{
 	width: 200px;
 	margin: 10px;
 
  }
 }
+
+@media (max-width: 1000px){
+ .latest-products h1{
+	font-size: 40px;
+ }
+}
 @media (max-width: 800px){
- .ultimos-produtos li{
+ .side-clouds{
+ 	display: none;
+ }
+ .home-carousel{
+	border-radius: 20px;
+ }
+ .latest-products li{
 	width: 150px;
 	margin: 10px;
 	display: inline-block !important;
 
  }
-}
-@media (max-width: 500px){
- .ultimos-produtos li{
-	width: 150px;
-	margin: 10px;
-	display: inline-block !important;
-
- }
-}
-@media (max-width: 800px){
- .produto{
+ .product{
  	border-radius: 20px !important;
  }
-}
-@media (max-width: 800px){
- .nome-produto{
+ .product-name{
  	font-size: 14px !important;
  	margin: 0;
  }
+ .home-button{
+ 	font-size: 12px !important;
+ 	width: 100px !important;
+ 	padding: 4px !important;
+ }
+ .more{
+ 	font-size: 35px !important;
+ }
 }
+
 @media (max-width: 500px){
- .nome-produto{
+ .latest-products li{
+	width: 150px;
+	margin: 10px;
+	display: inline-block !important;
+
+ }
+ .product-name{
  	font-size: 12px !important;
  	margin: 0;
  }
-}
-@media (max-width: 500px){
- .botao{
+ .home-button{
  	font-size: 10px !important;
  	width: 80px !important;
  	padding: 4px !important;
  }
 }
-@media (max-width: 800px){
- .botao{
- 	font-size: 12px !important;
- 	width: 100px !important;
- 	padding: 4px !important;
- }
-}
-

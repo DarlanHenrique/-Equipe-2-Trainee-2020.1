@@ -1,8 +1,8 @@
  /* NAVBAR */
 header{
     background: linear-gradient(#58D3F7, #FEFEFE)!important;
-    font-family:'Amatic SC', cursive;
-    font-size: 50px;
+    font-family:'Amatic SC', cursive !important;
+    font-size: 50px !important;
  }
   
 .container {   
