@@ -1,3 +1,4 @@
+/*  CSS Quem somos */
 .all {
     font-family:'Montserrat', sans-serif;
     width: 100%;
@@ -43,30 +44,36 @@
     font-weight: 30px;
 }
 
-/*CSS LUCAS*/
+/*  FIM CSS Quem somos */
 
- 
+
+
+/*CSS NAVBAR & FOOTER*/
+
+
  /* NAVBAR */
- header{
+ .header-directrix{
     background: linear-gradient(#58D3F7, #FEFEFE)!important;
     font-family:'Amatic SC', cursive;
     font-size: 50px;
  }
   
-.container {   
+.container-header {   
     width: 100%;
 }
-@media screen and (max-width: 600px) {
-    .pesquisa {
+@media screen and (max-width: 1000px) {
+    .search, .banner-header{
       display: none;
     }
-  }
-/* FIM DO CSS NAVBAR */
-
-/* Banner Entre </header> e <main>/ */
-.banner {
+}
+.banner-header {
     width: 100%;
 }
+
+
+/* FIM DO CSS NAVBAR */
+
+
 
 /* FOOTER */
 footer {
@@ -82,9 +89,14 @@ footer p {
     margin: 5px 0 5px 0;
     padding-bottom: 10px;
 }
-.final p {
+.final-footer p {
     margin: 5px 0 10px 0;
 }
-.final a {
+.final-footer a {
     padding: 5px;
 }
+.icons {
+    color: #141414;
+}
+
+/* FIM DO FOOTER */
