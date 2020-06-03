@@ -1,0 +1,54 @@
+/* CSS listing */
+
+main {
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 8%;
+}
+
+.title-list {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.nav_list {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.search_bar {
+    width: auto;
+}
+
+.table-list {
+    width: 95%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.view_button {
+    color: white;
+    background-color: rgb(58, 192, 102);
+}
+
+.edit_button {
+    background-color: rgb(252, 232, 58);
+}
+
+.delete_button {
+    color: white;
+    background-color: rgb(202, 71, 71);
+}
+
+.button_cell {
+    width: 5px;
+}
+
+.back_list {
+    padding-left: 2%;
+}
+
+/*  End CSS listing */
