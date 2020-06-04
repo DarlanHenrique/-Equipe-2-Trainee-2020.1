@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*  CSS Quem somos */
 .all {
     font-family:'Montserrat', sans-serif;
@@ -98,3 +99,146 @@ footer p {
 }
 
 /* FIM DO FOOTER */
+=======
+body{
+
+	background-color: white;
+}
+/* HOME */
+.banner img{
+	width: 100%;
+}
+.home-main{
+	overflow: hidden;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.home-carousel{
+	overflow: hidden;
+	border-radius: 50px;
+}
+.latest-products{
+	margin-top: 50px;
+	background-color: #DDD0E6;
+	border-radius: 20px;
+}
+.latest-products ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.latest-products li{
+	width: 250px;
+	margin: 12px;
+	padding-bottom: 20px;
+
+}
+.latest-products h1{
+	font-size: 60px;
+	font-family: 'Amatic SC', cursive;
+	color: grey;
+	margin: 20px;
+	padding: 20px;
+}
+.product{
+	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
+	border-radius: 50px !important;
+	height: 100% !important;
+}
+.home-button{
+	background-color: #FFF6A1 !important;
+	color: grey !important;
+	font-weight: 600 !important;
+}
+.home-button:hover{
+	background-color: #e6da6a !important;
+}
+.more{
+	font-family: 'Amatic SC', cursive;
+	font-size: 40px !important;
+	margin-bottom: 50px;
+	margin-top: 10px;
+	border-radius: 10px !important;
+	background-color: #FFF6A1 !important;
+	color: grey !important;
+	font-weight: 600 !important;
+}
+.more:hover{
+	background-color: #e6da6a !important;
+}
+
+
+@media(min-width: 1049px){
+ .home-main{
+ 	max-height: 1300px;
+ }
+}
+
+@media (min-width: 2500px){
+ .home-main{
+ 	max-height: 1750px;
+ }
+}
+
+@media (max-width: 1500px){
+ .latest-products li{
+	width: 200px;
+	margin: 10px;
+
+ }
+}
+
+@media (max-width: 1000px){
+ .latest-products h1{
+	font-size: 40px;
+ }
+}
+@media (max-width: 800px){
+ .side-clouds{
+ 	display: none;
+ }
+ .home-carousel{
+	border-radius: 20px;
+ }
+ .latest-products li{
+	width: 150px;
+	margin: 10px;
+	display: inline-block !important;
+
+ }
+ .product{
+ 	border-radius: 20px !important;
+ }
+ .product-name{
+ 	font-size: 14px !important;
+ 	margin: 0;
+ }
+ .home-button{
+ 	font-size: 12px !important;
+ 	width: 100px !important;
+ 	padding: 4px !important;
+ }
+ .more{
+ 	font-size: 35px !important;
+ }
+}
+
+@media (max-width: 500px){
+ .latest-products li{
+	width: 150px;
+	margin: 10px;
+	display: inline-block !important;
+
+ }
+ .product-name{
+ 	font-size: 12px !important;
+ 	margin: 0;
+ }
+ .home-button{
+ 	font-size: 10px !important;
+ 	width: 80px !important;
+ 	padding: 4px !important;
+ }
+}
+>>>>>>> 23175742b89be3cfdff975f92ada7aa987eecde5
