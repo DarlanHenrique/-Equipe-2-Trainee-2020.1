@@ -458,4 +458,37 @@ body {
         width: 80px !important;
         padding: 4px !important;
     }
+html, body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.font{
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.title-form{
+  font-size: 45px;
+  padding-bottom: 2rem;
+  padding-top: 0px;
+  text-align: center;
+  font-family: 'Amatic SC', cursive;
+  color: black;
+}
+
+.map > iframe{
+border-radius: 8px;
+}
+
+.button-form{
+  font-size: 20px;
+  margin-bottom: 50px;
+  background-color: #FFF6A1 !important;
+  color: black !important;
+}
+.button-form:hover{
+    background-color: #ffeb35 !important;
 }
