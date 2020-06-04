@@ -19,8 +19,14 @@
 }
 
 
-/* FIM DO CSS NAVBAR */
+/* END OF CSS NAVBAR */
 
+/* MAIN  ADMINISTRATIVE PAGE */
+
+.home-adm h1 {
+    font-size: 150px;
+
+}
 
 
 /* FOOTER */
@@ -47,4 +53,5 @@ footer p {
     color: #141414;
 }
 
-/* FIM DO FOOTER */
+/* END OF FOOTER */
+
