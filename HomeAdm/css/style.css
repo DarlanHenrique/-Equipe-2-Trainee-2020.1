@@ -1,6 +1,5 @@
- 
- /* NAVBAR */
- .header-directrix{
+/* NAVBAR */
+.header-directrix{
     background: linear-gradient(#58D3F7, #FEFEFE)!important;
     font-family:'Amatic SC', cursive;
     font-size: 50px;
@@ -20,6 +19,25 @@
 
 
 /* END OF CSS NAVBAR */
+
+/* MAIN  ADMINISTRATIVE PAGE */
+
+.home-directrix {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.home-directrix h1 {    
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+.home-directrix h5 {
+    font-size: 18px;
+}
+
+/* END OF MAIN ADMINISTRATIVE PAGE */
+
 
 
 /* FOOTER */
@@ -47,4 +65,3 @@ footer p {
 }
 
 /* END OF FOOTER */
-
