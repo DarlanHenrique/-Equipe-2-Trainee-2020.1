@@ -70,11 +70,6 @@
                 }
                 /*barra categoria*/
                 
-                .categorybar {
-                    color: black;
-                    padding-top: 6px;
-                }
-                
                 .sidebar {
                     font-size: 20px;
                     line-height: 12px;
@@ -392,3 +387,18 @@
                     background-color: #ffeb35 !important;
                 }
                 /* FIM CONTATO */
+                /* INICIO VIEW PRODUTO */
+                
+                .descrprod {
+                    padding-top: 15%;
+                    text-align: center;
+                }
+                
+                .titleprod {
+                    font-size: 24px;
+                }
+                
+                .txtprod {
+                    font-size: 20px;
+                }
+                /* FIM VIEW PRODUTO */
