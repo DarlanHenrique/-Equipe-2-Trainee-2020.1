@@ -47,4 +47,18 @@ footer p {
 }
 
 /* END OF FOOTER */
-
+#page-container {
+    position: relative !important;
+    min-height: 100% !important;
+  }
+  
+#content-wrap {
+    padding-bottom: 40px !important;    /* Footer height */
+  }
+  
+#footer {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 10rem !important;            /* Footer height */
+  }

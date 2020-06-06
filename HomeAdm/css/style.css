@@ -1,4 +1,6 @@
+/* BEGIN OF HOME ADM CSS */
 /* NAVBAR */
+
 .header-directrix{
     background: linear-gradient(#58D3F7, #FEFEFE)!important;
     font-family:'Amatic SC', cursive;
@@ -17,9 +19,7 @@
     width: 100%;
 }
 
-
 /* END OF CSS NAVBAR */
-
 /* MAIN  ADMINISTRATIVE PAGE */
 
 .home-directrix {
@@ -37,10 +37,8 @@
 }
 
 /* END OF MAIN ADMINISTRATIVE PAGE */
-
-
-
 /* FOOTER */
+
 footer {
     background: linear-gradient( #FEFEFE,#58D3F7 )!important;
 }
@@ -65,3 +63,21 @@ footer p {
 }
 
 /* END OF FOOTER */
+/* FOOTER IN THE END OF PAGE */
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
+  }
+  
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;            /* Footer height */
+  }
+  /* END OF CSS HOME ADM*/
