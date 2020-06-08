@@ -313,11 +313,14 @@
                         font-size: 40px;
                     }
                 }
-                
-                @media (max-width: 800px) {
+
+                @media (max-width: 991px){
                     .side-clouds {
                         display: none;
                     }
+                }
+                
+                @media (max-width: 800px) {
                     .home-carousel {
                         border-radius: 20px;
                     }
