@@ -45,20 +45,23 @@ footer p {
 .icons {
     color: #141414;
 }
-
 /* END OF FOOTER */
+/* FOOTER IN THE END OF PAGE */
+
 #page-container {
-    position: relative !important;
-    min-height: 100% !important;
+    position: relative;
+    min-height: 100vh;
   }
   
-#content-wrap {
-    padding-bottom: 40px !important;    /* Footer height */
+  #content-wrap {
+    padding-bottom: 2.5rem;    /* Footer height */
   }
   
-#footer {
-    position: fixed !important;
-    bottom: 0 !important;
-    width: 100% !important;
-    height: 10rem !important;            /* Footer height */
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;            /* Footer height */
   }
+  /* END OF CSS HOME ADM*/
+
