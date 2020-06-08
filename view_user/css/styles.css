@@ -1,0 +1,65 @@
+
+/* Inicio Css View User*/
+
+.title-user{
+    padding: 30px;
+    font-size: 50px;
+    text-align: center;
+}
+.font-user{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-add{
+   margin-left: 73%;
+   margin-bottom: 5px;
+   margin-bottom: 20px;
+   font-size: 18px;
+}
+.button-add:hover{
+    color:#007bff;
+    background-color: white;
+}
+
+
+
+.back-menu{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(243, 223, 46);
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.back-menu:hover{
+    background-color: #ffeb35;
+    text-decoration: none;
+    color: grey;
+}
+
+.button-actions{
+    margin: 5px;
+    margin-top: 0px;
+    color: white;
+}
+.button-action-view:hover{
+    color:#28a745;
+    background-color: white;
+    
+}
+
+.button-action-edit:hover{
+    color:#ffc107;
+    background-color: white;
+}
+.button-action-delete:hover{
+    color: #dc3545;
+    background-color: white;
+}
+
+/* Fim Css View User*/
