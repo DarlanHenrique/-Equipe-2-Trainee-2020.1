@@ -45,23 +45,19 @@ footer p {
 .icons {
     color: #141414;
 }
+.icons:hover {
+    color: rgb(4, 14, 134);
+}
 /* END OF FOOTER */
 /* FOOTER IN THE END OF PAGE */
 
-#page-container {
-    position: relative;
-    min-height: 100vh;
-  }
-  
+
+ 
   #content-wrap {
-    padding-bottom: 2.5rem;    /* Footer height */
+    padding-bottom: 5rem;    /* Footer height */
   }
   
-  #footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 5rem;            /* Footer height */
+ 
   }
   /* END OF CSS HOME ADM*/
 
