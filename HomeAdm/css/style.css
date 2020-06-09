@@ -22,6 +22,7 @@
 
 .home-directrix {
     font-family: 'Montserrat', sans-serif;
+    height: 800px;   /* Footer no fim da página, explico no fim do css. */
 }
 
 .home-directrix h1 {    
@@ -33,10 +34,30 @@
 .home-directrix h5 {
     font-size: 18px;
 }
+/* Responsive Main */
 
+@media screen and (max-width: 425px){
+    .media-home {
+        margin-left:35px;
+        
+    }
+}
+@media screen and (max-width: 375px){
+    .media-home {
+        margin-left:12px;
+        
+    }
+}
+@media screen and (max-width: 320px){
+    .media-home {
+        margin-left: 0px;
+        margin-right:6px;
+        
+    }
+}
 /* END OF MAIN ADMINISTRATIVE PAGE */
-/* FOOTER */
 
+/* FOOTER */
 footer {
     background: linear-gradient( #FEFEFE,#58D3F7 )!important;
     
@@ -60,17 +81,19 @@ footer p {
 .icons {
     color: #141414;
 }
-
+.icons:hover {
+    color: rgb(4, 14, 134);
+}
 
 /* END OF FOOTER */
 
-/* FOOTER IN THE END OF PAGE */
+/* FOOTER IN THE END OF PAGE 
+O bootstrap por padrão deixa o Footer sempre no final da página, sem que ele suba com o scroll.
+Porém, quando o conteúdo de uma pag. não ocupa toda a pixelagem do display de uma respectiva resolução de tela,
+é necessário adaptar a página, para que o Footer não "Suba" com o final do conteúdo.
+A adaptação é feita com um height: (pixelagem desejada)px; em uma classe da primeira div que engloba todo o main;
+o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
+ Caso esteje em dúvida do funcionamento, aqui no css, apague o height na classe home-directrix e observe.
 
-  
-#content-wrap {
-    padding-bottom: 5rem;    /* Footer height */
-  }
-  
-
-  /* END OF CSS HOME ADM*/
+/* END OF CSS HOME ADM*/
   
