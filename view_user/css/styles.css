@@ -1,5 +1,8 @@
-
 /* Inicio Css View User*/
+
+main {
+    width: 100%;
+}
 
 .title-user{
     padding: 30px;
@@ -10,8 +13,12 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+table{
+    text-align: center;
+}
+
 .button-add{
-   margin-left: 73%;
+   margin-left: 80%;
    margin-bottom: 5px;
    margin-bottom: 20px;
    font-size: 18px;
@@ -19,9 +26,7 @@
 .button-add:hover{
     color:#007bff;
     background-color: white;
-}
-
-
+} 
 
 .back-menu{
     display: block;
@@ -48,8 +53,9 @@
     color: white;
 }
 .button-action-view:hover{
-    color:#28a745;
     background-color: white;
+    text-decoration: none;
+    color:#28a745;
     
 }
 
