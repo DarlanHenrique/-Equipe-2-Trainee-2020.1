@@ -193,13 +193,6 @@
                         font-size: 16px;
                         line-height: 12px;
                     }
-                    .sidebar {
-                        font-size: 100%;
-                        line-height: 15px;
-                    }
-                    .col1pv {
-                        width: 30%;
-                    }
                     .descrprod {
                         padding-top: 0%;
                         width: 50%;
@@ -395,8 +388,17 @@
                 /* FIM CONTATO */
                 /* INICIO VIEW PRODUTO */
                 
+                .cardprdpg {
+                    padding-left: 0px;
+                    margin-left: 0px;
+                }
+                
+                .cardimgprdpg {
+                    width: 380px;
+                }
+                
                 .descrprod {
-                    padding-top: 15%;
+                    padding-top: 15px;
                     text-align: center;
                 }
                 
@@ -409,42 +411,48 @@
                 }
                 
                 @media (max-width: 768px) {
+                    .cardimgprdpg {
+                        width: 350px;
+                    }
                     .descrprod {
-                        padding-top: 0px;
-                        padding-right: 5px;
+                        padding-left: 15px;
                     }
                 }
                 
                 @media (max-width: 425px) {
-                    .descrprod {
-                        width: 160px;
+                    .col1prdpg {
+                        width: 20%;
                     }
-                    .carddeckprgpg {
-                        width: 60%;
+                    .sidebar {
+                        font-size: 18px;
                     }
                     .cardimgprdpg {
                         width: 180px;
                     }
                     .descrprod {
-                        width: 180px;
+                        width: 160px;
                     }
                     .titleprod {
                         font-size: 20px;
                     }
                     .txtprod {
-                        font-size: 16px;
+                        font-size: 18px;
                     }
                 }
                 
                 @media (max-width: 375px) {
-                    .cardimgprdpg {
-                        width: 140px;
-                    }
+                    .cardimgprdpg {}
                 }
                 
                 @media (max-width: 320px) {
                     .cardimgprdpg {
-                        width: 100px;
+                        width: 140px;
+                    }
+                    .descrprod {
+                        width: 130px;
+                    }
+                    .sidebar {
+                        font-size: 16px;
                     }
                 }
                 /* FIM VIEW PRODUTO */
