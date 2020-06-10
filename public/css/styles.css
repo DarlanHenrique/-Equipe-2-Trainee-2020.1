@@ -294,12 +294,20 @@
                         max-height: 1300px;
                     }
                 }
+
+                @media(min-width: 1625px) {
+                    .home-main{
+                        max-height: 1450px;
+                    }
+                }
                 
                 @media (min-width: 2500px) {
                     .home-main {
                         max-height: 1750px;
                     }
                 }
+
+                @media ()
                 
                 @media (max-width: 1500px) {
                     .latest-products li {
