@@ -1,54 +1,68 @@
+
 /* CSS listing */
 
-main {
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 8%;
+.title-user{
+    padding: 30px;
+    font-size: 50px;
+    text-align: center;
 }
 
-.title-list {
-    width: 100%;
-    text-align: center;
+.font-user{
     padding-bottom: 3%;
-}
-
-.nav_list {
-    width: 95%;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.search_bar {
-    width: auto;
-}
-
-.table-list {
-    width: 95%;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+    
 }
 
-.view_button {
+.button-add{
+   margin-left: 73%;
+   margin-bottom: 5px;
+   margin-bottom: 20px;
+   font-size: 18px;
+}
+
+.button-add:hover{
+    color:#007bff;
+    background-color: white;
+}
+
+.back-menu{
+    display: block;
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(243, 223, 46);
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.back-menu:hover{
+    background-color: #ffeb35;
+    text-decoration: none;
+    color: grey;
+}
+
+.button-actions{
+    margin: 5px;
+    margin-top: 0px;
     color: white;
-    background-color: rgb(58, 192, 102);
+}
+.button-action-view:hover{
+    color:#28a745;
+    background-color: white;
+    
 }
 
-.edit_button {
-    background-color: rgb(252, 232, 58);
+.button-action-edit:hover{
+    color:#ffc107;
+    background-color: white;
 }
-
-.delete_button {
-    color: white;
-    background-color: rgb(202, 71, 71);
-}
-
-.button_cell {
-    width: 5px;
-}
-
-.back_list {
-    padding-left: 2%;
+.button-action-delete:hover{
+    color: #dc3545;
+    background-color: white;
 }
 
 /*  End CSS listing */
