@@ -13,7 +13,7 @@ class UsersController
     {
         $users = App::get('database')->selectAll('users');
 
-        return view('users', compact('users'));
+        return view('admin/usuarios', compact('users'));
     }
 
     /**
@@ -23,7 +23,7 @@ class UsersController
     {
         $users = App::get('database')->selectAll('users');
 
-        return view('createUser', compact('users'));
+        return view('admin/createUser', compact('users'));
     }
 
     /**
@@ -33,11 +33,11 @@ class UsersController
     public function store()
     {
         App::get('database')->insert('users', [
-            'name' => $_POST['name'],
+            'username' => $_POST['username'],
             'email' => $_POST['email'],
             'password' => $_POST['password']
         ]);
 
-        return redirect('users');
+        return redirect('admin/usuarios');
     }
 }
