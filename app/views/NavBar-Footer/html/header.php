@@ -11,8 +11,8 @@
     <title>Da Lã | Roupas Infantis</title>
     <meta name="description" content ="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
 
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/../../../public/css/reset.css">
+    <link rel="stylesheet" href="/../../../public/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 
@@ -26,7 +26,7 @@
       <nav class="navbar navbar-expand-lg navbar-light header-directrix">
         <div class="container container-header">
           <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
-            <img class="logo" src="../img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã." >
+            <img class="logo" src="/../../../public/img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã." >
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
@@ -35,17 +35,17 @@
 
           <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Início<span class="sr-only">(Página atual)</span></a>
+              <li class="nav-item">
+                <a class="nav-link" href="/">Início</a>
               </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Produtos</a>
+                    <a class="nav-link" href="/produtos">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="/contato">Contato</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Quem somos</a>
+                  <a class="nav-link" href="/sobre">Quem somos</a>
                 </li>
             </ul>
           </div>      
@@ -56,51 +56,8 @@
         </div>            
       </nav>
 
-      <img class="banner-header" src="../img/cabecalho.jpg" alt="Banner do Site">
+      <img class="banner-header" src="/../../../public/img/cabecalho.jpg" alt="Banner do Site">
     </header>
-
-
-    <main>
-      <div class="container">
-        <h1 class="">Página Administrativa Da Lã</h1>
-        <div class="row">
-          <div class="col">
-            1 de 3
-          </div>
-          <div class="col">
-            2 de 3
-          </div>
-          <div class="col">
-            3 de 3
-          </div>
-        </div>
-        
-      </div> 
-
-    </main> 
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm"></div>
-          <div class="col-sm flex-center text-center">
-            <img src="../img/Da_lã_Logo_2.png" width="63" height="42" alt="Logotipo Da Lã">
-            <p class="copyright">&copy; copyright Da Lã - Loja Online - 2020. </p>
-          </div>
-          <div class="col-sm col align-self-center flex-center text-center final-footer">
-            
-            <p>Acompanhe nossas mídias sociais e fique por dentro das novidades!</p>
-            <a class="icons" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>            
-            <a class="icons" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-            <a class="icons" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            <a class="icons" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-            
-          </div>
-        </div>
-      </div>  
-    </footer>    
-
-    
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
