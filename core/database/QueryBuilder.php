@@ -33,7 +33,7 @@ class QueryBuilder
         $statement = $this->pdo->prepare("select * from {$table}");
 
         $statement->execute();
-        
+
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
@@ -60,14 +60,11 @@ class QueryBuilder
             //
         }
     }
-
     public function delete($table, $id)
     {
         $sql = "DELETE FROM " . $table . " WHERE id = :id";
-
             $qry = $this->pdo->prepare($sql);
             $qry->bindValue(":id", $id);
             $qry->execute();
     }
-
-}   
+}

@@ -7,7 +7,7 @@ use App\Core\App;
 class ProductsController
 {
     /**
-     * Show all products.
+     * Show all users.
      */
     public function index()
     {
@@ -15,25 +15,19 @@ class ProductsController
 
         return view('products', compact('products'));
     }
-    public function create() 
+    public function create()
     {
-        App::get('database')->insert('products', 
-        [
-            'id' => $_POST['id'],
-            'produto' => $_POST['produto'],
-            'preco' => $_POST['preco'],
-            'categoria' => $_POST['categoria']
+        App::get('database')->insert('products', [
+            'nome' => $_POST['nome'],
+             'preco' => $_POST['preco']
         ]);
-        
         return redirect('products');
     }
 
     public function delete()
     {
-       
-       App::get('database')->delete('products', $_POST['id']);
-    
-       return redirect('products');
+        App::get('database')->delete('products', $_POST['id']);
+        return redirect('products');
     }
-
+    
 }
