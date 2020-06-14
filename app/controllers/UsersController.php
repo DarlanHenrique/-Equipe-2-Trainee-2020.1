@@ -13,7 +13,7 @@ class UsersController
     {
         $users = App::get('database')->selectAll('users');
 
-        return view('admin/usuarios', compact('users'));
+        return view('users', compact('users'));
     }
 
     /**
@@ -23,7 +23,7 @@ class UsersController
     {
         $users = App::get('database')->selectAll('users');
 
-        return view('admin/createUser', compact('users'));
+        return view_admin('createUser', compact('users'));
     }
 
     /**
@@ -38,6 +38,6 @@ class UsersController
             'password' => $_POST['password']
         ]);
 
-        return redirect('admin/usuarios');
+        return header("location:" . "usuarios");
     }
 }
