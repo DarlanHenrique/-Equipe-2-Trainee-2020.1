@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14-Jun-2020 às 20:38
+-- Tempo de geração: 14-Jun-2020 às 23:54
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.5
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `treino`
+-- Banco de dados: `dala`
 --
 
 -- --------------------------------------------------------
@@ -31,16 +31,21 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL,
   `preco` varchar(55) NOT NULL,
-  `categoria` varchar(22) NOT NULL
+  `categoria` varchar(22) NOT NULL,
+  `detalhes` varchar(255) NOT NULL,
+  `descricao` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Extraindo dados da tabela `products`
 --
 
-INSERT INTO `products` (`id`, `nome`, `preco`, `categoria`) VALUES
-(8, 'anna', '22', ''),
-(12, 'sapato', 'R$15,00', 'feminino');
+INSERT INTO `products` (`id`, `nome`, `preco`, `categoria`, `detalhes`, `descricao`) VALUES
+(8, 'anna', '22', '', '', ''),
+(12, 'sapato', 'R$15,00', 'feminino', '', ''),
+(13, 'anna', '22', '', '', ''),
+(14, 'ablablue', '2222', '', '', ''),
+(15, 'anna', '22', 'feminino', 'legal', 'gente boa');
 
 --
 -- Índices para tabelas despejadas
@@ -60,7 +65,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
