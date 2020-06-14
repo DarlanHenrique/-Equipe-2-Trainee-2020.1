@@ -21,11 +21,7 @@
         <li><strong>nome: </strong><?= $product->produto; ?></li>
         <li><strong>preço: </strong><?= $product->preco; ?></li>
         <li><strong>genero: </strong><?= $product->genero; ?></li>
-        <li>
-            <form method="POST" action="/creatproducts/delete">
-                <input type="hiden" name="id" value="<?= $product->id ?>">               
-                <button type="submit" class="btn btn-danger">Delete</button>
-        </li>
+       
         <br>
     <?php endforeach; ?>
 
