@@ -25,7 +25,7 @@
 		    	</div>
 		    	<div class="col-sm-12 col-lg-12 ">
                     
-                    <form method="POST" action="/products">
+                    <form method="POST" action="/products/create">
                     
                     <div class="form-group col-sm-12 text-category">
 		    				<label for="nome" >Nome do Produto</label>

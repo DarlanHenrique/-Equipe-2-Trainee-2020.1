@@ -31,7 +31,7 @@ class ProductsController
                 'descricao' => $_POST['descricao']
             ]);
     
-            return redirect('products');
+            return redirect('admin/products');
         }
 
     
