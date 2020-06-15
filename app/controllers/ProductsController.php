@@ -17,14 +17,9 @@ class ProductsController
     }
     public function create()
     {
-        App::get('database')->insert('products', [
-            'nome' => $_POST['nome'],
-            'preco' => $_POST['preco'],
-            'categoria' => $_POST['categoria'],
-            'detalhes' => $_POST['detalhes'],
-            'descricao' => $_POST['descricao']
-        ]);
-        return redirect('products');
+        $products = App::get('database')->selectAll('products');
+
+        return view('create', compact('products'));
     }
     public function store()
         {

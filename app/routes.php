@@ -7,5 +7,5 @@ $router->get('contact', 'PagesController@contact');
 $router->get('users', 'UsersController@index');
 $router->post('users', 'UsersController@store');
 
-$router->get('products', 'ProductsController@index');
-$router->post('products', 'ProductsController@store');
+$router->get('products/create', 'ProductsController@create');
+$router->post('products/create', 'ProductsController@store');
