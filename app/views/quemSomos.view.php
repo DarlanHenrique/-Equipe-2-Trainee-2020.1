@@ -7,8 +7,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/../public/css/reset.css">
+    <link rel="stylesheet" href="/../public/css/styles.css">
 
     <!-- Bootstrap CSS -->
 
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 
-    <link rel="sortcut icon" href="../img/Da_lã_Logo_2.png" type="image/x-icon">
+    <link rel="sortcut icon" href="/../public/img/Da_lã_Logo_2.png" type="image/x-icon">
 
     <title>Da Lã - Quem somos?</title>
     <meta name="description" content="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
@@ -25,40 +25,7 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light header-directrix">
-            <div class="container container-header">
-                <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
-                    <img class="logo" src="../img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã.">
-                </a>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Início<span class="sr-only">(Página atual)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Produtos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Quem somos</a>
-                        </li>
-                    </ul>
-                </div>
-                <form class="form-inline search">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
-                    <button type="submit" class="btn btn-outline-dark">&#8981</button>
-                </form>
-            </div>
-        </nav>
-
-        <img class="banner-header" src="../img/cabecalho.jpg" alt="Banner do Site">
+        <?php require('NavBar-Footer/html/header.php'); ?>
     </header>
 
 
@@ -71,21 +38,21 @@
 
         <div class="card-group">
             <div class="card cardwho border-0 mb-3">
-                <img class="card-img-top1" src="../img/missao-rx.png" alt="Missão">
+                <img class="card-img-top1" src="/../public/img/missao-rx.png" alt="Missão">
                 <div class="card-body">
                     <p class="card-text1" style='color: rgb(98, 0, 255)'>Em primeiro lugar, visamos a satisfação dos clientes e o bem-estar das crianças, mas também prezamos a sustentabilidade. Contamos com uma produção sustentável, sem agressão ao meio-ambiente e na qual todos em seu ciclo produtivo são
                         beneficiados. Geramos empregos em diversas áreas de atuação, além de termos condições bem-definidas de trabalho, prezarmos a ética no ambiente empresarial e respeitarmos o meio ambiente.</p>
                 </div>
             </div>
             <div class="card cardwho border-0 mb-3">
-                <img class="card-img-top2" src="../img/visao-am.png" alt="Visão">
+                <img class="card-img-top2" src="/../public/img/visao-am.png" alt="Visão">
                 <div class="card-body">
                     <p class="card-text1" style='color: rgb(253, 152, 0)'>Nossa loja online já está pronta e disponível para envio a todo país, porém contamos com lojas físicas apenas no estado de Minas Gerais, o que não beneficia 100% da população. Temos o intuito de expandir novas filiais: Até o final
                         de 2021 planejamos abrir filiais em cada uma das regiões do país, e estamos estudando para que até o final de 2023, possamos ter, ao menos, uma filial em cada estado do país.</p>
                 </div>
             </div>
             <div class="card border-0 mb-3">
-                <img class="card-img-top3" src="../img/valores-az.png" alt="Valores">
+                <img class="card-img-top3" src="/../public/img/valores-az.png" alt="Valores">
                 <div class="card-body">
                     <p class="card-text1" style='color: rgb(0, 110, 255)'>Utilizamos tags de Papel Semente para nossos produtos, além de usarmos linhas e produtos feitos só com algodão orgânico e sustentável (naturalmente hipoalergênico) e fibra natural que deixa a pele respirar e permite uma regulação térmica
                         otimizada. Nenhum metal pesado é usado na preparação do tecido, utilizamos sempre estampas do lado de fora e tintas à base de água, botões de pressão sem níquel e, para completar, fazemos questão de não utilizar plástico em nossas
@@ -96,24 +63,7 @@
     </main>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm"></div>
-                <div class="col-sm flex-center text-center">
-                    <img src="../img/Da_lã_Logo_2.png" width="63" height="42" alt="Logotipo Da Lã">
-                    <p class="copyright">&copy; copyright Da Lã - Loja Online - 2020. </p>
-                </div>
-                <div class="col-sm col align-self-center flex-center text-center final-footer">
-
-                    <p>Acompanhe nossas mídias sociais e fique por dentro das novidades!</p>
-                    <a class="icons" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a class="icons" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    <a class="icons" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a class="icons" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-
-                </div>
-            </div>
-        </div>
+        <?php require('NavBar-Footer/html/footer.php'); ?>
     </footer>
 
 

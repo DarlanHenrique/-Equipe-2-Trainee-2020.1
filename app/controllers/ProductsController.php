@@ -7,32 +7,45 @@ use App\Core\App;
 class ProductsController
 {
     /**
-     * Show all users.
+     * Show all products.
      */
     public function index()
     {
         $products = App::get('database')->selectAll('products');
 
-        return view('products', compact('products'));
+        return view('admin/products', compact('products'));
     }
     public function create()
     {
         $products = App::get('database')->selectAll('products');
 
-        return view('create', compact('products'));
+        return view('admin/create', compact('products'));
     }
     public function store()
         {
         App::get('database')->insert('products', [
-                'nome' => $_POST['nome'],
-                'preco' => $_POST['preco'],
-                'categoria' => $_POST['categoria'],
-                'detalhes' => $_POST['detalhes'],
-                'descricao' => $_POST['descricao']
+                'name' => $_POST['name'],
+                'price' => $_POST['price'],
+                'category' => $_POST['category'],
+                'details' => $_POST['details'],
+                'description' => $_POST['description']
             ]);
     
             return redirect('admin/products');
         }
 
+    public function delete()
+    {
+       
+       App::get('database')->delete('products', $_POST['id']);
     
+       return redirect('admin/products');
+    }
+
+    public function select()
+    {
+        $products = App::get('database')->selectAll('products', $_POST['id']);
+
+        return view('admin/select', compact('products'));
+    }
 }

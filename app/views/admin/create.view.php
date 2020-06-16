@@ -1,4 +1,7 @@
-<?php require('partials/head.php'); ?>
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,39 +28,53 @@
 		    	</div>
 		    	<div class="col-sm-12 col-lg-12 ">
                     
-                    <form method="POST" action="/products/create">
+                    <form method="POST" action="/admin/products/create">
                     
                     <div class="form-group col-sm-12 text-category">
-		    				<label for="nome" >Nome do Produto</label>
-                            <input type="text" name="nome" class="form-control" required id="name"  placeholder="Insira o Nome">
+		    				<label for="name" >Nome do Produto</label>
+                            <input type="text" name="name" class="form-control" required id="name"  placeholder="Insira o Nome">
 		  			</div>
                     
                     <div class="form-group col-sm-12 text-category">
-		    				<label for="preco">Preço do Produto:</label>
-		    				<input type="text" name="preco" class="form-control" required id="amount" placeholder="Insira o Preço">
+		    				<label for="price">Preço do Produto:</label>
+		    				<input type="text" name="price" class="form-control" required id="price" placeholder="Insira o Preço">
                     </div>
 
                     <div class="form-group col-sm-12 text-category">
-		    				<label for="categoria">Categoria do Produto:</label>
-		    				<input type="text" name="categoria" class="form-control" required id="category" placeholder="Insira a Categoria">
+		    				<label for="category">Categoria do Produto:</label>
+		    				<input type="text" name="category" class="form-control" required id="category" placeholder="Insira a Categoria">
                     </div>
 
                     <div class="form-group col-sm-12 text-category">
-		    				<label for="detalhes">Detalhes do Produto:</label>
-		    				<input type="text" name="detalhes" class="form-control" required id="details" placeholder="Insira os Detalhes">
+		    				<label for="details">Detalhes do Produto:</label>
+		    				<input type="text" name="details" class="form-control" required id="details" placeholder="Insira os Detalhes">
                     </div>
                           
                     <div class="form-group col-sm-12 text-category">
-		    				<label for="descricao">Descrição do Produto:</label>
-		    				<input type="text" name="descricao" class="form-control" required id="description" placeholder="Insira a Descrição">
+		    				<label for="description">Descrição do Produto:</label>
+		    				<input type="text" name="description" class="form-control" required id="description" placeholder="Insira a Descrição">
                     </div>
 
                     <button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
-		    				<a href="https://www.youtube.com/watch?v=U4VUEdlaxhUs" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
+		    				<a href="/admin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
 		    		</form>
 				</div>
 			</div>
 		</div>
-    
+</main>
+
+<script src="../../../public/js/jquery-3.5.1.slim.min.js" ></script>
+<script src="../../../public/js/popper.min.js"></script>
+<script src="../../../public/js/bootstrap.min.js" ></script>	
+	
+</body>
+
+<!-- Links Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+
+</html>
+
  
-<?php require('partials/footer.php'); ?>
+
