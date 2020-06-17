@@ -42,10 +42,13 @@ class ProductsController
        return redirect('admin/products');
     }
 
-    public function prod()
+ 
+    public function show()
+    
     {
-        $products = App::get('database')->selectAll('products');
+        $product = App::get('database')->show('products', $_POST['id']);
 
-        return view('admin/prod', compact('products'));
+        return view('admin/prod', compact('product'));
     }
+
 }

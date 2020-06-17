@@ -70,14 +70,12 @@ class QueryBuilder
             $qry->execute();
     }
 
-/*    public function show($table, $id)
+    public function show($table, $id)
     {
-     $sql = " select FROM " . $table . " WHERE id = :id";
+     $sql = "SELECT * FROM " . $table . " WHERE id = {$id}";
            
-        $qry = $this->pdo->prepare($sql);
-            $qry->bindValue(":id", $id);
+            $qry = $this->pdo->prepare($sql);
             $qry->execute();
-
-            return $qry->fetchAll(PDO::FETCH_CLASS);
-    }*/
+            return $qry->fetch(PDO::FETCH_OBJ);
+        }
 }    

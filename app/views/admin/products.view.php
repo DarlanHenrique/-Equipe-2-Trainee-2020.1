@@ -48,7 +48,7 @@
     </div>
 
     <div class="row" >
-        <div class="col-sm-12 col-lg-12">
+        <div class="col-sm-12 col-lg-12 tab_prod">
             <div>
                 <a href="products/create" class="btn btn-primary button-add btn-sm"><i class="fas fa-plus"></i> Adicionar</a>               
             </div>
@@ -71,9 +71,9 @@
                         <td><?= $product->price; ?></td>
                         <td>
                             <div>
-                                <form class="cell_buttons" method="POST" action="/admin/products/show">
+                                <form class="cell_buttons" method="POST" action="/admin/products/prod">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">
-                                    <button class="btn btn-success button-actions button-action-view"><span class="fas fa-eye"></span></button>
+                                    <button class="btn btn-success button-actions button-action-view" type="submit" ><span class="fas fa-eye"></span></button>
                                 </form>
                                 <form class="cell_buttons" method="POST" action="/admin/products/update">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">

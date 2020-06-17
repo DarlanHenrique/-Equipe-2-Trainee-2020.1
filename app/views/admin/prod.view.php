@@ -32,13 +32,6 @@
 
 <main class="font-user">
 
-    <div class="container mt-5">
-        <nav>
-            <div>
-            <a class="back-menu" href="#"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
-            </div>
-        </nav>
-
     <div class="col-sm flex-center text-center">
         <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
     </div>
@@ -55,8 +48,8 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Código</th>
-                    <th scope="col">Nome</th>
                     <th scope="col">Imagem</th>
+                    <th scope="col">Nome</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Detalhes</th>
@@ -65,22 +58,25 @@
             </thead>
 
             <tbody>
-                <?php foreach ($products as $product) : ?>
+    
                     <tr>
                         <td><?= '#' . $product->id; ?></td>
-                        <td><?= $product->name; ?></td>
                         <td><?= $product->image; ?></td>
+                        <td><?= $product->name; ?></td>
                         <td><?= $product->price; ?></td>
                         <td><?= $product->category; ?></td>
                         <td><?= $product->details; ?></td>
                         <td><?= $product->description; ?></td>
                     </tr>
-                <?php endforeach; ?>  
+            
             </tbody>
 
         </table>
         </div>
     </div>
+
+    <a href="/admin/products" class="btn btn-warning button-actions button-action-edit"> Voltar a Listagem </a>
+
 </main>
 
 <script src="../../../public/js/jquery-3.5.1.slim.min.js" ></script>
