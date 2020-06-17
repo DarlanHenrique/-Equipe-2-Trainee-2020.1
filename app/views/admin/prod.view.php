@@ -30,17 +30,17 @@
 
 <body>
 
-<main class="font-user">
+<main class="font-user prod">
 
-    <div class="col-sm flex-center text-center">
-        <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
+<div  class="title-prod">
+        <h1>Produto <?= '#' . $product->id; ?></h1>
     </div>
 
-    <div  class="title-user">
-        <h1>Listagem de Produtos</h1>
+    <div class="col-sm flex-center img-prod">
+        <img src="<?= $product->image; ?>" width="250" height="250" alt="Produto <?= '#' . $product->id; ?>">
     </div>
 
-    <div class="row" >
+    <div class="row table-prod" >
         <div class="col-sm-12 col-lg-12">
 
         <table class="table table-striped table-bordered table-responsive-md-1 table-responsive-sm-5">
@@ -48,7 +48,6 @@
             <thead class="thead-dark">
                 <tr>
                     <th scope="col">Código</th>
-                    <th scope="col">Imagem</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Preço</th>
                     <th scope="col">Categoria</th>
@@ -61,7 +60,6 @@
     
                     <tr>
                         <td><?= '#' . $product->id; ?></td>
-                        <td><?= $product->image; ?></td>
                         <td><?= $product->name; ?></td>
                         <td><?= $product->price; ?></td>
                         <td><?= $product->category; ?></td>
@@ -75,7 +73,7 @@
         </div>
     </div>
 
-    <a href="/admin/products" class="btn btn-warning button-actions button-action-edit"> Voltar a Listagem </a>
+    <a href="/admin/products" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
 
 </main>
 

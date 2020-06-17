@@ -52,8 +52,7 @@
 }
 .button-action-view:hover{
     color:#28a745;
-    background-color: white;
-    
+    background-color: white; 
 }
 
 .cell_buttons {
@@ -69,8 +68,22 @@
     background-color: white;
 }
 
+.prod {
+    margin: 3% 3% 3% 3%;
+}
 
+.title-prod {
+    margin-top: -20px;
+    margin-bottom: 3%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.img-prod {
+    margin-bottom: 3%;
+}
 /*  End CSS listing */
+
 
 /* CSS Create products */
 
