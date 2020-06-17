@@ -28,7 +28,8 @@ class ProductsController
                 'price' => $_POST['price'],
                 'category' => $_POST['category'],
                 'details' => $_POST['details'],
-                'description' => $_POST['description']
+                'description' => $_POST['description'],
+                'image' => $_POST['image']
             ]);
     
             return redirect('admin/products');

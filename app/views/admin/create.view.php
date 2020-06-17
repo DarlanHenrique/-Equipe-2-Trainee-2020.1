@@ -55,6 +55,11 @@
 		    				<input type="text" name="description" class="form-control" required id="description" placeholder="Insira a Descrição">
                     </div>
 
+					<div class="form-group col-sm-12 text-category">
+		    				<label for="image">Imagem do Produto:</label>
+		    				<input type="file" name="image" class="form-control" required id="image" placeholder="Insira a Imagem">	
+                    </div>
+
                     <button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
 		    				<a href="/admin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
 		    		</form>
