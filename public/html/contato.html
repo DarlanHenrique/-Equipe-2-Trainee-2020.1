@@ -13,56 +13,88 @@
         <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">  
         <!-- Css cabeçalho/Footer-->
-        <link rel="stylesheet" href="/../public/css/reset.css">
-        <link rel="stylesheet" href="/../public/css/style.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
         <!--Css personalizado-->
-        <link rel="stylesheet" href="/../public/css/styles.css">
-        <link rel="sortcut icon" href="/../public/img/Da_lã_Logo_2.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/styles.css">
         <title>Contato</title>
         <meta name="description" content ="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
     </head>
     <body>
         <!-- Inicio Header-->
         <header>
-            <?php require('NavBar-Footer/html/header.php'); ?>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container container-header">
+                    <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
+                        <img class="logo" src="../img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã." >
+                    </a>
+  
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+  
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Contato<span class="sr-only">(Página atual)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Quem somos</a>
+                            </li>
+                        </ul>
+                    </div>      
+                    <form class="form-inline pesquisa">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                        <button type="submit" class="btn btn-outline-dark">&#8981</button>
+                    </form>
+                </div>            
+            </nav>
         </header>
+  
+        <img class="banner" src="../img/cabecalho.jpg" alt="Banner do Site">
         <!-- Final Header-->
-        <main class="font-contact">
-            <div class="container mt-5 mb-5">
+        <main>
+            <div class="container mt-5 mb-5" >
                 <div>
-                    <h1 class="title-contact">Entre em Contato</h1>
+                    <h1 class="title-form">Entre em Contato</h1>
                 </div>
                 <div class="row">
-                    <div class="col-lg-6 col-sm-12">
+                    <div class="col-lg-6 col-sm-12 ">
                         <form action="">
                             <div class="form-group col-sm-12">
-                                <label for="Nome" class="font-contact label-contact">Nome:</label>
+                                <label for="Nome" class="font">Nome:</label>
                                 <input type="text" class="form-control" autofocus required ="required" name="nome" id="nome" placeholder="Informe seu nome">
                             </div>
                         
                             <div class="form-group col-sm-12">
-                                <label for="Telefone" class="font-contact label-contact">Telefone:</label>
+                                <label for="Telefone" class="font">Telefone:</label>
                                 <input type="text" class="form-control telefone" name="telefone" required ="required" maxlength="15" id="telefone" placeholder="(99) 9 9999-9999">
                             </div>
                         
                             <div class="form-group col-sm-12">
-                                <label for="Email" class="font-contact label-contact" >E-mail:</label>
+                                <label for="Email" class="font" >E-mail:</label>
                                 <input type="email" class="form-control" required ="required" name="email" id="email" placeholder="nome@exemplo.com">
                             </div>
                         
                             <div class="form-group col-sm-12">
-                                <label for="FormControlAssunto" class="font-contact label-contact" >Assunto:</label>
+                                <label for="FormControlAssunto" class="font" >Assunto:</label>
                                 <input type="text" class="form-control" required ="required" name="assunto" id="assunto" placeholder="Assunto">
                             </div>
                         
                             <div class="form-group col-sm-12">
-                                <label for="Textarea" class="font-contact label-contact" >Mensagem:</label>
+                                <label for="Textarea" class="font" >Mensagem:</label>
                                 <textarea class="form-control mb-2"  style="resize:none;" name="textarea" id="textarea" required ="required"rows="3" placeholder="Digite sua mensagem aqui."></textarea>
                             </div>
                         
                             <div class="col-sm-6 col-sm-offset-3">
-                                <button type="submit" name="con-enviar" id="con-enviar" class="btn btn-outline-warning button-contact btn-sm">
-                                    <span class="font-contact">Enviar mensagem</span>
+                                <button type="submit" name="con-enviar" id="con-enviar" class="btn btn-outline-warning button-form btn-sm">
+                                    <span class="font">Enviar mensagem</span>
                                 </button>
                             </div>
                         </form>
@@ -75,7 +107,24 @@
         </main>
         <!--Inicio Footer-->
         <footer>
-            <?php require('NavBar-Footer/html/footer.php'); ?>
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm"></div>
+                  <div class="col-sm flex-center text-center meio">
+                        <img src="../img/Da_lã_Logo_2.png" width="90" height="60" alt="Logotipo Da Lã">
+                        <p class="copyright">&copy; copyright - 2020 - Da Lã comércio eletrônico - LTDA </p>
+                  </div>
+                  <div class="col-sm col align-self-center flex-center text-center final">
+                    
+                    <p>Acompanhe nossas mídias sociais e fique por dentro das novidades!</p>
+                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/DarlanHenrique/-Equipe-2-Trainee-2020.1"><i class="fab fa-github"></i></a>
+                    
+                  </div>
+                </div>
+            </div>  
         </footer>
         <!--Final Footer-->
     
@@ -87,6 +136,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 
         <!-- Mascara input Telefone -->
-        <script src="/../public/js/mascaraTel.js"></script>
+        <script src="../js/mascaraTel.js"></script>
     </body>
 </html>
