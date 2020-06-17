@@ -13,25 +13,39 @@ class ProductsController
     {
         $products = App::get('database')->selectAll('products');
 
-        return view('products', compact('products'));
+        return view('admin/products', compact('products'));
     }
-    public function create() 
+    public function create()
     {
-        App::get('database')->insert('products', 
-        [
-            'nome' => $_POST['nome'],
-            'preco' => $_POST['preco']
-        ]);
-        
-        return redirect('products');
+        $products = App::get('database')->selectAll('products');
+
+        return view('admin/create', compact('products'));
     }
+    public function store()
+        {
+        App::get('database')->insert('products', [
+                'name' => $_POST['name'],
+                'price' => $_POST['price'],
+                'category' => $_POST['category'],
+                'details' => $_POST['details'],
+                'description' => $_POST['description']
+            ]);
+    
+            return redirect('admin/products');
+        }
 
     public function delete()
     {
        
        App::get('database')->delete('products', $_POST['id']);
     
-       return redirect('products');
+       return redirect('admin/products');
     }
 
+    public function prod()
+    {
+        $products = App::get('database')->selectAll('products');
+
+        return view('admin/prod', compact('products'));
+    }
 }

@@ -1,12 +1,21 @@
  <?php
 
+//Pages Routes
 $router->get('', 'PagesController@home');
-$router->get('about', 'PagesController@about');
-$router->get('contact', 'PagesController@contact');
+$router->get('produtos', 'PagesController@products');
+$router->get('sobre', 'PagesController@about');
+$router->get('contato', 'PagesController@contact');
 
-$router->get('users', 'UsersController@index');
-$router->post('users', 'UsersController@store');
+//rota painel de controle
+$router->get('admin', 'PagesController@restricArea');
 
-$router->get('products', 'ProductsController@index');
-$router->post('products', 'ProductsController@create');
-$router->post('products/delete', 'ProductsController@delete');
+//rota leva a listagem de produtos
+$router->get('admin/products', 'ProductsController@index');
+$router->post('admin/products/delete', 'ProductsController@delete');
+
+//rota criagem de novos produtos
+$router->get('admin/products/create', 'ProductsController@create');
+$router->post('admin/products/create', 'ProductsController@store');
+
+//rota view produtos
+$router->get('admin/products/prod', 'ProductsController@prod');
