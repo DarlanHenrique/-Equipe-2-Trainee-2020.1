@@ -21,3 +21,6 @@ $router->post('admin/products/create', 'ProductsController@store');
 
 //rota view produtos
 $router->post('admin/products/prod', 'ProductsController@show');
+
+//rota edit produtos
+$router->post('admin/products/edit', 'ProductsController@edit');

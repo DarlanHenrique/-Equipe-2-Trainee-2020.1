@@ -15,6 +15,7 @@ class ProductsController
 
         return view('admin/products', compact('products'));
     }
+
     public function create()
     {
         $products = App::get('database')->selectAll('products');
@@ -42,7 +43,6 @@ class ProductsController
        return redirect('admin/products');
     }
 
- 
     public function show()
     
     {
@@ -51,4 +51,11 @@ class ProductsController
         return view('admin/prod', compact('product'));
     }
 
+    public function edit()
+    
+    {
+        $product = App::get('database')->edit('products', $_POST['id']);
+
+        return view('admin/edit', compact('product'));
+    }
 }

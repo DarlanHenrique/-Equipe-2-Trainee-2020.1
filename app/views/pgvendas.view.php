@@ -74,139 +74,19 @@
                 <div class="col py-3 px-lg-5 ">
                     <div class="card-deck carddeckprdpg">
                         <div class="row ">
-                            <div class="col">
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Body Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 54,90</p>
+                            <?php foreach ($products as $product) : ?>    
+                                <div class="col">
+                                    <div class="cardprdpg">
+                                        <img class="card-img-top cardimgprdpg" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
+                                        <div class="card-body cardbodyprdpg">
+                                            <h5 class="card-title cardtitleprdpg"><a href="#"><?= $product->name; ?></a></h5>
+                                            <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
+                                        </div>
                                     </div>
                                 </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa2.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 44,90</p>
-                                    </div>
-                                </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa3.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Lacinho</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 102,90</p>
-                                    </div>
-                                </div>
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa4.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Felino</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 99,60</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Body Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 54,90</p>
-                                    </div>
-                                </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa2.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 44,90</p>
-                                    </div>
-                                </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa3.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Lacinho</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 102,90</p>
-                                    </div>
-                                </div>
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa4.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Felino</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 99,60</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Body Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 54,90</p>
-                                    </div>
-                                </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa2.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 44,90</p>
-                                    </div>
-                                </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa3.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Lacinho</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 102,90</p>
-                                    </div>
-                                </div>
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa4.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Felino</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 99,60</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Body Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 54,90</p>
-                                    </div>
-                                </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa2.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Animais</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 44,90</p>
-                                    </div>
-                                </div>
-
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa3.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Lacinho</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 102,90</p>
-                                    </div>
-                                </div>
-                                <div class="cardprdpg">
-                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa4.jpeg" alt="Imagem de capa do card">
-                                    <div class="card-body cardbodyprdpg">
-                                        <h5 class="card-title cardtitleprdpg"><a href="#">Macacão Felino</a></h5>
-                                        <p class="card-text cardtxtprdpg">R$ 99,60</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
+                            <?php endforeach; ?>  
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

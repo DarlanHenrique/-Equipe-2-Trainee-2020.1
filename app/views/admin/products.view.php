@@ -73,11 +73,11 @@
                             <div>
                                 <form class="cell_buttons" method="POST" action="/admin/products/prod">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">
-                                    <button class="btn btn-success button-actions button-action-view" type="submit" ><span class="fas fa-eye"></span></button>
+                                    <button class="btn btn-success button-actions button-action-view" type="submit"><span class="fas fa-eye"></span></button>
                                 </form>
-                                <form class="cell_buttons" method="POST" action="/admin/products/update">
+                                <form class="cell_buttons" method="POST" action="/admin/products/edit">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">
-                                    <button class="btn btn-warning button-actions button-action-edit"><span class="fas fa-pen"></span></button>
+                                    <button class="btn btn-warning button-actions button-action-edit" type="submit"><span class="fas fa-pen"></span></button>
                                 </form>
                                 <form class="cell_buttons" method="POST" action="/admin/products/delete">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">
