@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Core\App;
+
 class PagesController
 {
     /**
@@ -9,7 +11,9 @@ class PagesController
      */
     public function home()
     {
-        return view('index');
+        $users = App::get('database')->selectAll('products');
+
+        return view('index', compact('products'));
     }
 
     /**

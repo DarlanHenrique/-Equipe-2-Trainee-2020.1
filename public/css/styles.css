@@ -1,541 +1,406 @@
-html,
-body {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Amatic SC', cursive;
-    background-color: white;
-}
-/* INICIO NAVBAR */
-
-.header-directrix {
-    background: linear-gradient(#58D3F7, #FEFEFE)!important;
-    font-family: 'Amatic SC', cursive;
-    font-size: 50px;
-}
-
-.container-header {
-    width: 100%;
-}
-
-@media screen and (max-width: 1000px) {
-    .search,
-    .banner-header {
-        display: none;
-    }
-}
-/* Banner Entre </header> e <main>/ */
-
-.banner-header {
-    width: 100%;
-}
-/* FIM NAVBAR */
-/* INICIO FOOTER */
-
-footer {
-    background: linear-gradient( #FEFEFE, #58D3F7)!important;
-}
-
-footer p {
-    font-family: 'Montserrat', sans-serif;
-    color: #000000;
-    font-size: 10px;
-    font-style: bold;
-}
-
-.copyright {
-    margin: 5px 0 5px 0;
-    padding-bottom: 10px;
-}
-
-.final-footer p {
-    margin: 5px 0 10px 0;
-}
-
-.final-footer a {
-    padding: 5px;
-}
-/* FIM FOOTER */
-/* INICIO PAG DE VENDAS */
-/*card promoção*/
-
-.promfolder {
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 2%;
-}
-
-.prom {
-    border-radius: 40px;
-    width: 70%;
-}
-/*barra categoria*/
-
-.categorybar {
-    color: black;
-    padding-top: 6px;
-}
-
-.sidebar {
-    font-size: 20px;
-    line-height: 12px;
-    padding-top: 15px;
-}
-/*card produto*/
-
-.carddeckprdpg {
-    padding-top: 40px;
-}
-
-.cardprdpg {
-    width: 100%;
-    border: 0px;
-}
-
-.cardimgprdpg {
-    width: 100%;
-    border-radius: 50px;
-}
-
-.cardbodyprdpg {
-    text-align: center;
-}
-
-.cardtitleprdpg a {
-    color: #000000;
-    font-size: 22px;
-    letter-spacing: 1px;
-}
-
-.cardtxprdpg {
-    font-size: 20px;
-}
-/* FIM PAG DE PRODUTO */
-/* INICIO QUEM SOMOS */
-
-.all {
-    font-family: 'Montserrat', sans-serif;
-    width: 100%;
-}
-
-.who {
-    text-align: center;
-    font-size: 18px;
-}
-
-.who h1 {
-    padding-top: 2%;
-    font-family: 'Amatic SC', cursive;
-    font-size: 60px;
-    text-align: center;
-}
-
-.who p {
-    margin: 25px 20% 15px 20%;
-}
-
-.cardwho {
-    margin: 30px 5% 15% 5%;
-    text-align: justify;
-}
-
-.card-img-top1 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    height: auto;
-}
-
-.card-img-top2 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 15px;
-    width: 60%;
-    height: auto;
-}
-
-.card-img-top3 {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    height: auto;
-}
-
-.card-text1 {
-    font-size: 16px;
-    font-weight: 30px;
-}
-/* FIM QUEM SOMOS */
-/* INICIO RESPONSIVIDADE PAG DE VENDAS */
-
-@media (max-width: 1000px) {
-    .prom {
-        border-radius: 30px;
-    }
-    .searchprod {
-        padding-left: 15%;
-    }
-    .carddeckprdpg {
-        display: inline-block;
-        width: 60%;
-        padding-left: 0px;
-    }
-    .cardprdpg {
-        width: 150px;
-    }
-    .cardimgprdpg {
-        border-radius: 30px;
-    }
-    .cardtitleprdpg a {
-        font-size: 18px;
-    }
-    .cardtxtprdpg {
-        font-size: 16px;
-        line-height: 12px;
-    }
-    .sidebar {
-        font-size: 100%;
-        line-height: 15px;
-    }
-    .col1pv {
-        width: 50%;
-    }
-    .descrprod {
-        padding-top: 0%;
-        width: 50%;
-    }
-    .titleprod {
-        font-size: 22px;
-    }
-    .txtprod {
-        line-height: 17px;
-    }
-}
-/* FIM RESPONSIVIDADE PAG DE VENDAS */
-/* INICIO HOME */
-
-.banner img {
-    width: 100%;
-}
-
-.home-main {
-    overflow: hidden;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.home-carousel {
-    overflow: hidden;
-    border-radius: 50px;
-}
-
-.latest-products {
-    margin-top: 50px;
-    background-color: #DDD0E6;
-    border-radius: 20px;
-}
-
-.latest-products ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.latest-products li {
-    width: 250px;
-    margin: 12px;
-    padding-bottom: 20px;
-}
-
-.latest-products h1 {
-    font-size: 60px;
-    font-family: 'Amatic SC', cursive;
-    color: grey;
-    margin: 20px;
-    padding: 20px;
-}
-
-.product {
-    overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
-    border-radius: 50px !important;
-    height: 100% !important;
-}
-
-.home-button {
-    background-color: #FFF6A1 !important;
-    color: grey !important;
-    font-weight: 600 !important;
-    margin-top: 10px;
-}
-
-.home-button:hover {
-    background-color: #e6da6a !important;
-}
-
-.more {
-    font-family: 'Amatic SC', cursive;
-    font-size: 40px !important;
-    margin-bottom: 50px;
-    margin-top: 10px;
-    border-radius: 10px !important;
-    background-color: #FFF6A1 !important;
-    color: grey !important;
-    font-weight: 600 !important;
-}
-
-.more:hover {
-    background-color: #e6da6a !important;
-}
-/* FIM HOME */
-/* INICIO RESPONSIVIDADE HOME */
-
-@media(min-width: 1049px) {
-    .home-main {
-        max-height: 1300px;
-    }
-}
-
-@media (min-width: 2500px) {
-    .home-main {
-        max-height: 1750px;
-    }
-}
-
-@media (max-width: 1500px) {
-    .latest-products li {
-        width: 200px;
-        margin: 10px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .latest-products h1 {
-        font-size: 40px;
-    }
-}/*falta } */ 
-@media (max-width: 991px){
-    .side-clouds {
-        display: none;
-    }
-}
-
-@media (max-width: 800px) {
-    .home-carousel {
-        border-radius: 20px;
-    }
-    .latest-products li {
-        width: 150px;
-        margin: 10px;
-        display: inline-block !important;
-    }
-    .product {
-        border-radius: 20px !important;
-    }
-    .product-name {
-        font-size: 14px !important;
-        margin: 0;
-    }
-    .home-button {
-        font-size: 12px !important;
-        width: 100px !important;
-        padding: 4px !important;
-    }
-    .more {
-        font-size: 35px !important;
-    }
-}
-
-@media (max-width: 500px) {
-    .latest-products li {
-        width: 150px;
-        margin: 10px;
-        display: inline-block !important;
-    }
-    .product-name {
-        font-size: 12px !important;
-        margin: 0;
-    }
-    .home-button {
-        font-size: 10px !important;
-        width: 80px !important;
-        padding: 4px !important;
-    }
-}
-/* FIM RESPONSIVIDADE HOME */
-/* INICIO CONTATO */
-
-.font {
-    font-family: 'Amatic SC', cursive;
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.label-contact{
-    margin-bottom: 3px;
-}
-
-.title-contact {
-    font-size: 45px;
-    padding-bottom: 2rem;
-    padding-top: 0px;
-    text-align: center;
-    font-family: 'Amatic SC', cursive;
-    color: black;
-}
-
-.map > iframe {
-    border-radius: 8px;
-}
-
-.button-contact {
-    font-size: 20px;
-    margin-bottom: 50px;
-    background-color: #FFF6A1 !important;
-    color: black !important;
-}
-
-.button-contact:hover {
-    background-color: #ffeb35 !important;
-}
-/* FIM CONTATO */
-
-/* Inicio Css View User/Categories/products*/
-
-.main-user{
-    width: 100%;
-}
-
-.title-user{
-    padding: 30px;
-    font-size: 50px;
-    text-align: center;
-}
-.font-user{
-    font-family: 'Montserrat', sans-serif;
-}
-
-.table-user{
-    text-align: center;
-}
-.button-add{
-   margin-left: 80%;
-   margin-bottom: 20px;
-   font-size: 18px;
-}
-
-.button-add:hover{
-    color:#007bff;
-    background-color: white;
-} 
-
-.back-menu{
-    display: block;
-    width: 150px;
-    height: 40px;
-    line-height: 40px;
-    background-color: rgb(243, 223, 46);
-    color: black;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 17px;
-    margin-bottom: 10px;
-}
-
-.back-menu:hover{
-    background-color: #ffeb35;
-    text-decoration: none;
-    color: grey;
-}
-
-.button-actions{
-    margin-left: 5px;
-    color: white;
-    padding-top: 5px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-}
-
-.button-action-view:hover{
-    flex-direction: row;
-    background-color: white;
-    text-decoration: none;
-    color:#28a745;
-    
-}
-
-.button-action-edit:hover{
-    color:#ffc107;
-    background-color: white;
-}
-
-.button-action-delete:hover{
-    color: #dc3545;
-    background-color: white;
-}
-
-.button-align{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-/* Fim Css View User */
-
-/* MAIN  ADMINISTRATIVE PAGE */
-
-.home-directrix {
-    font-family: 'Montserrat', sans-serif;
-    height: 800px;   /* Footer no fim da página, explico no fim do css. */
-}
-
-.home-directrix h1 {    
-    font-size: 30px;
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 10px;
-}
-.home-directrix h5 {
-    font-size: 18px;
-}
-/* Responsive Main */
-
-@media screen and (max-width: 425px){
-    .media-home {
-        margin-left:35px;
-        
-    }
-}
-@media screen and (max-width: 375px){
-    .media-home {
-        margin-left:12px;
-        
-    }
-}
-@media screen and (max-width: 320px){
-    .media-home {
-        margin-left: 0px;
-        margin-right:6px;
-        
-    }
-}
-/* END OF MAIN ADMINISTRATIVE PAGE */
-
-/*Inicio Css Form-Categoria*/
-
-.text-category{
-    text-align: start;
-}
-
-.text-category > label{
-    margin-bottom: 5px;
-    margin-left: 20%;
-    font-weight: bold;
-}
-
-.text-category > input{
-    margin-left: 20%;
-    width: 60%;
-}
+                html,
+                body {
+                    margin: 0px;
+                    padding: 0px;
+                    font-family: 'Amatic SC', cursive;
+                    background-color: white;
+                }
+                /* INICIO NAVBAR */
+                
+                .header-directrix {
+                    background: linear-gradient(#58D3F7, #FEFEFE)!important;
+                    font-family: 'Amatic SC', cursive;
+                    font-size: 50px;
+                }
+                
+                .container-header {
+                    width: 100%;
+                }
+                
+                @media screen and (max-width: 1000px) {
+                    .search,
+                    .banner-header {
+                        display: none;
+                    }
+                }
+                /* Banner Entre </header> e <main>/ */
+                
+                .banner-header {
+                    width: 100%;
+                }
+                /* FIM NAVBAR */
+                /* INICIO FOOTER */
+                
+                footer {
+                    background: linear-gradient( #FEFEFE, #58D3F7)!important;
+                }
+                
+                footer p {
+                    font-family: 'Montserrat', sans-serif;
+                    color: #000000;
+                    font-size: 10px;
+                    font-style: bold;
+                }
+                
+                .copyright {
+                    margin: 5px 0 5px 0;
+                    padding-bottom: 10px;
+                }
+                
+                .final-footer p {
+                    margin: 5px 0 10px 0;
+                }
+                
+                .final-footer a {
+                    padding: 5px;
+                }
+                /* FIM FOOTER */
+                /* INICIO PAG DE VENDAS */
+                /*card promoção*/
+                
+                .promfolder {
+                    text-align: center;
+                    padding-top: 5%;
+                    padding-bottom: 2%;
+                }
+                
+                .prom {
+                    border-radius: 40px;
+                    width: 70%;
+                }
+                /*barra categoria*/
+                
+                .categorybar {
+                    color: black;
+                    padding-top: 6px;
+                }
+                
+                .sidebar {
+                    font-size: 20px;
+                    line-height: 12px;
+                    padding-top: 15px;
+                }
+                /*card produto*/
+                
+                .carddeckprdpg {
+                    padding-top: 40px;
+                }
+                
+                .cardprdpg {
+                    width: 100%;
+                    border: 0px;
+                }
+                
+                .cardimgprdpg {
+                    width: 100%;
+                    border-radius: 50px;
+                }
+                
+                .cardbodyprdpg {
+                    text-align: center;
+                }
+                
+                .cardtitleprdpg a {
+                    color: #000000;
+                    font-size: 22px;
+                    letter-spacing: 1px;
+                }
+                
+                .cardtxprdpg {
+                    font-size: 20px;
+                }
+                /* FIM PAG DE PRODUTO */
+                /* INICIO QUEM SOMOS */
+                
+                .all {
+                    font-family: 'Montserrat', sans-serif;
+                    width: 100%;
+                }
+                
+                .who {
+                    text-align: center;
+                    font-size: 18px;
+                }
+                
+                .who h1 {
+                    padding-top: 2%;
+                    font-family: 'Amatic SC', cursive;
+                    font-size: 60px;
+                    text-align: center;
+                }
+                
+                .who p {
+                    margin: 25px 20% 15px 20%;
+                }
+                
+                .cardwho {
+                    margin: 30px 5% 15% 5%;
+                    text-align: justify;
+                }
+                
+                .card-img-top1 {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 80%;
+                    height: auto;
+                }
+                
+                .card-img-top2 {
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 15px;
+                    width: 60%;
+                    height: auto;
+                }
+                
+                .card-img-top3 {
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 80%;
+                    height: auto;
+                }
+                
+                .card-text1 {
+                    font-size: 16px;
+                    font-weight: 30px;
+                }
+                /* FIM QUEM SOMOS */
+                /* INICIO RESPONSIVIDADE PAG DE VENDAS */
+                
+                @media (max-width: 1000px) {
+                    .prom {
+                        border-radius: 30px;
+                    }
+                    .searchprod {
+                        padding-left: 15%;
+                    }
+                    .carddeckprdpg {
+                        display: inline-block;
+                        width: 60%;
+                        padding-left: 0px;
+                    }
+                    .cardprdpg {
+                        width: 150px;
+                    }
+                    .cardimgprdpg {
+                        border-radius: 30px;
+                    }
+                    .cardtitleprdpg a {
+                        font-size: 18px;
+                    }
+                    .cardtxtprdpg {
+                        font-size: 16px;
+                        line-height: 12px;
+                    }
+                    .sidebar {
+                        font-size: 100%;
+                        line-height: 15px;
+                    }
+                    .col1pv {
+                        width: 50%;
+                    }
+                    .descrprod {
+                        padding-top: 0%;
+                        width: 50%;
+                    }
+                    .titleprod {
+                        font-size: 22px;
+                    }
+                    .txtprod {
+                        line-height: 17px;
+                    }
+                }
+                /* FIM RESPONSIVIDADE PAG DE VENDAS */
+                /* INICIO HOME */
+                
+                .banner img {
+                    width: 100%;
+                }
+                
+                .home-main {
+                    overflow: hidden;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+                
+                .home-carousel {
+                    overflow: hidden;
+                    border-radius: 50px;
+                }
+                
+                .latest-products {
+                    margin-top: 50px;
+                    background-color: #DDD0E6;
+                    border-radius: 20px;
+                }
+                
+                .latest-products ul {
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                }
+                
+                .latest-products li {
+                    width: 250px;
+                    margin: 12px;
+                    padding-bottom: 20px;
+                }
+                
+                .latest-products h1 {
+                    font-size: 60px;
+                    font-family: 'Amatic SC', cursive;
+                    color: grey;
+                    margin: 20px;
+                    padding: 20px;
+                }
+                
+                .product {
+                    overflow: hidden;
+                    font-family: 'Montserrat', sans-serif;
+                    border-radius: 50px !important;
+                    height: 100% !important;
+                }
+                
+                .home-button {
+                    background-color: #FFF6A1 !important;
+                    color: grey !important;
+                    font-weight: 600 !important;
+                    margin-top: 10px;
+                }
+                
+                .home-button:hover {
+                    background-color: #e6da6a !important;
+                }
+                
+                .more {
+                    font-family: 'Amatic SC', cursive;
+                    font-size: 40px !important;
+                    margin-bottom: 50px;
+                    margin-top: 10px;
+                    border-radius: 10px !important;
+                    background-color: #FFF6A1 !important;
+                    color: grey !important;
+                    font-weight: 600 !important;
+                }
+                
+                .more:hover {
+                    background-color: #e6da6a !important;
+                }
+                /* FIM HOME */
+                /* INICIO RESPONSIVIDADE HOME */
+                
+                @media(min-width: 1049px) {
+                    .home-main {
+                        max-height: 1300px;
+                    }
+                }
+
+                @media(min-width: 1625px) {
+                    .home-main{
+                        max-height: 1450px;
+                    }
+                }
+                
+                @media (min-width: 2500px) {
+                    .home-main {
+                        max-height: 1750px;
+                    }
+                }
+
+                @media ()
+                
+                @media (max-width: 1500px) {
+                    .latest-products li {
+                        width: 200px;
+                        margin: 10px;
+                    }
+                }
+                
+                @media (max-width: 1000px) {
+                    .latest-products h1 {
+                        font-size: 40px;
+                    }
+                }
+
+                @media (max-width: 991px){
+                    .side-clouds {
+                        display: none;
+                    }
+                }
+                
+                @media (max-width: 800px) {
+                    .home-carousel {
+                        border-radius: 20px;
+                    }
+                    .latest-products li {
+                        width: 150px;
+                        margin: 10px;
+                        display: inline-block !important;
+                    }
+                    .product {
+                        border-radius: 20px !important;
+                    }
+                    .product-name {
+                        font-size: 14px !important;
+                        margin: 0;
+                    }
+                    .home-button {
+                        font-size: 12px !important;
+                        width: 100px !important;
+                        padding: 4px !important;
+                    }
+                    .more {
+                        font-size: 35px !important;
+                    }
+                }
+                
+                @media (max-width: 500px) {
+                    .latest-products li {
+                        width: 150px;
+                        margin: 10px;
+                        display: inline-block !important;
+                    }
+                    .product-name {
+                        font-size: 12px !important;
+                        margin: 0;
+                    }
+                    .home-button {
+                        font-size: 10px !important;
+                        width: 80px !important;
+                        padding: 4px !important;
+                    }
+                }
+                /* FIM RESPONSIVIDADE HOME */
+                /* INICIO CONTATO */
+                
+                .font {
+                    font-family: 'Amatic SC', cursive;
+                    font-size: 25px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+                
+                .title-form {
+                    font-size: 45px;
+                    padding-bottom: 2rem;
+                    padding-top: 0px;
+                    text-align: center;
+                    font-family: 'Amatic SC', cursive;
+                    color: black;
+                }
+                
+                .map>iframe {
+                    border-radius: 8px;
+                }
+                
+                .button-form {
+                    font-size: 20px;
+                    margin-bottom: 50px;
+                    background-color: #FFF6A1 !important;
+                    color: black !important;
+                }
+                
+                .button-form:hover {
+                    background-color: #ffeb35 !important;
+                }
+                /* FIM CONTATO */
