@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Core\App;
+
 class PagesController {
     /**
      * Show the home page.
@@ -14,7 +16,9 @@ class PagesController {
     //Mostra pagina de produtos.
     public function products() {
 
-        return view('pgvendas');
+        $products = App::get('database')->selectAll('products');
+
+        return view('pgvendas', compact('products'));
     }
 
     //mostra pagina Quem somos.

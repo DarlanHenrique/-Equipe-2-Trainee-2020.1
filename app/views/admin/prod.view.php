@@ -30,28 +30,19 @@
 
 <body>
 
-<main class="font-user">
+<main class="font-user prod">
 
-    <div class="container mt-5">
-        <nav>
-            <div>
-            <a class="back-menu" href="#"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
-            </div>
-        </nav>
-
-    <div class="col-sm flex-center text-center">
-        <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
+<div  class="title-prod">
+        <h1>Produto <?= '#' . $product->id; ?></h1>
     </div>
 
-    <div  class="title-user">
-        <h1>Listagem de Produtos</h1>
+    <div class="col-sm flex-center img-prod">
+        <img src="<?= $product->image; ?>" width="250" height="250" alt="Produto <?= '#' . $product->id; ?>">
     </div>
 
-    <div class="row" >
-        <div class="col-sm-12 col-lg-12 tab_prod">
-            <div>
-                <a href="products/create" class="btn btn-primary button-add btn-sm"><i class="fas fa-plus"></i> Adicionar</a>               
-            </div>
+    <div class="row table-prod" >
+        <div class="col-sm-12 col-lg-12">
+
         <table class="table table-striped table-bordered table-responsive-md-1 table-responsive-sm-5">
            
             <thead class="thead-dark">
@@ -59,39 +50,31 @@
                     <th scope="col">Código</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Preço</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Detalhes</th>
+                    <th scope="col">Descrição</th>
                 </tr>
             </thead>
 
             <tbody>
-                <?php foreach ($products as $product) : ?>
+    
                     <tr>
                         <td><?= '#' . $product->id; ?></td>
                         <td><?= $product->name; ?></td>
                         <td><?= $product->price; ?></td>
-                        <td>
-                            <div>
-                                <form class="cell_buttons" method="POST" action="/admin/products/prod">
-                                    <input type="hidden" name="id" value="<?= $product->id ?>">
-                                    <button class="btn btn-success button-actions button-action-view" type="submit"><span class="fas fa-eye"></span></button>
-                                </form>
-                                <form class="cell_buttons" method="POST" action="/admin/products/edit">
-                                    <input type="hidden" name="id" value="<?= $product->id ?>">
-                                    <button class="btn btn-warning button-actions button-action-edit" type="submit"><span class="fas fa-pen"></span></button>
-                                </form>
-                                <form class="cell_buttons" method="POST" action="/admin/products/delete">
-                                    <input type="hidden" name="id" value="<?= $product->id ?>">
-                                    <button class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
-                                </form>
-                            </div>
-                        </td>
+                        <td><?= $product->category; ?></td>
+                        <td><?= $product->details; ?></td>
+                        <td><?= $product->description; ?></td>
                     </tr>
-                <?php endforeach; ?>  
+            
             </tbody>
 
         </table>
         </div>
     </div>
+
+    <a href="/admin/products" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
+
 </main>
 
 <script src="../../../public/js/jquery-3.5.1.slim.min.js" ></script>

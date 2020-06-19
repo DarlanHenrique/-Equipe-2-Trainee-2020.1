@@ -11,6 +11,8 @@ $router->get('admin', 'PagesController@restricArea');
 
 //rota leva a listagem de produtos
 $router->get('admin/products', 'ProductsController@index');
+
+//rota leva a deleção
 $router->post('admin/products/delete', 'ProductsController@delete');
 
 //rota criagem de novos produtos
@@ -18,4 +20,7 @@ $router->get('admin/products/create', 'ProductsController@create');
 $router->post('admin/products/create', 'ProductsController@store');
 
 //rota view produtos
-$router->get('admin/products/select', 'ProductsController@select');
+$router->post('admin/products/prod', 'ProductsController@show');
+
+//rota edit produtos
+$router->post('admin/products/edit', 'ProductsController@edit');

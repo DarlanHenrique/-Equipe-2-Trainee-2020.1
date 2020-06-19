@@ -69,4 +69,22 @@ class QueryBuilder
             $qry->bindValue(":id", $id);
             $qry->execute();
     }
+
+    public function show($table, $id)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE id = {$id}";
+           
+            $qry = $this->pdo->prepare($sql);
+            $qry->execute();
+            return $qry->fetch(PDO::FETCH_OBJ);
+    }
+
+        public function edit($table, $id)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE id = {$id}";
+           
+            $qry = $this->pdo->prepare($sql);
+            $qry->execute();
+            return $qry->fetch(PDO::FETCH_OBJ);
+    }
 }    

@@ -22,7 +22,7 @@
     <meta name="description" content="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
 </head>
 
-<body>
+<body puzzle>
 
     <header>
         <?php require('NavBar-Footer/html/header.php'); ?>
@@ -39,21 +39,21 @@
         <div class="card-group">
             <div class="card cardwho border-0 mb-3">
                 <img class="card-img-top1" src="/../public/img/missao-rx.png" alt="Missão">
-                <div class="card-body">
+                <div class="card-body puzzle">
                     <p class="card-text1" style='color: rgb(98, 0, 255)'>Em primeiro lugar, visamos a satisfação dos clientes e o bem-estar das crianças, mas também prezamos a sustentabilidade. Contamos com uma produção sustentável, sem agressão ao meio-ambiente e na qual todos em seu ciclo produtivo são
                         beneficiados. Geramos empregos em diversas áreas de atuação, além de termos condições bem-definidas de trabalho, prezarmos a ética no ambiente empresarial e respeitarmos o meio ambiente.</p>
                 </div>
             </div>
             <div class="card cardwho border-0 mb-3">
                 <img class="card-img-top2" src="/../public/img/visao-am.png" alt="Visão">
-                <div class="card-body">
+                <div class="card-body puzzle">
                     <p class="card-text1" style='color: rgb(253, 152, 0)'>Nossa loja online já está pronta e disponível para envio a todo país, porém contamos com lojas físicas apenas no estado de Minas Gerais, o que não beneficia 100% da população. Temos o intuito de expandir novas filiais: Até o final
                         de 2021 planejamos abrir filiais em cada uma das regiões do país, e estamos estudando para que até o final de 2023, possamos ter, ao menos, uma filial em cada estado do país.</p>
                 </div>
             </div>
             <div class="card border-0 mb-3">
                 <img class="card-img-top3" src="/../public/img/valores-az.png" alt="Valores">
-                <div class="card-body">
+                <div class="card-body puzzle">
                     <p class="card-text1" style='color: rgb(0, 110, 255)'>Utilizamos tags de Papel Semente para nossos produtos, além de usarmos linhas e produtos feitos só com algodão orgânico e sustentável (naturalmente hipoalergênico) e fibra natural que deixa a pele respirar e permite uma regulação térmica
                         otimizada. Nenhum metal pesado é usado na preparação do tecido, utilizamos sempre estampas do lado de fora e tintas à base de água, botões de pressão sem níquel e, para completar, fazemos questão de não utilizar plástico em nossas
                         embalagens.</p>
@@ -76,6 +76,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-</body>
+</body puzzle>
 
 </html>
