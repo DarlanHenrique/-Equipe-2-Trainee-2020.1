@@ -7,20 +7,20 @@
                 }
                 /* INICIO NAVBAR */
                 
-                header{
+                .header-directrix{
                     background: linear-gradient(#58D3F7, #FEFEFE)!important;
-                    font-family:'Amatic SC', cursive !important;
-                    font-size: 50px !important;
+                    font-family:'Amatic SC', cursive;
+                    font-size: 50px;
                  }
                   
-                .container {   
+                .container-header {   
                     width: 100%;
                 }
-                @media screen and (max-width: 600px) {
-                    .pesquisa {
+                @media screen and (max-width: 1000px) {
+                    .search{
                       display: none;
                     }
-                  }
+                }
                 /* Banner Entre </header> e <main>/ */
                 
                 .banner-header {
