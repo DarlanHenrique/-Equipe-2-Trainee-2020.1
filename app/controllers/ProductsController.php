@@ -61,6 +61,14 @@ class ProductsController
         return view('admin/prod', compact('product'));
     }
 
+    public function showzin()
+    
+    {
+        $product = App::get('database')->show('products', $_POST['id']);
+
+        return view('viewprod', compact('product'));
+    }
+
     public function edit()
     
     {

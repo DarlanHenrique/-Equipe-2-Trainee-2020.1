@@ -21,6 +21,14 @@ class PagesController {
         return view('pgvendas', compact('products'));
     }
 
+      //mostra pagina da View de Produtos.
+      public function viewprod(){
+
+        $products = App::get('database')->selectAll('products');
+
+        return view('viewprod', compact('products'));
+    }
+
     //mostra pagina Quem somos.
     public function about() {
 
@@ -44,6 +52,8 @@ class PagesController {
 
         return view('admin/homeadm');
     }
+
+
 
     
 

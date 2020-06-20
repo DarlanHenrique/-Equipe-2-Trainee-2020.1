@@ -6,6 +6,9 @@ $router->get('produtos', 'PagesController@products');
 $router->get('sobre', 'PagesController@about');
 $router->get('contato', 'PagesController@contact');
 
+//rota viewprod
+$router->post('produtos/viewprod', 'ProductsController@showzin');
+
 //rota painel de controle
 $router->get('admin', 'PagesController@restricArea');
 
