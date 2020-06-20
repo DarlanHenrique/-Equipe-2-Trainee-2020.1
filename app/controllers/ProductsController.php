@@ -24,23 +24,13 @@ class ProductsController
     }
     public function store()
         {
-            if(isset($_FILES['image'])){
-                $extensao = strtolower(substr($_FILES['image']['name'], -4));
-                $novo_nome = md5(time()) . $extensao;
-                $diretorio = "/assets/img/";
-
-                move_uploaded_file($_FILES['image']['tpm_name'], $diretorio.$novo_nome);
-            }
-            // $url_image = isset($_POST["url_image"]) ? strip_tags(filter_input(INPUT_POST, "url_image")) : NULL;
-
-            App::get('database')->insert('products', [
-                    'name' => $_POST['name'],
-                    'price' => $_POST['price'],
-                    'category' => $_POST['category'],
-                    'details' => $_POST['details'],
-                    'description' => $_POST['description'],
-                    'image' => $_POST['image']
-                ]);
+        App::get('database')->insert('products', [
+                'name' => $_POST['name'],
+                'price' => $_POST['price'],
+                'category' => $_POST['category'],
+                'details' => $_POST['details'],
+                'description' => $_POST['description']
+            ]);
     
             return redirect('admin/products');
         }
@@ -59,14 +49,6 @@ class ProductsController
         $product = App::get('database')->show('products', $_POST['id']);
 
         return view('admin/prod', compact('product'));
-    }
-
-    public function showzin()
-    
-    {
-        $product = App::get('database')->show('products', $_POST['id']);
-
-        return view('viewprod', compact('product'));
     }
 
     public function edit()
