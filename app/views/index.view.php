@@ -26,42 +26,7 @@
 
   <body>
 
-  <header>
-      <nav class="navbar navbar-expand-lg navbar-light header-directrix">
-        <div class="container container-header">
-          <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
-            <img class="logo" src="../../public/img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã." >
-          </a>
-
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Início<span class="sr-only">(Página atual)</span></a>
-              </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Produtos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Quem somos</a>
-                </li>
-            </ul>
-          </div>      
-          <form class="form-inline search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
-            <button type="submit" class="btn btn-outline-dark">&#8981</button>
-          </form>
-        </div>            
-      </nav>
-
-      <img class="banner-header" src="../../public/img/cabecalho.png" alt="Banner do Site">
-    </header>
+  <?php require('partials/navbar.php'); ?>
 
 
     <main>
@@ -123,26 +88,7 @@
       </div>
     </main>
 
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm"></div>
-          <div class="col-sm flex-center text-center meio">
-            <img src="../../public/img/Da_lã_Logo_2.png" width="90" height="60" alt="Logotipo Da Lã">
-            <p class="copyright">&copy; copyright - 2020 - Da Lã comércio eletrônico - LTDA </p>
-          </div>
-          <div class="col-sm col align-self-center flex-center text-center final">
-            
-            <p>Acompanhe nossas mídias sociais e fique por dentro das novidades!</p>
-            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/DarlanHenrique/-Equipe-2-Trainee-2020.1"><i class="fab fa-github"></i></a>
-            
-          </div>
-        </div>
-      </div>  
-    </footer>  
+    <?php require('partials/footer.php'); ?>
 
 
     <!-- JavaScript (Opcional) -->
