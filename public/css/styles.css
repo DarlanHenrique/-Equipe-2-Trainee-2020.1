@@ -307,6 +307,9 @@ footer p {
     .col1pv {
         width: 50%;
     }
+    .prod-buttons:hover {
+       background-color:  none;
+    }
     .descrprod {
         padding-top: 0%;
         width: 50%;

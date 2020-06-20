@@ -21,6 +21,15 @@ class PagesController {
         return view('pgvendas', compact('products'));
     }
 
+    //Mostra pagina do Produto.
+     public function product() {
+
+        $product = App::get('database')->show('products', $_POST['id']);
+
+        return view('view-product', compact('product'));
+    }
+
+
     //mostra pagina Quem somos.
     public function about() {
 
