@@ -78,15 +78,15 @@
                             <?php foreach ($products as $product) : ?>    
                                 <div class="col">
                                     <div class="cardprdpg">
-                                        <form  method="POST" action="produtos/viewprod">
+                                        <form  method="POST" action="/produtos/viewprod">
                                             <input type="hidden" name="id" value="<?= $product->id ?>">
                                                 <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
-                                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
+                                                    <img class="card-img-top rounded" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
                                                 </button> 
                                         </form>
                                        
                                         <div class="card-body cardbodyprdpg">
-                                            <h5 class="card-title cardtitleprdpg"><a href="#"><?= $product->name; ?></a></h5>
+                                            <h5 class="card-title cardtitleprdpg"><?= $product->name; ?></h5>
                                             <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
                                         </div>
                                     </div>

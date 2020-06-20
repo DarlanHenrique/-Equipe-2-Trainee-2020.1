@@ -124,7 +124,7 @@ body {
 }
 
 
-/* INICIO NAVBAR */
+/* NAVBAR */
 
 .header-directrix {
     background: linear-gradient(#58D3F7, #FEFEFE)!important;
@@ -142,9 +142,6 @@ body {
         display: none;
     }
 }
-
-
-/* Banner Entre </header> e <main>/ */
 
 .banner-header {
     width: 100%;
@@ -180,8 +177,16 @@ footer p {
     padding: 5px;
 }
 
+.icons {
+    color: #141414;
+}
 
-/* FIM FOOTER */
+.icons:hover {
+    color: rgb(4, 14, 134);
+}
+
+
+/* FINAL FOOTER */
 
 
 /* INICIO PAG DE VENDAS */
@@ -218,28 +223,24 @@ footer p {
 /*card produto*/
 
 .cardprdpg {
-    width: 200px;
+    width: 197px;
     border: 0px;
     padding-top: 20px;
 }
 
-.cardimgprdpg {
-    width: 50%;
-    border-radius: 0px;
+.cardtitleprdpg {
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 1px;
 }
 
 .cardbodyprdpg {
     text-align: center;
 }
 
-.cardtitleprdpg a {
-    color: #000000;
+.cardbodyprdpg p {
     font-size: 22px;
-    letter-spacing: 1px;
-}
-
-.cardtxprdpg {
-    font-size: 20px;
+    line-height: 22px;
 }
 
 
@@ -568,31 +569,30 @@ footer p {
 
 /* INICIO VIEW PRODUTO */
 
+.carddeckprdpg {
+    width: 100%;
+}
+
 .cardprdpg {
     padding-left: 0px;
     margin-left: 0px;
 }
 
 .cardimgprdpg {
+    width: 300px;
+}
+
+.carddetails {
     width: 380px;
 }
 
-.descrprod {
-    padding-top: 15px;
-    text-align: center;
-}
-
-.titleprod {
-    font-size: 24px;
-}
-
-.txtprod {
-    font-size: 20px;
+.col3prdpg {
+    padding-left: 40px;
 }
 
 @media (max-width: 768px) {
     .cardimgprdpg {
-        width: 350px;
+        width: 260px;
     }
     .descrprod {
         padding-left: 15px;
@@ -607,7 +607,7 @@ footer p {
         font-size: 18px;
     }
     .cardimgprdpg {
-        width: 180px;
+        width: 260px;
     }
     .descrprod {
         width: 160px;
@@ -620,9 +620,15 @@ footer p {
     }
 }
 
+@media (max-width: 375px) {
+    .cardimgprdpg {
+        width: 220px;
+    }
+}
+
 @media (max-width: 320px) {
     .cardimgprdpg {
-        width: 140px;
+        width: 180px;
     }
     .descrprod {
         width: 130px;
