@@ -4,28 +4,33 @@
     <!-- Meta tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
+    <!--Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="../../public/css/reset.css">
+    <link rel="stylesheet" href="../../public/css/styles.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
 
-    <title> Da Lã - Boutique infantil</title>
+    <title>Da lã | Roupas Infantis</title>
+      <meta name="description" content ="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
+
+
+    <title> Da Lã | Roupas Infantis</title>
   </head>
 
   <body>
 
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-light header-directrix">
+        <div class="container container-header">
           <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
-            <img class="logo" src="../img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" >
+            <img class="logo" src="../../public/img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã." >
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
@@ -48,23 +53,23 @@
                 </li>
             </ul>
           </div>      
-            <form class="form-inline pesquisa">
-              <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
-              <button type="submit" class="btn btn-outline-dark">&#8981</button>
-            </form>
+          <form class="form-inline search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+            <button type="submit" class="btn btn-outline-dark">&#8981</button>
+          </form>
         </div>            
-       </nav>
+      </nav>
+
+      <img class="banner-header" src="../../public/img/cabecalho.png" alt="Banner do Site">
     </header>
 
+
     <main>
-      <div class="banner">
-        <img src="../img/header.png" class="w-100">
-      </div>
 
       <div class="home-main" align="center">
 
-        <img class="side-clouds float-right col-2" src="../img/clouds-right.png">
-        <img class="side-clouds float-left col-2" src="../img/clouds-left.png">
+        <img class="side-clouds float-right col-2" src="../../public/img/clouds-right.png">
+        <img class="side-clouds float-left col-2" src="../../public/img/clouds-left.png">
 
         <div id="carouselExampleIndicators" class="carousel slide home-carousel col-xl-8 col-lg-8 col-md-9 col-sm-12 p-0 mt-xl-50" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -74,13 +79,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="../img/carousel1.jpg" alt="Dois meninos e duas meninas">
+              <img class="d-block w-100" src="../../public/img/carousel1.jpg" alt="Dois meninos e duas meninas">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="../img/carousel2.jpg" alt="Duas meninas e dois meninos">
+              <img class="d-block w-100" src="../../public/img/carousel2.jpg" alt="Duas meninas e dois meninos">
             </div>
             <div class="carousel-item item-carrossel">
-              <img class="d-block w-100" src="../img/carousel3.jpg" alt="Uma menina e um menino">
+              <img class="d-block w-100" src="../../public/img/carousel3.jpg" alt="Uma menina e um menino">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -98,42 +103,22 @@
           <h1>Nossos últimos produtos:</h1>
 
           <ul>
-            <li class="d-inline-block">
-              <div class="p-0">
-                <div class="card product">
-                  <img class="card-img-top" src="../img/roupa2.jpeg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title product-name">Body de Animais</h5>
-                    <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
+            <?php foreach ($products as $product) : ?>
+              <li class="d-inline-block">
+                <div class="p-0">
+                  <div class="card product">
+                    <img class="card-img-top" src="<?= $product->image; ?>" alt="<?= $product->name; ?>">
+                    <div class="card-body">
+                      <h5 class="card-title product-name"><?= $product->name; ?></h5>
+                      <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="d-xl-inline-block d-lg-inline-block d-md-block d-sm-block">
-              <div>
-                <div class="card product">
-                  <img class="card-img-top" src="../img/roupa3.jpeg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title product-name">Macacão Lacinho</h5>
-                    <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="d-xl-inline-block d-lg-inline-block d-md-block d-sm-block">
-              <div class="w-lg-100">
-                <div class="card product">
-                  <img class="card-img-top" src="../img/roupa4.jpeg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title product-name">Macacão Animais</h5>
-                    <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
-                  </div>
-                </div>
-              </div>
-            </li>
+              </li>
+            <?php endforeach; ?>
           </ul>
 
-            <a href="#" class="btn btn-outline-warning more col-sm-10">Ver mais produtos &#10140;</a>
+            <a href="pgvendas.html" class="btn btn-outline-warning more col-sm-10">Ver mais produtos &#10140;</a>
         </div>
       </div>
     </main>
@@ -143,7 +128,7 @@
         <div class="row">
           <div class="col-sm"></div>
           <div class="col-sm flex-center text-center meio">
-            <img src="../img/Da_lã_Logo_2.png" width="90" height="60" alt="Logotipo Da Lã">
+            <img src="../../public/img/Da_lã_Logo_2.png" width="90" height="60" alt="Logotipo Da Lã">
             <p class="copyright">&copy; copyright - 2020 - Da Lã comércio eletrônico - LTDA </p>
           </div>
           <div class="col-sm col align-self-center flex-center text-center final">
