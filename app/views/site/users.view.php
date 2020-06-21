@@ -1,4 +1,4 @@
-<?php require('partials/head.php'); ?>
+<?php require('partials/navbar.php'); ?>
 
     <h1>All Users</h1>
 

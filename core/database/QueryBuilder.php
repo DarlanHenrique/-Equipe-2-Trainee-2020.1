@@ -37,6 +37,20 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+        /**
+     * Select last three records from a database table.
+     *
+     * @param string $table
+     */
+    public function selectLastThree($table)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} order by id desc limit 3");
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
     /**
      * Insert a record into a table.
      *
@@ -59,6 +73,32 @@ class QueryBuilder
         } catch (\Exception $e) {
             //
         }
+    }
+    public function delete($table, $id)
+    {
+        $sql = "DELETE FROM " . $table . " WHERE id = :id";
+            $qry = $this->pdo->prepare($sql);
+            $qry->bindValue(":id", $id);
+            $qry->execute();
+    }
+
+    public function show($table, $id)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE id = {$id}";
+           
+            $qry = $this->pdo->prepare($sql);
+            $qry->execute();
+            return $qry->fetch(PDO::FETCH_OBJ);
+    }
+
+    //Functions for EDIT.
+   
+    public function update($table, $id)
+    {
+        $sql = "UPDATE FROM " . $table . " WHERE id = :id";
+            $qry = $this->pdo->prepare($sql);
+            $qry->bindValue(":id", $id);
+            $qry->execute();
     }
 }
 

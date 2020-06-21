@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Jun-2020 às 22:06
+-- Tempo de geração: 20-Jun-2020 às 21:24
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `treino`
+-- Banco de dados: `dala`
 --
 
 -- --------------------------------------------------------
@@ -42,8 +42,10 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `price`, `category`, `details`, `description`, `image`) VALUES
-(1, 'Macacão Lacinho', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg'),
-(2, 'Macacão Lacinho', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg');
+(1, '1', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg'),
+(7, '2', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg'),
+(8, '3', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg'),
+(9, '4', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg');
 
 -- --------------------------------------------------------
 
@@ -90,7 +92,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `users`

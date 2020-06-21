@@ -11,7 +11,7 @@ class PagesController
      */
     public function home()
     {
-        $users = App::get('database')->selectAll('products');
+        $products = App::get('database')->selectLastThree('products');
 
         return view('index', compact('products'));
     }
