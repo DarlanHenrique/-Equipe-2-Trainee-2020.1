@@ -45,7 +45,7 @@
             <thead class="thead-dark">
               <tr>
                 <th scope="col">Nome</th>
-                <th scope="col">N° de Peças</th>
+                
                 <th scope="col">Gênero</th>
                 <th scope="col">Ações</th>
               </tr>
@@ -57,7 +57,6 @@
                 <tr>
                   <td><?= 'Nenhum cadastro' ?></td>
                   <td><?= 'Nenhum cadastro' ?></td>
-                  <td><?= 'Nenhum cadastro' ?></td>
                   <td><?= '' ?></td>
                 </tr>
               <?php } else{
@@ -65,7 +64,6 @@
               foreach ($categories as $category) : ?>
                 <tr>
                   <td><?= $category->name; ?></td>
-                  <td><?= $category->amount; ?></td>
                   <td><?= $category->gender; ?></td>
                   <td>
                     <div class="button-align">

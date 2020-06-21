@@ -36,7 +36,7 @@ class PagesController {
     }
 
     //mostra pagina da area Restrita.
-    public function restricArea(){
+    public function restrictArea(){
 
         return view('admin/homeadm');
     }

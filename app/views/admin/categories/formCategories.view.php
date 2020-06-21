@@ -31,13 +31,13 @@
 		    				<label for="name" >Nome:</label>
 		    				<input type="text" name="name" class="form-control" required ="required" id="name"  placeholder="Nome da Categoria">
 		  				</div>
-						  <div class="form-group col-sm-12 text-category">
-		    				<label for="amount">Numero de Peças:</label>
-		    				<input type="text" class="form-control" id="amount" required ="required" name="amount"  placeholder="Numero de Peças">
-		  				</div>
+						  
 						<div class="form-group col-sm-12 text-category">
 		    				<label for="gender">Gênero:</label>
-		    				<input type="text" class="form-control" required ="required" name="gender" id="gender"  placeholder="Gênero">
+		    				<select class="custom-select form-control" name="gender" id="gender">
+  								<option value="masculino">Masculino</option>
+  								<option value="feminino">Feminino</option>
+							</select>
 		  				</div>
 							<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Cadastrar</button>
 		    				<a href="/admin/categorias" class="btn btn-warning button-actions button-action-edit"> Voltar </a>

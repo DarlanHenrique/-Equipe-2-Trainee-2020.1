@@ -25,7 +25,6 @@ class CategoriesController {
 
         App::get('database')->insert('categories', [
             'name' => $_POST['name'],
-            'amount' => $_POST['amount'],
             'gender' => $_POST['gender']
         ]);
 
@@ -38,12 +37,14 @@ class CategoriesController {
         return redirect('admin/categorias');
     }
 
-    public function edit($id){
-        app::get('database')->edit('categories', [
-            'name' => $_POST['name'],
-            'amount' => $_POST['amount'],
-            'gender' => $_POST['gender']
-        ] ,$_POST['id']);
+
+    public function update(){
+        app::get('database')->edit(
+            'categories', 
+            $name = $_POST['name'], 
+            $gender = $_POST['gender'], 
+            $id = $_POST['id']
+        );
 
         return redirect('admin/categorias');
     }
@@ -56,11 +57,10 @@ class CategoriesController {
 
     public function showFormCategoriesEdit(){
 
-        return view('admin/categories/formEditCategories');
+        $category = app::get('database')->show('categories', $_GET['id']);
+
+        return view('admin/categories/formEditCategories', compact('category'));
     }
 
-
-    public function view(){
-        
-    }
+    
 }
