@@ -13,26 +13,36 @@ class ProductsController
     {
         $products = App::get('database')->selectAll('products');
 
-        return view('admin/products', compact('products'));
+        return view('admin/productsadmin/products', compact('products'));
     }
 
     public function create()
     {
         $products = App::get('database')->selectAll('products');
 
-        return view('admin/create', compact('products'));
+        return view('admin/productsadmin/create', compact('products'));
     }
     public function store()
         {
-        App::get('database')->insert('products', [
-                'name' => $_POST['name'],
-                'price' => $_POST['price'],
-                'category' => $_POST['category'],
-                'details' => $_POST['details'],
-                'description' => $_POST['description']
-            ]);
+            if(isset($_FILES['image'])){
+                $extensao = strtolower(substr($_FILES['image']['name'], -4));
+                $novo_nome = md5(time()) . $extensao;
+                $diretorio = "/assets/img/";
+
+                move_uploaded_file($_FILES['image']['tpm_name'], $diretorio.$novo_nome);
+            }
+            // $url_image = isset($_POST["url_image"]) ? strip_tags(filter_input(INPUT_POST, "url_image")) : NULL;
+
+            App::get('database')->insert('products', [
+                    'name' => $_POST['name'],
+                    'price' => $_POST['price'],
+                    'category' => $_POST['category'],
+                    'details' => $_POST['details'],
+                    'description' => $_POST['description'],
+                    'image' => $_POST['image']
+                ]);
     
-            return redirect('admin/products');
+            return redirect('admin/productsadmin/products');
         }
 
     public function delete()
@@ -40,7 +50,7 @@ class ProductsController
        
        App::get('database')->delete('products', $_POST['id']);
     
-       return redirect('admin/products');
+       return redirect('admin/productsadmin/products');
     }
 
     public function show()
@@ -48,7 +58,7 @@ class ProductsController
     {
         $product = App::get('database')->show('products', $_POST['id']);
 
-        return view('admin/prod', compact('product'));
+        return view('admin/productsadmin/prod', compact('product'));
     }
 
     public function edit()
@@ -56,6 +66,6 @@ class ProductsController
     {
         $product = App::get('database')->edit('products', $_POST['id']);
 
-        return view('admin/edit', compact('product'));
+        return view('admin/productsadmin/edit', compact('product'));
     }
 }

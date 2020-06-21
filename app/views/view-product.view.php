@@ -82,7 +82,7 @@
 
                                 <div class="col col2prdpg ">
                                     <div class="cardprdpg ">
-                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../public/img/roupa1.jpeg " alt="Imagem de capa do card ">
+                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
                                     </div>
                                 </div>
 

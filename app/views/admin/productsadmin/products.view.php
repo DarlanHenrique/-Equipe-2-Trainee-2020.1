@@ -11,8 +11,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 
 <!-- Links css -->
-<link rel="stylesheet" href="../../public/css/styles.css">
-<link rel="stylesheet" href="../../public/css/reset.css">
+<link rel="stylesheet" href="../../../public/css/styles.css">
+<link rel="stylesheet" href="../../../public/css/reset.css">
 <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
 
 <!-- Fonts -->
@@ -35,7 +35,7 @@
     <div class="container mt-5">
         <nav>
             <div>
-            <a class="back-menu" href="#"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
+            <a class="back-menu" href="/admin"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
             </div>
         </nav>
 
@@ -50,7 +50,7 @@
     <div class="row" >
         <div class="col-sm-12 col-lg-12 tab_prod">
             <div>
-                <a href="products/create" class="btn btn-primary button-add btn-sm"><i class="fas fa-plus"></i> Adicionar</a>               
+                <a href="/admin/productsadmin/products/create" class="btn btn-primary button-add btn-sm"><i class="fas fa-plus"></i> Adicionar</a>               
             </div>
         <table class="table table-striped table-bordered table-responsive-md-1 table-responsive-sm-5">
            
@@ -71,15 +71,15 @@
                         <td><?= $product->price; ?></td>
                         <td>
                             <div>
-                                <form class="cell_buttons" method="POST" action="/admin/products/prod">
+                                <form class="cell_buttons" method="POST" action="/admin/productsadmin/products/prod">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">
                                     <button class="btn btn-success button-actions button-action-view" type="submit"><span class="fas fa-eye"></span></button>
                                 </form>
-                                <form class="cell_buttons" method="POST" action="/admin/products/edit">
+                                <form class="cell_buttons" method="POST" action="/admin/productsadmin/products/edit">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">
                                     <button class="btn btn-warning button-actions button-action-edit" type="submit"><span class="fas fa-pen"></span></button>
                                 </form>
-                                <form class="cell_buttons" method="POST" action="/admin/products/delete">
+                                <form class="cell_buttons" method="POST" action="/admin/productsadmin/products/delete">
                                     <input type="hidden" name="id" value="<?= $product->id ?>">
                                     <button class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
                                 </form>

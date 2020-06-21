@@ -13,16 +13,16 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Início</a>
+                    <a class="nav-link" href="/">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Produtos</a>
+                    <a class="nav-link" href="/products">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="/contato">Contato</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Quem somos</a>
+                  <a class="nav-link" href="/aboutus">Quem somos</a>
                 </li>
               </ul>
             </div>      
