@@ -24,7 +24,7 @@
 
 <body>
     <header>
-      <?php require('NavBar-Footer/html/header.php'); ?>
+      <?php require('partials/header.php'); ?>
     </header>
 
     <main>
@@ -99,7 +99,7 @@
         </div>
     </main>
     <footer>
-      <?php require('NavBar-Footer/html/footer.php'); ?>
+      <?php require('partials/footer.php'); ?>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js "></script>
