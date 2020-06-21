@@ -47,27 +47,17 @@
                     <nav id="navbar-exemplo3 " class="navbar navbar-light ">
                         <div class="sidebar ">
 
-                            <a class="nav-link text-dark" href="#item-1 ">  &#x025B8; Feminino </a>
+                            <a class="nav-link text-dark" href="#item-1 ">  &#x025B8; Produtos </a>
                             <nav class="nav nav-pills flex-column ">
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Blusas</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Bermudas</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Saias</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Vestidos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Vestidos</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
-                            </nav>
-                            <br>
-                            <a class="nav-link text-dark" href="#item-2 "> &#x025B8; Masculino</a>
-                            <nav class="nav nav-pills flex-column">
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-1 ">Blusas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-2 ">Bodies</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Calças</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Bermudas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-5 ">Conjuntos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-6 ">Pijamas</a>
                             </nav>
 
                         </div>
@@ -92,6 +82,7 @@
                                             <div class="card-header bg-transparent border-dark cardtitleprdpg"><?= $product->name; ?></div>
                                             <div class="card-body text-dark ">
                                                 <p class="card-text cardtxtprdpg"><?= $product->price; ?><p>
+                                                <p class="card-text cardtxtprdpg"><?= $product->gender; ?><p>
                                                 <p class="card-text cardtxtprdpg"><?= $product->description; ?></p>
                                             </div>
                                         </div>

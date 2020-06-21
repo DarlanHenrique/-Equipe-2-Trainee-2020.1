@@ -50,6 +50,7 @@
                     <th scope="col">Código</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Preço</th>
+                    <th scope="col">Genero</th>
                     <th scope="col">Categoria</th>
                     <th scope="col">Detalhes</th>
                     <th scope="col">Descrição</th>
@@ -62,6 +63,7 @@
                         <td><?= '#' . $product->id; ?></td>
                         <td><?= $product->name; ?></td>
                         <td><?= $product->price; ?></td>
+                        <td><?= $product->gender; ?></td>
                         <td><?= $product->category; ?></td>
                         <td><?= $product->details; ?></td>
                         <td><?= $product->description; ?></td>
@@ -73,7 +75,7 @@
         </div>
     </div>
 
-    <a href="/admin/products" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
+    <a href="/admin/productsadmin/products" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
 
 </main>
 

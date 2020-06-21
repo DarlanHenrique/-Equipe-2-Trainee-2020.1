@@ -39,6 +39,10 @@
 								<label for="price">Preço do Produto:</label>
 								<input type="text" name="price" class="form-control" required id="price" placeholder="Insira o Preço">
 						</div>
+						<div class="form-group col-sm-12 text-category">
+								<label for="gender">Genero do Produto:</label>
+								<input type="text" name="gender" class="form-control" required id="gender" placeholder="Insira o Genero">
+						</div>
 
 						<div class="form-group col-sm-12 text-category">
 								<label for="category">Categoria do Produto:</label>

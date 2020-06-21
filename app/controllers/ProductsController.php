@@ -36,6 +36,7 @@ class ProductsController
             App::get('database')->insert('products', [
                     'name' => $_POST['name'],
                     'price' => $_POST['price'],
+                    'gender' => $_POST['gender'],
                     'category' => $_POST['category'],
                     'details' => $_POST['details'],
                     'description' => $_POST['description'],
