@@ -407,140 +407,140 @@
 
                 /* Inicio Css View User/Categories/products*/
 
-.main-user{
-    width: 100%;
-}
+                .main-user{
+                    width: 100%;
+                }
 
-.title-user{
-    padding: 30px;
-    font-size: 50px;
-    text-align: center;
-}
-.font-user{
-    font-family: 'Montserrat', sans-serif;
-}
+                .title-user{
+                    padding: 30px;
+                    font-size: 50px;
+                    text-align: center;
+                }
+                .font-user{
+                    font-family: 'Montserrat', sans-serif;
+                }
 
-.table-user{
-    text-align: center;
-}
-.button-add{
-   margin-left: 80%;
-   margin-bottom: 20px;
-   font-size: 18px;
-}
+                .table-user{
+                    text-align: center;
+                }
+                .button-add{
+                margin-left: 80%;
+                margin-bottom: 20px;
+                font-size: 18px;
+                }
 
-.button-add:hover{
-    color:#007bff;
-    background-color: white;
-} 
+                .button-add:hover{
+                    color:#007bff;
+                    background-color: white;
+                } 
 
-.back-menu{
-    display: block;
-    width: 150px;
-    height: 40px;
-    line-height: 40px;
-    background-color: rgb(243, 223, 46);
-    color: black;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 17px;
-    margin-bottom: 10px;
-}
+                .back-menu{
+                    display: block;
+                    width: 150px;
+                    height: 40px;
+                    line-height: 40px;
+                    background-color: rgb(243, 223, 46);
+                    color: black;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    text-align: center;
+                    font-size: 17px;
+                    margin-bottom: 10px;
+                }
 
-.back-menu:hover{
-    background-color: #ffeb35;
-    text-decoration: none;
-    color: grey;
-}
+                .back-menu:hover{
+                    background-color: #ffeb35;
+                    text-decoration: none;
+                    color: grey;
+                }
 
-.button-actions{
-    margin-left: 5px;
-    color: white;
-    padding-top: 5px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-}
+                .button-actions{
+                    margin-left: 5px;
+                    color: white;
+                    padding-top: 5px;
+                    padding-right: 10px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                }
 
-.button-action-view:hover{
-    flex-direction: row;
-    background-color: white;
-    text-decoration: none;
-    color:#28a745;
-    
-}
+                .button-action-view:hover{
+                    flex-direction: row;
+                    background-color: white;
+                    text-decoration: none;
+                    color:#28a745;
+                    
+                }
 
-.button-action-edit:hover{
-    color:#ffc107;
-    background-color: white;
-}
+                .button-action-edit:hover{
+                    color:#ffc107;
+                    background-color: white;
+                }
 
-.button-action-delete:hover{
-    color: #dc3545;
-    background-color: white;
-}
+                .button-action-delete:hover{
+                    color: #dc3545;
+                    background-color: white;
+                }
 
-.button-align{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+                .button-align{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                }
 
-/* Fim Css View User */
+                /* Fim Css View User */
 
-/* MAIN  ADMINISTRATIVE PAGE */
+                /* MAIN  ADMINISTRATIVE PAGE */
 
-.home-directrix {
-    font-family: 'Montserrat', sans-serif;
-    height: 800px;   /* Footer no fim da página, explico no fim do css. */
-}
+                .home-directrix {
+                    font-family: 'Montserrat', sans-serif;
+                    height: 800px;   /* Footer no fim da página, explico no fim do css. */
+                }
 
-.home-directrix h1 {    
-    font-size: 30px;
-    text-align: center;
-    padding-bottom: 50px;
-    padding-top: 10px;
-}
-.home-directrix h5 {
-    font-size: 18px;
-}
-/* Responsive Main */
+                .home-directrix h1 {    
+                    font-size: 30px;
+                    text-align: center;
+                    padding-bottom: 50px;
+                    padding-top: 10px;
+                }
+                .home-directrix h5 {
+                    font-size: 18px;
+                }
+                /* Responsive Main */
 
-@media screen and (max-width: 425px){
-    .media-home {
-        margin-left:35px;
-        
-    }
-}
-@media screen and (max-width: 375px){
-    .media-home {
-        margin-left:12px;
-        
-    }
-}
-@media screen and (max-width: 320px){
-    .media-home {
-        margin-left: 0px;
-        margin-right:6px;
-        
-    }
-}
-/* END OF MAIN ADMINISTRATIVE PAGE */
+                @media screen and (max-width: 425px){
+                    .media-home {
+                        margin-left:35px;
+                        
+                    }
+                }
+                @media screen and (max-width: 375px){
+                    .media-home {
+                        margin-left:12px;
+                        
+                    }
+                }
+                @media screen and (max-width: 320px){
+                    .media-home {
+                        margin-left: 0px;
+                        margin-right:6px;
+                        
+                    }
+                }
+                /* END OF MAIN ADMINISTRATIVE PAGE */
 
-/*Inicio Css Form-Categoria*/
+                /*Inicio Css Form-Categoria*/
 
-.text-category{
-    text-align: start;
-}
+                .text-category{
+                    text-align: start;
+                }
 
-.text-category > label{
-    margin-bottom: 5px;
-    margin-left: 20%;
-    font-weight: bold;
-}
+                .text-category > label{
+                    margin-bottom: 5px;
+                    margin-left: 20%;
+                    font-weight: bold;
+                }
 
-.text-category > input{
-    margin-left: 20%;
-    width: 60%;
-}
+                .text-category > input{
+                    margin-left: 20%;
+                    width: 60%;
+                }

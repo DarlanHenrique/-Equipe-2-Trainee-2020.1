@@ -38,14 +38,14 @@ class UsersController
             'password' => $_POST['password']
         ]);
 
-        return header("location:" . "usuarios");
+        return header("location:" . "user");
     }
 
     public function delete()
     {
         App::get('database')->delete('users', $_POST['id']);
                 
-        return redirect('user');
+        return redirect('admin/user');
     }
 
     public function show()
@@ -66,7 +66,7 @@ class UsersController
             'password'=>$_POST['password']
         ]);
 
-        return redirect('user/edit');
+        return redirect('admin/user/edit');
     }
 
 }

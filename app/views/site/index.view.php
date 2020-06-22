@@ -26,7 +26,7 @@
 
   <body>
 
-  <?php require('partials/navbar.php'); ?>
+  <?php require __DIR__ . '/../partials/navbar.php'; ?>
 
 
     <main>
@@ -88,7 +88,7 @@
       </div>
     </main>
 
-    <?php require('partials/footer.php'); ?>
+    <?php require __DIR__ . '/../partials/footer.php'; ?>
 
 
     <!-- JavaScript (Opcional) -->

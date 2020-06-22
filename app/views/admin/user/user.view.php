@@ -1,4 +1,4 @@
-<?php include('../../partials/head.php'); ?>
+<?php require __DIR__ . '/../../partials/head.php'; ?>
 
 <body>
     <main class="font-user">
@@ -17,7 +17,7 @@
         <div class="row" >
             <div class="col-sm-12 col-lg-12">
             <div> 
-                <a href="#" title="Adicionar" class="btn btn-primary button-add btn-sm" ><i class="fas fa-plus"></i> Adicionar</a>
+                <a href="user/create" title="Adicionar" class="btn btn-primary button-add btn-sm" ><i class="fas fa-plus"></i> Adicionar</a>
             </div>
             <table class="table table-striped table-bordered table-responsive-md-1 table-responsive-sm-5">
                 <thead class="thead-dark">
@@ -35,18 +35,18 @@
                             <td><?= $user->username; ?></td>
                             <td>
                             <div>
-                                <form class="cell_buttons" method="POST" action="/user/show">
+                                <form class="cell_buttons" method="POST" action="/admin/user/show">
                                     <input type="hidden" name="id" value="<?= $user->id ?>">
                                     <button class="btn btn-success button-actions button-action-view"><span class="fas fa-eye"></span></button>
                                 </form>
 
                              
-                                <form class="cell_buttons" method="POST" action="/user/edit">
+                                <form class="cell_buttons" method="POST" action="/admin/user/edit">
                                     <input type="hidden" name="id" value="<?= $user->id ?>">
                                     <button class="btn btn-warning button-actions button-action-edit"><span class="fas fa-pen"></span></button>
                                 </form>
 
-                                <form class="cell_buttons" method="POST" action="/user/delete">
+                                <form class="cell_buttons" method="POST" action="/admin/user/delete">
                                     <input type="hidden" name="id" value="<?= $user->id ?>">
                                     <button class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
                                 </form>
@@ -61,4 +61,4 @@
     </main>
 </body>
 
-<?php include('../../partials/footer.php'); ?>
+<?php require __DIR__ . '/../../partials/footer.php'; ?>

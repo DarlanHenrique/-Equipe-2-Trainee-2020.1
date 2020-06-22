@@ -26,7 +26,7 @@
 		    	</div>
 	</div>
 
-		<form method="POST" action="/admin/usuarios" class="font-user">
+		<form method="POST" action="/admin/user" class="font-user">
 			<div class="form-group col-sm-12 text-category">
 				<label for="username" >Nome:</label>
 				<input type="text" name="username" class="form-control" required ="required" placeholder="Nome de usuário">
@@ -40,7 +40,7 @@
 				<input type="text" class="form-control" required ="required" name="password"  placeholder="Senha">
 			</div>
 				<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Cadastrar</button>
-				<a href="/admin/usuarios" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
+				<a href="/admin/user" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
 		</form>
 	</div>
 </main>

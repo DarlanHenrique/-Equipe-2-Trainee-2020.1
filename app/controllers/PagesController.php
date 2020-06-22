@@ -13,7 +13,7 @@ class PagesController
     {
         $products = App::get('database')->selectLastThree('products');
 
-        return view('index', compact('products'));
+        return view('site/index', compact('products'));
     }
 
     /**
