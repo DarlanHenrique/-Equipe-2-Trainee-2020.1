@@ -25,7 +25,6 @@ class CategoriesController {
 
         App::get('database')->insert('categories', [
             'name' => $_POST['name'],
-            'gender' => $_POST['gender']
         ]);
 
         return redirect('admin/categorias');
@@ -40,9 +39,9 @@ class CategoriesController {
 
     public function update(){
         app::get('database')->edit(
-            'categories', 
-            $name = $_POST['name'], 
-            $gender = $_POST['gender'], 
+            'categories', [
+                'name' => $_POST['name'], 
+            ], 
             $id = $_POST['id']
         );
 

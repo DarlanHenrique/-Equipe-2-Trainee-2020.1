@@ -41,17 +41,27 @@ class QueryBuilder {
         }
     }
 
-    public function edit($table, $name, $gender, $id){
-                      
-        $sql = "update {$table} set name = '{$name}', gender = '{$gender}' where id = {$id}";
+    public function edit($table, $parameters, $id){
+        $counter = 1;
+        $sql = "update " . $table. " set "; 
+            foreach($parameters as $key => $value){
+                if($counter == count($parameters)){
+                    $sql .= $key . " = '" . $value . "'";
+                
+                }else {
+                    $sql .= $key . " = '" . $value . "' ,";
+                }
+                $counter += 1;
+            }
+        $sql .= " where id = {$id}";
         
         try {
-
+            
             $qry = $this->pdo->prepare($sql);
-            $qry->execute();
+            $qry->execute($parameters);
 
         } catch (\Exception $e) {
-            echo "não foi possivel alterar informações no banco " .$e;
+            echo "não foi possivel alterar informações no banco " .$e->getMessage();
         }
        
 
@@ -67,7 +77,7 @@ class QueryBuilder {
             $qry->execute();
 
         } catch (\Exception $e) {
-            echo "não foi possivel excluir informações do banco " .$e;
+            echo "não foi possivel excluir informações do banco " .$e->getMessage();
         }
     }
 

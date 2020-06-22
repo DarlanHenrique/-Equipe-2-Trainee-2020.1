@@ -45,26 +45,22 @@
             <thead class="thead-dark">
               <tr>
                 <th scope="col">Nome</th>
-                
-                <th scope="col">Gênero</th>
                 <th scope="col">Ações</th>
               </tr>
             </thead>
             <tbody>
               <?php 
 
-              if($categories == []) { ?>
+              if($categories == []) : ?>
                 <tr>
-                  <td><?= 'Nenhum cadastro' ?></td>
                   <td><?= 'Nenhum cadastro' ?></td>
                   <td><?= '' ?></td>
                 </tr>
-              <?php } else{
+              <?php else :
 
               foreach ($categories as $category) : ?>
                 <tr>
                   <td><?= $category->name; ?></td>
-                  <td><?= $category->gender; ?></td>
                   <td>
                     <div class="button-align">
                       <form method="GET" action="categorias/edit">
@@ -78,7 +74,10 @@
                     </div>
                   </td>
                 </tr>
-              <?php endforeach; }?>
+              <?php 
+                endforeach; 
+                endif; 
+              ?>
             </tbody>
           </table>
         </div>

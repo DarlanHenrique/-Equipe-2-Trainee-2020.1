@@ -31,14 +31,6 @@
 		    				<label for="name" >Nome:</label>
 		    				<input type="text" name="name" value="<?= $category->name ?>" class="form-control" id="name"  placeholder="Nome da Categoria">
 		  				</div>
-				
-						  <div class="form-group col-sm-12 text-category">
-		    				<label for="gender">Gênero:</label>
-		    				<select class="custom-select form-control" name="gender" id="gender">
-  								<option name="masculino" value="masculino">Masculino</option>
-  								<option name="feminino" value="feminino">Feminino</option>
-							</select>
-		  				</div>
 						<input type="hidden" name="id" value="<?= $category->id ?>">
 						<button type="submit" name="btn" class="btn btn-success button-actions button-action-view">Atualizar</button>
 		    			<a href="/admin/categorias" class="btn btn-warning button-actions button-action-edit">Voltar</a>
