@@ -19,10 +19,10 @@
                     <a class="nav-link" href="/products">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contato">Contato</a>
+                    <a class="nav-link" href="/contact">Contato</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/aboutus">Quem somos</a>
+                  <a class="nav-link" href="/about">Quem somos</a>
                 </li>
               </ul>
             </div>      

@@ -25,7 +25,7 @@
 <body puzzle>
 
     <header>
-        <?php require('NavBar-Footer/html/header.php'); ?>
+        <?php require('partials/header.php'); ?>
     </header>
 
 
@@ -63,7 +63,7 @@
     </main>
 
     <footer>
-        <?php require('NavBar-Footer/html/footer.php'); ?>
+        <?php require('partials/footer.php'); ?>
     </footer>
 
 

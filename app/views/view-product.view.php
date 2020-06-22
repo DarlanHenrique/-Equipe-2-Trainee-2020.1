@@ -14,8 +14,8 @@
     <title>Da Lã | Produtos</title>
     <meta name="description" content="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
 
-    <link rel="stylesheet" href="/../public/css/reset.css">
-    <link rel="stylesheet" href="/../public/css/styles.css">
+    <link rel="stylesheet" href="/../../../../public/css/reset.css">
+    <link rel="stylesheet" href="/../../../../public/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
 

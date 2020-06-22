@@ -3,8 +3,8 @@
 //Pages Routes
 $router->get('', 'PagesController@home');
 $router->get('products', 'PagesController@products');
-$router->get('aboutus', 'PagesController@about');
-$router->get('contato', 'PagesController@contact');
+$router->get('about', 'PagesController@about');
+$router->get('contact', 'PagesController@contact');
 $router->post('products/viewprod', 'PagesController@product');
 
 //rota painel de controle

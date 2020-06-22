@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js">
 
 <!-- Links css -->
-<link rel="stylesheet" href="../../public/css/styles.css">
-<link rel="stylesheet" href="../../public/css/reset.css">
-<link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
+<link rel="stylesheet" href="../../../../public/css/styles.css">
+<link rel="stylesheet" href="../../../../public/css/reset.css">
+<link rel="stylesheet" href="../../../../public/css/bootstrap.min.css">
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
