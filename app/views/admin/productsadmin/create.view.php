@@ -13,7 +13,7 @@
       
     <meta name="description" content="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
   	<link rel="stylesheet" href="/public/css/reset.css">
-  	<link rel="stylesheet" href="/../public/css/styles.css">
+  	<link rel="stylesheet" href="/../../../public/css/styles.css">
   	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
   	<link rel="sortcut icon" href="/../public/img/Da_lã_Logo_2.png" type="image/x-icon">
@@ -28,35 +28,48 @@
 		    	</div>
 		    	<div class="col-sm-12 col-lg-12 ">
                     
-                    <form method="POST" action="/admin/products/create">
+                    <form method="POST" action="/admin/productsadmin/products/create">
                     
-                    <div class="form-group col-sm-12 text-category">
-		    				<label for="name" >Nome do Produto</label>
-                            <input type="text" name="name" class="form-control" required id="name"  placeholder="Insira o Nome">
-		  			</div>
+						<div class="form-group col-sm-12 text-category">
+								<label for="name" >Nome do Produto</label>
+								<input type="text" name="name" class="form-control" required id="name"  placeholder="Insira o Nome">
+						</div>
+						
+						<div class="form-group col-sm-12 text-category">
+								<label for="price">Preço do Produto:</label>
+								<input type="text" name="price" class="form-control" required id="price" placeholder="Insira o Preço">
+						</div>
+						<div class="form-group col-sm-12 text-category">
+								<label for="gender">Genero do Produto:</label>
+								<input type="text" name="gender" class="form-control" required id="gender" placeholder="Insira o Genero">
+						</div>
+
+						<div class="form-group col-sm-12 text-category">
+								<label for="category">Categoria do Produto:</label>
+								<input type="text" name="category" class="form-control" required id="category" placeholder="Insira a Categoria">
+						</div>
+
+						<div class="form-group col-sm-12 text-category">
+								<label for="details">Detalhes do Produto:</label>
+								<input type="text" name="details" class="form-control" required id="details" placeholder="Insira os Detalhes">
+						</div>
+							
+						<div class="form-group col-sm-12 text-category">
+								<label for="description">Descrição do Produto:</label>
+								<input type="text" name="description" class="form-control" required id="description" placeholder="Insira a Descrição">
+						</div>
+
+						<div class="form-group col-sm-12 text-category">
+							<form action="/admin/productsadmin/products/create" method="POST" enctype="multipart/form-data">
+								<label for="name" >Imagem do Produto</label>
+								<input type="file" required name="image">
+								
+								<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
+								<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
+							</form>
+						</div>
+
                     
-                    <div class="form-group col-sm-12 text-category">
-		    				<label for="price">Preço do Produto:</label>
-		    				<input type="text" name="price" class="form-control" required id="price" placeholder="Insira o Preço">
-                    </div>
-
-                    <div class="form-group col-sm-12 text-category">
-		    				<label for="category">Categoria do Produto:</label>
-		    				<input type="text" name="category" class="form-control" required id="category" placeholder="Insira a Categoria">
-                    </div>
-
-                    <div class="form-group col-sm-12 text-category">
-		    				<label for="details">Detalhes do Produto:</label>
-		    				<input type="text" name="details" class="form-control" required id="details" placeholder="Insira os Detalhes">
-                    </div>
-                          
-                    <div class="form-group col-sm-12 text-category">
-		    				<label for="description">Descrição do Produto:</label>
-		    				<input type="text" name="description" class="form-control" required id="description" placeholder="Insira a Descrição">
-                    </div>
-
-                    <button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
-		    				<a href="/admin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
 		    		</form>
 				</div>
 			</div>

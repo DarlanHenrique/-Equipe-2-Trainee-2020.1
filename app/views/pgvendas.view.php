@@ -24,11 +24,12 @@
 
 <body>
     <header>
-      <?php require('NavBar-Footer/html/header.php'); ?>
+      <?php require('partials/header.php'); ?>
     </header>
 
     <main>
         <div class="container">
+        <div class="body-change">
             <div class="promfolder">
                 <img class="prom" src="/../public/img/cupom.png" alt="Cupom FICAEMCASA">
             </div>
@@ -46,24 +47,20 @@
 
                     <nav id="navbar-exemplo3 " class="navbar navbar-light ">
                         <div class="sidebar ">
-                            <a class="categorybar nav-link" href="#item-1 ">  &#x025B8; Feminino </a>
+
+                            <a class="categorybar nav-link" href="#item-1 ">  &#x025B8; Produtos </a>
                             <nav class="nav nav-pills flex-column ">
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-1-1 ">Blusas</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-1-2 ">Bodies</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-1-3 ">Calças e Saias</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-1-4 ">Macacões e Vestidos</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
-                            </nav>
-                            <br>
-                            <a class=" categorybar nav-link " href="#item-2 "> &#x025B8; Masculino</a>
-                            <nav class="nav nav-pills flex-column ">
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-2-1 ">Blusas</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-2-2 ">Bodies</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-2-3 ">Calças e Bermudas</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-2-4 ">Macacões</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-2-5 ">Conjuntos</a>
-                                <a class="categorybar nav-link ml-3 my-1 " href="#item-2-6 ">Pijamas</a>
+
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Blusas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Bermudas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Saias</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Vestidos</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
+                            
                             </nav>
 
                         </div>
@@ -77,15 +74,15 @@
                             <?php foreach ($products as $product) : ?>    
                                 <div class="col">
                                     <div class="cardprdpg">
-                                        <form  method="POST" action="produtos/viewprod">
+                                        <form  method="POST" action="/products/viewprod">
                                             <input type="hidden" name="id" value="<?= $product->id ?>">
                                                 <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
-                                                    <img class="card-img-top cardimgprdpg" src="/../public/img/roupa1.jpeg" alt="Imagem de capa do card ">
+                                                    <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
                                                 </button> 
                                         </form>
                                        
                                         <div class="card-body cardbodyprdpg">
-                                            <h5 class="card-title cardtitleprdpg"><a href="#"><?= $product->name; ?></a></h5>
+                                            <h5 class="card-title cardtitleprdpg"><?= $product->name; ?></h5>
                                             <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
                                         </div>
                                     </div>
@@ -94,11 +91,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
         </div>
     </main>
     <footer>
-      <?php require('NavBar-Footer/html/footer.php'); ?>
+      <?php require('partials/footer.php'); ?>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js "></script>

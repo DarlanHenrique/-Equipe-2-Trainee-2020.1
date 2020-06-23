@@ -24,7 +24,7 @@
     <body>
         <!-- Inicio Header-->
         <header>
-            <?php require('NavBar-Footer/html/header.php'); ?>
+            <?php require('partials/header.php'); ?>
         </header>
         <!-- Final Header-->
         <main class="font-contact">
@@ -75,7 +75,7 @@
         </main>
         <!--Inicio Footer-->
         <footer>
-            <?php require('NavBar-Footer/html/footer.php'); ?>
+            <?php require('partials/footer.php'); ?>
         </footer>
         <!--Final Footer-->
     

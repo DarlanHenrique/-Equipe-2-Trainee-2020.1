@@ -88,12 +88,29 @@ class QueryBuilder
             return $qry->fetch(PDO::FETCH_OBJ);
     }
 
-        public function edit($table, $id)
-    {
-        $sql = "SELECT * FROM " . $table . " WHERE id = {$id}";
-           
+    public function edit($table, $parameters, $id){
+        $counter = 1;
+        $sql = "update " . $table. " set "; 
+            foreach($parameters as $key => $value){
+                if($counter == count($parameters)){
+                    $sql .= $key . " = '" . $value . "'";
+                
+                }else {
+                    $sql .= $key . " = '" . $value . "' ,";
+                }
+                $counter += 1;
+            }
+        $sql .= " where id = {$id}";
+        
+        try {
+            
             $qry = $this->pdo->prepare($sql);
-            $qry->execute();
-            return $qry->fetch(PDO::FETCH_OBJ);
+            $qry->execute($parameters);
+
+        } catch (\Exception $e) {
+            echo "não foi possivel alterar informações no banco " .$e->getMessage();
+        }
+       
+
     }
 }    
