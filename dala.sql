@@ -3,9 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+
 -- Tempo de geração: 20-Jun-2020 às 21:24
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.4.6
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,8 +32,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `price` varchar(255) NOT NULL,
-  `category` varchar(255) NOT NULL,
+
+  `price` varchar(55) NOT NULL,
+  `gender` varchar(255) NOT NULL,
+  `category` varchar(55) NOT NULL,
   `details` varchar(255) NOT NULL,
   `description` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL
@@ -69,6 +73,7 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
 (2, 'dale', 'dele', 'dole');
 
 --
+
 -- Índices para tabelas despejadas
 --
 
@@ -92,6 +97,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
+
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
@@ -99,6 +105,7 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

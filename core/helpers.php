@@ -27,6 +27,7 @@ function view_admin_user($name, $data = [])
     return require "app/views/admin/user/{$name}.view.php";
 }
 
+
 /**
  * Redirect to a new page.
  *
@@ -35,4 +36,5 @@ function view_admin_user($name, $data = [])
 function redirect($path)
 {
     header("Location: /{$path}");
+
 }
