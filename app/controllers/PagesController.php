@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Core\App;
+
 class PagesController
 {
     /**
@@ -9,7 +11,9 @@ class PagesController
      */
     public function home()
     {
-        return view('index');
+        $products = App::get('database')->selectLastThree('products');
+
+        return view('site/index', compact('products'));
     }
 
     /**
@@ -28,5 +32,9 @@ class PagesController
     public function contact()
     {
         return view('contact');
+    }
+    public function restrictArea(){
+
+        return view('admin/homeadm');
     }
 }

@@ -13,6 +13,20 @@ function view($name, $data = [])
     return require "app/views/{$name}.view.php";
 }
 
+function view_admin($name, $data = [])
+{
+    extract($data);
+
+    return require "app/views/admin/{$name}.view.php";
+}
+
+function view_admin_user($name, $data = [])
+{
+    extract($data);
+
+    return require "app/views/admin/user/{$name}.view.php";
+}
+
 /**
  * Redirect to a new page.
  *

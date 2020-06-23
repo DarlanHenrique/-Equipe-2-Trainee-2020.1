@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2dda760d5efa0727baa773a1b0ce74e9
+class ComposerStaticInit74afa3845c14a53e2503e4528633d950
 {
     public static $files = array (
         '5ec26a44593cffc3089bdca7ce7a56c3' => __DIR__ . '/../..' . '/core/helpers.php',
@@ -18,15 +18,19 @@ class ComposerStaticInit2dda760d5efa0727baa773a1b0ce74e9
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
-        'ComposerAutoloaderInit2dda760d5efa0727baa773a1b0ce74e9' => __DIR__ . '/..' . '/composer/autoload_real.php',
+        'ComposerAutoloaderInit74afa3845c14a53e2503e4528633d950' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
-        'Composer\\Autoload\\ComposerStaticInit2dda760d5efa0727baa773a1b0ce74e9' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Composer\\Autoload\\ComposerStaticInit74afa3845c14a53e2503e4528633d950' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'ErrorHandler' => __DIR__ . '/../..' . '/composer-setup.php',
+        'HttpClient' => __DIR__ . '/../..' . '/composer-setup.php',
+        'Installer' => __DIR__ . '/../..' . '/composer-setup.php',
+        'NoProxyPattern' => __DIR__ . '/../..' . '/composer-setup.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit2dda760d5efa0727baa773a1b0ce74e9::$classMap;
+            $loader->classMap = ComposerStaticInit74afa3845c14a53e2503e4528633d950::$classMap;
 
         }, null, ClassLoader::class);
     }

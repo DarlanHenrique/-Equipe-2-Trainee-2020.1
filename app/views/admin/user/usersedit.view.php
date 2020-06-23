@@ -1,11 +1,11 @@
-<?php require('partials/head.php'); ?>
+<?php require __DIR__ . '/../../partials/head.php'; ?>
 
 <body>
     <main class="font-user">
         <div class="container mt-5">
         <nav>
             <div>
-            <a class="back-menu" title="Menu" href="#"><i class="fas fa-angle-left"></i> Voltar a Listagem</a>
+            <a class="back-menu" title="Menu" href="#"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
             </div>
         </nav>
         <div class="col-sm flex-center text-center">
@@ -19,13 +19,14 @@
             <div> 
                 <a href="#" title="Adicionar" class="btn btn-primary button-add btn-sm" ><i class="fas fa-plus"></i> Adicionar</a>
             </div>
-            <table class="table table-striped table-bordered table-responsive-md-1 table-responsive-sm-5">
+            <table class="table table-striped table-bordered table-responsive-md-1 table-responsive-sm-5 table-user">
                 <thead class="thead-dark">
                 <tr>
                     <th scope="col">N°</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
                     <th scope="col">Ações</th>
+                    <th scope="col">Senha</th>
                 </tr>
                 </thead>
                 <tbody>                
@@ -33,6 +34,7 @@
                             <td><?= '#' . $user->id; ?></td>
                             <td><?= $user->username; ?></td>
                             <td><?= $user->email; ?></td>
+                            <td><?= $user->password; ?></td>
                             <td>
                             <div>
                                 <form class="cell_buttons" method="POST" action="/user/show">
@@ -40,8 +42,10 @@
                                     <button class="btn btn-success button-actions button-action-view"><span class="fas fa-eye"></span></button>
                                 </form>
 
-                             
+                                <form class="cell_buttons" method="POST" action="/user/edit">
+                                    <input type="hidden" name="id" value="<?= $user->id ?>">
                                     <button class="btn btn-warning button-actions button-action-edit"><span class="fas fa-pen"></span></button>
+                                </form>
 
                                 <form class="cell_buttons" method="POST" action="/user/delete">
                                     <input type="hidden" name="id" value="<?= $user->id ?>">
@@ -57,4 +61,5 @@
     </main>
 </body>
 
-<?php require('partials/footer.php'); ?>
+
+<?php require __DIR__ . '/../../partials/footer.php'; ?>

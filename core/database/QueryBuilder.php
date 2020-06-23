@@ -37,6 +37,20 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+        /**
+     * Select last three records from a database table.
+     *
+     * @param string $table
+     */
+    public function selectLastThree($table)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} order by id desc limit 3");
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
     /**
      * Insert a record into a table.
      *
@@ -60,7 +74,6 @@ class QueryBuilder
             //
         }
     }
-
     public function delete($table, $id)
     {
         $sql = "DELETE FROM " . $table . " WHERE id = :id";
@@ -80,11 +93,31 @@ class QueryBuilder
 
     //Functions for EDIT.
    
-    public function update($table, $id)
-    {
-        $sql = "UPDATE FROM " . $table . " WHERE id = :id";
+    public function edit($table, $parameters, $id){
+        $counter = 1;
+        $sql = "update " . $table. " set "; 
+            foreach($parameters as $key => $value){
+                if($counter == count($parameters)){
+                    $sql .= $key . " = '" . $value . "'";
+                
+                }else {
+                    $sql .= $key . " = '" . $value . "' ,";
+                }
+                $counter += 1;
+            }
+        $sql .= " where id = {$id}";
+        
+        try {
+            
             $qry = $this->pdo->prepare($sql);
-            $qry->bindValue(":id", $id);
-            $qry->execute();
+            $qry->execute($parameters);
+
+        } catch (\Exception $e) {
+            echo "não foi possivel alterar informações no banco " .$e->getMessage();
+        }
+       
+
     }
 }
+
+   

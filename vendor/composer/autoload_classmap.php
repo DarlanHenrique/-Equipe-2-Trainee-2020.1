@@ -13,7 +13,11 @@ return array(
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
-    'ComposerAutoloaderInit2dda760d5efa0727baa773a1b0ce74e9' => $vendorDir . '/composer/autoload_real.php',
+    'ComposerAutoloaderInit74afa3845c14a53e2503e4528633d950' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInit2dda760d5efa0727baa773a1b0ce74e9' => $vendorDir . '/composer/autoload_static.php',
+    'Composer\\Autoload\\ComposerStaticInit74afa3845c14a53e2503e4528633d950' => $vendorDir . '/composer/autoload_static.php',
+    'ErrorHandler' => $baseDir . '/composer-setup.php',
+    'HttpClient' => $baseDir . '/composer-setup.php',
+    'Installer' => $baseDir . '/composer-setup.php',
+    'NoProxyPattern' => $baseDir . '/composer-setup.php',
 );
