@@ -6,39 +6,111 @@ use PDO;
 
 class QueryBuilder
 {
-
+    /**
+     * The PDO instance.
+     *
+     * @var PDO
+     */
     protected $pdo;
 
-
-    public function __construct()
+    /**
+     * Create a new QueryBuilder instance.
+     *
+     * @param PDO $pdo
+     */
+    public function __construct($pdo)
     {
-    
+        $this->pdo = $pdo;
     }
 
+    /**
+     * Select all records from a database table.
+     *
+     * @param string $table
+     */
+    public function selectAll($table)
+    {
+        $statement = $this->pdo->prepare("select * from {$table}");
 
-    public function selectAll()
-    {
-      
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
-    public function insert()
+    /**
+     * Insert a record into a table.
+     *
+     * @param  string $table
+     * @param  array  $parameters
+     */
+    public function insert($table, $parameters)
     {
-      
-         
+        $sql = sprintf(
+            'insert into %s (%s) values (%s)',
+            $table,
+            implode(', ', array_keys($parameters)),
+            ':' . implode(', :', array_keys($parameters))
+        );
+
+        try {
+            $statement = $this->pdo->prepare($sql);
+
+            $statement->execute($parameters);
+        } catch (\Exception $e) {
+            //
+        }
     }
-    public function edit()
+
+    public function delete($table, $id)
     {
-      
-         
+        $sql = "DELETE FROM " . $table . " WHERE id = :id";
+
+            $qry = $this->pdo->prepare($sql);
+            $qry->bindValue(":id", $id);
+            $qry->execute();
     }
-    public function delete()
+
+    public function show($table, $id)
     {
-      
-         
+        $sql = "SELECT * FROM " . $table . " WHERE id = {$id}";
+           
+            $qry = $this->pdo->prepare($sql);
+            $qry->execute();
+            return $qry->fetch(PDO::FETCH_OBJ);
     }
-    public function read()
+
+    public function product($table, $id)
     {
-      
-         
+        $sql = "SELECT * FROM " . $table . " WHERE id = {$id}";
+           
+            $qry = $this->pdo->prepare($sql);
+            $qry->execute();
+            return $qry->fetch(PDO::FETCH_OBJ);
     }
-}
+
+    public function edit($table, $parameters, $id){
+        $counter = 1;
+        $sql = "update " . $table. " set "; 
+            foreach($parameters as $key => $value){
+                if($counter == count($parameters)){
+                    $sql .= $key . " = '" . $value . "'";
+                
+                }else {
+                    $sql .= $key . " = '" . $value . "' ,";
+                }
+                $counter += 1;
+            }
+        $sql .= " where id = {$id}";
+        
+        try {
+            
+            $qry = $this->pdo->prepare($sql);
+            $qry->execute($parameters);
+
+        } catch (\Exception $e) {
+            echo "não foi possivel alterar informações no banco " .$e->getMessage();
+        }
+       
+
+    }
+}    

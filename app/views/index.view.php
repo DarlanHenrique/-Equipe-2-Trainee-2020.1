@@ -13,9 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="/../../public/css/reset.css">
+    <link rel="stylesheet" href="/../../public/css/styles.css">
+
+    <link rel="sortcut icon" href="/../public/img/Da_lã_Logo_2.png" type="image/x-icon">
 
     <title>Da lã | Roupas Infantis</title>
       <meta name="description" content ="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
@@ -27,48 +28,14 @@
   <body>
 
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container container-header">
-              <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
-                  <img class="logo" src="../img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã." >
-              </a>
-
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
-                  <ul class="navbar-nav">
-                      <li class="nav-item">
-                          <a class="nav-link active" href="#">Início<span class="sr-only">(Página atual)</span></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="pgvendas.html">Produtos</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="contato.html">Contato</a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link" href="quemSomos.html">Quem somos</a>
-                      </li>
-                  </ul>
-              </div>      
-              <form class="form-inline pesquisa">
-                  <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
-                  <button type="submit" class="btn btn-outline-dark">&#8981</button>
-              </form>
-          </div>            
-      </nav>
-  </header>
-
-  <img class="banner" src="../img/cabecalho.png" alt="Banner do Site">
-
+      <?php require('partials/header.php'); ?>
+    </header>
     <main>
 
       <div class="home-main" align="center">
 
-        <img class="side-clouds float-right col-2" src="../img/clouds-right.png">
-        <img class="side-clouds float-left col-2" src="../img/clouds-left.png">
+        <img class="side-clouds float-right col-2" src="/../public/img/clouds-right.png">
+        <img class="side-clouds float-left col-2" src="/../public/img/clouds-left.png">
 
         <div id="carouselExampleIndicators" class="carousel slide home-carousel col-xl-8 col-lg-8 col-md-9 col-sm-12 p-0 mt-xl-50" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -78,13 +45,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="../img/carousel1.jpg" alt="Dois meninos e duas meninas">
+              <img class="d-block w-100" src="/../public/img/carousel1.jpg" alt="Dois meninos e duas meninas">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="../img/carousel2.jpg" alt="Duas meninas e dois meninos">
+              <img class="d-block w-100" src="/../public/img/carousel2.jpg" alt="Duas meninas e dois meninos">
             </div>
             <div class="carousel-item item-carrossel">
-              <img class="d-block w-100" src="../img/carousel3.jpg" alt="Uma menina e um menino">
+              <img class="d-block w-100" src="/../public/img/carousel3.jpg" alt="Uma menina e um menino">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -105,7 +72,7 @@
             <li class="d-inline-block">
               <div class="p-0">
                 <div class="card product">
-                  <img class="card-img-top" src="../img/roupa2.jpeg" alt="Body de Animais">
+                  <img class="card-img-top" src="/../public/img/roupa2.jpeg" alt="Body de Animais">
                   <div class="card-body">
                     <h5 class="card-title product-name">Body de Animais</h5>
                     <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
@@ -116,7 +83,7 @@
             <li class="d-xl-inline-block d-lg-inline-block d-md-block d-sm-block">
               <div>
                 <div class="card product">
-                  <img class="card-img-top" src="../img/roupa3.jpeg" alt="Macacão Lacinho">
+                  <img class="card-img-top" src="/../public/img/roupa3.jpeg" alt="Macacão Lacinho">
                   <div class="card-body">
                     <h5 class="card-title product-name">Macacão Lacinho</h5>
                     <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
@@ -127,7 +94,7 @@
             <li class="d-xl-inline-block d-lg-inline-block d-md-block d-sm-block">
               <div class="w-lg-100">
                 <div class="card product">
-                  <img class="card-img-top" src="../img/roupa4.jpeg" alt="Macacão Animais">
+                  <img class="card-img-top" src="/../public/img/roupa4.jpeg" alt="Macacão Animais">
                   <div class="card-body">
                     <h5 class="card-title product-name">Macacão Animais</h5>
                     <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
@@ -143,24 +110,7 @@
     </main>
 
     <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm"></div>
-          <div class="col-sm flex-center text-center meio">
-            <img src="../img/Da_lã_Logo_2.png" width="90" height="60" alt="Logotipo Da Lã">
-            <p class="copyright">&copy; copyright - 2020 - Da Lã comércio eletrônico - LTDA </p>
-          </div>
-          <div class="col-sm col align-self-center flex-center text-center final">
-            
-            <p>Acompanhe nossas mídias sociais e fique por dentro das novidades!</p>
-            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            <a href="https://github.com/DarlanHenrique/-Equipe-2-Trainee-2020.1"><i class="fab fa-github"></i></a>
-            
-          </div>
-        </div>
-      </div>  
+      <?php require('partials/footer.php'); ?>
     </footer>  
 
 
