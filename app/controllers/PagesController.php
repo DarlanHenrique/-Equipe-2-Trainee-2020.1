@@ -4,16 +4,42 @@ namespace App\Controllers;
 
 use App\Core\App;
 
-class PagesController {
+
+class PagesController
+{
     /**
      * Show the home page.
      */
-    public function home() {
+    public function home()
+    {
+        $products = App::get('database')->selectLastThree('products');
 
-        return view('index');
+        return view('site/index', compact('products'));
     }
 
-    //Mostra pagina de produtos.
+    /**
+     * Show the about page.
+     */
+    public function about()
+    {
+        $company = 'Laracasts';
+
+        return view('about', ['company' => $company]);
+    }
+
+    /**
+     * Show the contact page.
+     */
+    public function contact()
+    {
+        return view('contact');
+    }
+    public function restrictArea(){
+
+        return view('admin/homeadm');
+    }
+  
+      //Mostra pagina de produtos.
     public function products() {
 
         $products = App::get('database')->selectAll('products');
@@ -35,25 +61,5 @@ class PagesController {
 
         return view('quemSomos');
     }
-  
-    //mostra pagina de contato.
-    public function contact(){
-
-        return view('contato');
-    }
-
-    //mostra pagina de listagem de usuarios.
-    public function users(){
-
-        return view('admin/user/users');
-    }
-
-    //mostra pagina da area Restrita.
-    public function restricArea(){
-
-        return view('admin/homeadm');
-    }
-
-    
 
 }

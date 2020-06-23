@@ -8,7 +8,7 @@ $router->get('contact', 'PagesController@contact');
 $router->post('products/viewprod', 'PagesController@product');
 
 //rota painel de controle
-$router->get('admin', 'PagesController@restricArea');
+$router->get('admin', 'PagesController@restrictArea');
 
 //rota leva a listagem de produtos
 $router->get('admin/productsadmin/products', 'ProductsController@index');
@@ -28,4 +28,14 @@ $router->get('admin/productsadmin/products/edit','ProductsController@showFormPro
 
 //rota edit produtos
 $router->post('admin/productsadmin/products/edit', 'ProductsController@update');
+
+$router->get('admin/user', 'UsersController@index');
+$router->get('admin/user/create', 'UsersController@create');
+$router->post('admin/user', 'UsersController@store');
+
+$router->post('admin/user/delete', 'UsersController@delete');
+$router->post('admin/user/show', 'UsersController@show');
+
+$router->post('admin/user/edit', 'UsersController@update');
+$router->get('admin/user/edit','UsersController@showFormUserEdit');
 

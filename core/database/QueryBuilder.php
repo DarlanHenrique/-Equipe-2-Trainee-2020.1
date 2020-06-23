@@ -37,6 +37,21 @@ class QueryBuilder
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+
+        /**
+     * Select last three records from a database table.
+     *
+     * @param string $table
+     */
+    public function selectLastThree($table)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} order by id desc limit 3");
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
     /**
      * Insert a record into a table.
      *
@@ -60,6 +75,7 @@ class QueryBuilder
             //
         }
     }
+
 
     public function delete($table, $id)
     {
@@ -88,6 +104,8 @@ class QueryBuilder
             return $qry->fetch(PDO::FETCH_OBJ);
     }
 
+      //Functions for EDIT.
+
     public function edit($table, $parameters, $id){
         $counter = 1;
         $sql = "update " . $table. " set "; 
@@ -111,6 +129,5 @@ class QueryBuilder
             echo "não foi possivel alterar informações no banco " .$e->getMessage();
         }
        
-
     }
-}    
+}

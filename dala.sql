@@ -3,9 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 23-Jun-2020 às 02:35
+
+-- Tempo de geração: 20-Jun-2020 às 21:24
 -- Versão do servidor: 10.4.11-MariaDB
--- versão do PHP: 7.4.5
+-- versão do PHP: 7.4.6
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,6 +32,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+
   `price` varchar(55) NOT NULL,
   `gender` varchar(255) NOT NULL,
   `category` varchar(55) NOT NULL,
@@ -39,6 +42,38 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `price`, `category`, `details`, `description`, `image`) VALUES
+(1, '1', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg'),
+(7, '2', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg'),
+(8, '3', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg'),
+(9, '4', 'a', 'a', 'a', 'a', '../../public/img/roupa1.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(1, 'Igor', 'igor.mfam@gmail.com', 'xesquedele'),
+(2, 'dale', 'dele', 'dole');
+
+--
+
 -- Índices para tabelas despejadas
 --
 
@@ -49,6 +84,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices para tabela `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de tabelas despejadas
 --
 
@@ -56,7 +97,15 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT de tabela `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de tabela `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
