@@ -43,22 +43,19 @@
           </div>
           <table class="table table-striped table-bordered table-user table-responsive-md-1 table-responsive-sm-5">
             <thead class="thead-dark">
-              <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Ações</th>
+                <?php if($categories == []) : ?>
+            </thead>
+                  <tbody>
+                    <tr>
+                      <td><?= 'Nenhum cadastro' ?></td>
+                    </tr>
+                <?php else : ?>
+                 <th scope="col">Nome</th>
+                 <th scope="col">Ações</th>
               </tr>
             </thead>
             <tbody>
-              <?php 
-
-              if($categories == []) : ?>
-                <tr>
-                  <td><?= 'Nenhum cadastro' ?></td>
-                  <td><?= '' ?></td>
-                </tr>
-              <?php else :
-
-              foreach ($categories as $category) : ?>
+              <?php foreach ($categories as $category) : ?>
                 <tr>
                   <td><?= $category->name; ?></td>
                   <td>

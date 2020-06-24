@@ -21,7 +21,7 @@
 	<main>
 		<div class=" text-center">
 		  	<div class="card-body font-user ">
-		  		<h1 class="title-user">Nova Categoria</h1>
+		  		<h1 class="title-user">Editar Categoria</h1>
 		  		<div class="col-sm flex-center text-center card-title">
 		    	    <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
 		    	</div>
@@ -30,7 +30,8 @@
 						<div class="form-group col-sm-12 text-category">
 		    				<label for="name" >Nome:</label>
 		    				<input type="text" name="name" value="<?= $category->name ?>" class="form-control" id="name"  placeholder="Nome da Categoria">
-		  				</div>
+						</div>
+						
 						<input type="hidden" name="id" value="<?= $category->id ?>">
 						<button type="submit" name="btn" class="btn btn-success button-actions button-action-view">Atualizar</button>
 		    			<a href="/admin/categorias" class="btn btn-warning button-actions button-action-edit">Voltar</a>
