@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="/../../public/css/reset.css">
-    <link rel="stylesheet" href="/../../public/css/styles.css">
+    <link rel="stylesheet" href="/../public/css/reset.css">
+    <link rel="stylesheet" href="/../public/css/style.css">
+    <link rel="stylesheet" href="/../public/css/styles.css">
 
     <link rel="sortcut icon" href="/../public/img/Da_lã_Logo_2.png" type="image/x-icon">
 
@@ -110,7 +111,11 @@
     </main>
 
     <footer>
+<<<<<<< HEAD:app/views/index.view.php
       <?php require('partials/footer.php'); ?>
+=======
+      <?php include('includes/footer.php'); ?>
+>>>>>>> backend_categorias:app/views/index.view.php
     </footer>  
 
 

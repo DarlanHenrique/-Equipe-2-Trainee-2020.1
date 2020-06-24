@@ -16,24 +16,13 @@ class PagesController
 
         return view('site/index', compact('products'));
     }
+  
+    //mostra pagina de contato.
+    public function contact(){
 
-    /**
-     * Show the about page.
-     */
-    public function about()
-    {
-        $company = 'Laracasts';
-
-        return view('about', ['company' => $company]);
+        return view('contato');
     }
 
-    /**
-     * Show the contact page.
-     */
-    public function contact()
-    {
-        return view('contact');
-    }
     public function restrictArea(){
 
         return view('admin/homeadm');
@@ -48,7 +37,7 @@ class PagesController
     }
 
     //Mostra pagina do Produto.
-     public function product() {
+    public function product() {
 
         $product = App::get('database')->show('products', $_POST['id']);
 
