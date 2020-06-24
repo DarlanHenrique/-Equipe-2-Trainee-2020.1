@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <a href="/admin/productsadmin/products" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
+    <a href="/admin/productsadmin/products " class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
 
 </main>
 
