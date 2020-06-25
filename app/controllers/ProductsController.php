@@ -37,7 +37,7 @@ class ProductsController
                     'name' => $_POST['name'],
                     'price' => $_POST['price'],
                     'gender' => $_POST['gender'],
-                    'category' => $_POST['category'],
+                    'category' => $_POST['categories'],
                     'details' => $_POST['details'],
                     'description' => $_POST['description'],
                     'image' => $_POST['image']
@@ -68,7 +68,7 @@ class ProductsController
                 'name' => $_POST['name'],
                 'price' => $_POST['price'],
                 'gender' => $_POST['gender'],
-                'category' => $_POST['category'],
+                'category' => $_POST['categories'],
                 'details' => $_POST['details'],
                 'description' => $_POST['description'],
             ], 

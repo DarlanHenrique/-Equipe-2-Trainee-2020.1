@@ -64,7 +64,7 @@
                         <td><?= $product->name; ?></td>
                         <td><?= $product->price; ?></td>
                         <td><?= $product->gender; ?></td>
-                        <td><?= $product->category; ?></td>
+                        <td><?= $product->categories; ?></td>
                         <td><?= $product->details; ?></td>
                         <td><?= $product->description; ?></td>
                     </tr>
@@ -75,7 +75,7 @@
         </div>
     </div>
 
-    <a href="/admin/productsadmin/products" class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
+    <a href="/admin/productsadmin/products " class="btn btn-warning"><i class="fas fa-angle-left"></i> Voltar a Listagem </a>
 
 </main>
 

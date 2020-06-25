@@ -118,7 +118,8 @@ class QueryBuilder
                 }
                 $counter += 1;
             }
-        $sql .= " where id = {$id}";
+        
+            $sql .= " where id = {$id}";
         
         try {
             

@@ -93,6 +93,27 @@
                 </div>
         </div>
         </div>
+        <nav aria-label="Navegação de página exemplo">
+            <ul class="pagprdpg pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Anterior">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <div>
+                    <a class="page-link" href="#" aria-label="Próximo">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </main>
     <footer>
       <?php require('partials/footer.php'); ?>

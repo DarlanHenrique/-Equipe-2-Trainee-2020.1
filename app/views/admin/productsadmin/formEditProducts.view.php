@@ -40,12 +40,26 @@
 
 						<div class="form-group col-sm-12 text-products edit-form">
 		    				<label for="name" > Genêro:</label>
-		    				<input type="text" name="gender" value="<?= $product->gender; ?>" class="form-control" id="gender"  placeholder="Genêro do produto">
-		  				</div>
+		    				<select type="text" name="gender" value="<?= $product->gender; ?>" class="form-control" id="gender"  placeholder="Genêro do produto">
+									<option value="1" selected>Masculino</option>
+									<option value="2">Feminino</option>
+									<option value="3">Unissex</option>
+							</select>
+						</div>
 
 						<div class="form-group col-sm-12 text-products edit-form">
 		    				<label for="name" > Categoria:</label>
-		    				<input type="text" name="category" value="<?= $product->category; ?>" class="form-control" id="category"  placeholder="Categoria do produto">
+		    				<select type="text" name="categories" value="<?= $product->categories; ?>" class="form-control" id="categories"  placeholder="Categoria do produto">
+									<option value="1">Bermudas</option>
+									<option value="2">Blusas</option>
+									<option value="3">Bodies</option>
+									<option value="4">Calças</option>
+									<option value="5">Conjuntos</option>
+									<option value="6" selected>Macacões</option>
+									<option value="7">Pijamas</option>
+									<option value="8">Saias</option>
+									<option value="9">Vestidos</option>
+							</select>
 						</div>
 	
 						<div class="form-group col-sm-12 text-products edit-form">

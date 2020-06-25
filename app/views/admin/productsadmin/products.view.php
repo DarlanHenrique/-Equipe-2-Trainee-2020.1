@@ -79,17 +79,15 @@
                                         <div>
                                             <form class="cell_buttons" method="POST" action="/admin/productsadmin/products/prod">
                                                 <input type="hidden" name="id" value="<?= $product->id ?>">
-                                                <div class="button-action-view">
-                                                    <button class="btn btn-success button-actions button-action-view" type="submit"><span class="fas fa-eye"></span></button>
-                                                </div>
+                                                <button class="btn button-actions button-action-view" type="submit"><span class="fas fa-eye"></span></button>
                                             </form>
                                             <form class="cell_buttons" method="GET" action="/admin/productsadmin/products/edit">
                                                 <input type="hidden" name="id" value="<?= $product->id ?>">
-                                                <button class="btn btn-warning button-actions button-action-ediit" type="submit"><span class="fas fa-pen"></span></button>
+                                                <button class="btn button-actions button-action-edit" type="submit"><span class="fas fa-pen"></span></button>
                                             </form>
                                             <form class="cell_buttons" method="POST" action="/admin/productsadmin/products/delete">
                                                 <input type="hidden" name="id" value="<?= $product->id ?>">
-                                                <button class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
+                                                <button class="btn button-actions button-action-delete"><span class="fas fa-trash"></span></button>
                                             </form>
                                         </div>
                                     </td>
