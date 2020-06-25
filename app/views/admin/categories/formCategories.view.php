@@ -26,21 +26,13 @@
 		    	    <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
 		    	</div>
 		    	<div class="col-sm-12 col-lg-12 ">
-		    		<form name="formAddCategory" action="/admin/categorias" onsubmit="MudaDePagina()" method="POST">
+		    		<form name="formAddCategory" action="/admin/categories" onsubmit="MudaDePagina()" method="POST">
 						<div class="form-group col-sm-12 text-category">
 		    				<label for="name" >Nome:</label>
 		    				<input type="text" name="name" class="form-control" required ="required" id="name"  placeholder="Nome da Categoria">
 		  				</div>
-						  <div class="form-group col-sm-12 text-category">
-		    				<label for="amount">Numero de Peças:</label>
-		    				<input type="text" class="form-control" id="amount" required ="required" name="amount"  placeholder="Numero de Peças">
-		  				</div>
-						<div class="form-group col-sm-12 text-category">
-		    				<label for="gender">Gênero:</label>
-		    				<input type="text" class="form-control" required ="required" name="gender" id="gender"  placeholder="Gênero">
-		  				</div>
-							<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Cadastrar</button>
-		    				<a href="/admin/categorias" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
+						<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Cadastrar</button>
+		    			<a href="/admin/categories" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
 		    		</form>
 				</div>
 			</div>

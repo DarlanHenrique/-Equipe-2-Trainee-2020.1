@@ -27,7 +27,7 @@ class ProductsController
             if(isset($_FILES['image'])){
                 $extensao = strtolower(substr($_FILES['image']['name'], -4));
                 $novo_nome = md5(time()) . $extensao;
-                $diretorio = "/assets/img/";
+                $diretorio = "/public/img/";
 
                 move_uploaded_file($_FILES['image']['tpm_name'], $diretorio.$novo_nome);
             }
@@ -37,7 +37,7 @@ class ProductsController
                     'name' => $_POST['name'],
                     'price' => $_POST['price'],
                     'gender' => $_POST['gender'],
-                    'category' => $_POST['categories'],
+                    'category' => $_POST['category'],
                     'details' => $_POST['details'],
                     'description' => $_POST['description'],
                     'image' => $_POST['image']
@@ -68,7 +68,7 @@ class ProductsController
                 'name' => $_POST['name'],
                 'price' => $_POST['price'],
                 'gender' => $_POST['gender'],
-                'category' => $_POST['categories'],
+                'category' => $_POST['category'],
                 'details' => $_POST['details'],
                 'description' => $_POST['description'],
             ], 

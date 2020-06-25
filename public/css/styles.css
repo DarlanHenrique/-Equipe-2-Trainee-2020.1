@@ -483,30 +483,17 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                 .cell_buttons {
                     display: inline-block;
                 }
-
-                .button-action-view {
-                    color: white;
-                    background-color: #28a745;
-                }
                 
                 .button-action-view:hover {
+                    flex-direction: row;
                     background-color: white;
+                    text-decoration: none;
                     color: #28a745;
-                }
-
-                .button-action-edit {
-                    background-color: #ffc107;
-                    color: white;
                 }
                 
                 .button-action-edit:hover {
                     color: #ffc107;
                     background-color: white;
-                }
-
-                .button-action-delete {
-                    background-color: #dc3545;
-                    color: white;
                 }
                 
                 .button-action-delete:hover {
@@ -561,11 +548,6 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                     margin-bottom: 5px;
                     margin-left: 20%;
                     font-weight: bold;
-                }
-
-                .select-form {
-                    margin-left: 20%;
-                    width: 60%;
                 }
                 
                 .text-category>input {

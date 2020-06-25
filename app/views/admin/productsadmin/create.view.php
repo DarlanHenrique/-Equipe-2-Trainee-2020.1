@@ -41,28 +41,12 @@
 						</div>
 						<div class="form-group col-sm-12 text-category">
 								<label for="gender">Genero do Produto:</label>
-								<select type="text" name="gender" class="form-control select-form" required id="gender">
-									<option disabled>Insira o Genero</option>
-									<option value="1">Masculino</option>
-									<option value="2">Feminino</option>
-									<option value="3">Unissex</option>
-								</select>
+								<input type="text" name="gender" class="form-control" required id="gender" placeholder="Insira o Genero">
 						</div>
 
 						<div class="form-group col-sm-12 text-category">
 								<label for="category">Categoria do Produto:</label>
-								<select type="text" name="categories" class="form-control select-form" required id="categories">
-									<option disabled>Insira a Categoria</option>
-									<option value="1">Bermudas</option>
-									<option value="2">Blusas</option>
-									<option value="3">Bodies</option>
-									<option value="4">Calças</option>
-									<option value="5">Conjuntos</option>
-									<option value="6">Macacões</option>
-									<option value="7">Pijamas</option>
-									<option value="8">Saias</option>
-									<option value="9">Vestidos</option>
-								</select>
+								<input type="text" name="category" class="form-control" required id="category" placeholder="Insira a Categoria">
 						</div>
 
 						<div class="form-group col-sm-12 text-category">

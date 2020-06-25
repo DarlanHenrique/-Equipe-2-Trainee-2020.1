@@ -25,7 +25,7 @@
 <body puzzle>
 
     <header>
-        <?php require('partials/header.php'); ?>
+        <?php require('includes/header.php'); ?>
     </header>
 
 
@@ -63,7 +63,7 @@
     </main>
 
     <footer>
-        <?php require('partials/footer.php'); ?>
+        <?php require('includes/footer.php'); ?>
     </footer>
 
 

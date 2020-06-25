@@ -39,16 +39,16 @@
                 <a class="nav-link" href="/">Início</a>
               </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/produtos">Produtos</a>
+                    <a class="nav-link" href="/products">Produtos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contato">Contato</a>
+                    <a class="nav-link" href="/contact">Contato</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/sobre">Quem somos</a>
+                  <a class="nav-link" href="/about">Quem somos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/admin">Entrar</a>
+                  <a class="nav-link" href="/login">Entrar</a>
                 </li>
             </ul>
           </div>      

@@ -37,52 +37,46 @@
         <h1>Listagem de Categorias</h1>
       </div>
       <div class="row" >
+        <div> 
+            <a href="categories/add" title="Adicionar" class="btn btn-primary button-add btn-sm" ><i class="fas fa-plus"></i> Adicionar</a>
+        </div>
         <div class="col-sm-12 col-lg-12">
-          <div> 
-            <a href="categorias/adicionar" title="Adicionar" class="btn btn-primary button-add btn-sm" ><i class="fas fa-plus"></i> Adicionar</a>
-          </div>
+          
           <table class="table table-striped table-bordered table-user table-responsive-md-1 table-responsive-sm-5">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">N° de Peças</th>
-                <th scope="col">Gênero</th>
-                <th scope="col">Ações</th>
-              </tr>
-            </thead>
-            <tbody>
-              <?php 
-
-              if($categories == []) { ?>
+            <?php if($categories == []) : ?>
+              <tbody>
                 <tr>
                   <td><?= 'Nenhum cadastro' ?></td>
-                  <td><?= 'Nenhum cadastro' ?></td>
-                  <td><?= 'Nenhum cadastro' ?></td>
-                  <td><?= '' ?></td>
                 </tr>
-              <?php } else{
-
-              foreach ($categories as $category) : ?>
+              </tbody>
+              <?php else : ?>
+              <thead class="thead-dark">
                 <tr>
-                  <td><?= $category->name; ?></td>
-                  <td><?= $category->amount; ?></td>
-                  <td><?= $category->gender; ?></td>
-                  <td>
-                    <div class="button-align">
-                      <form method="GET" action="categorias/edit">
-                        <input type="hidden" name="id" value="<?= $category->id ?>">
-                        <button title="Editar" class="btn btn-warning button-actions button-action-edit"><span class="fas fa-pen"></span></button>
-                      </form>
-                      <form method="POST" action="categorias/delete">
-                        <input type="hidden" name="id" value="<?= $category->id ?>">
-                        <button title="Excluir" class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
-                      </form>
-                    </div>
-                  </td>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Ações</th>
                 </tr>
-              <?php endforeach; }?>
-            </tbody>
-          </table>
+              </thead>
+              <?php foreach ($categories as $category) : ?>
+                <tbody>
+                    <tr>
+                      <td><?= $category->name; ?></td>
+                      <td>
+                        <div class="button-align">
+                          <form method="GET" action="categories/edit">
+                            <input type="hidden" name="id" value="<?= $category->id ?>">
+                            <button title="Editar" class="btn btn-warning button-actions button-action-edit"><span class="fas fa-pen"></span></button>
+                          </form>
+                          <form method="POST" action="categories/delete">
+                            <input type="hidden" name="id" value="<?= $category->id ?>">
+                            <button title="Excluir" class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                </tbody>
+              <?php endforeach; ?>
+            <?php endif; ?>
+          </table>  
         </div>
     </div>
   </main>

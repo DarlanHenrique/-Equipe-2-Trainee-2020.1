@@ -14,7 +14,7 @@ class PagesController
     {
         $products = App::get('database')->selectLastThree('products');
 
-        return view('site/index', compact('products'));
+        return view('index', compact('products'));
     }
   
     //mostra pagina de contato.
@@ -49,6 +49,12 @@ class PagesController
     public function about() {
 
         return view('quemSomos');
+    }
+
+     //mostra pagina Quem somos.
+     public function login() {
+
+        return view('login');
     }
 
 }
