@@ -47,7 +47,7 @@
                                         <form method="POST" action="/products/category">
                                             <input type="hidden" name="id" value="<?= $category->id ?>">
                                             <div>
-                                                <button class="btn btn  button-categories" type="submit"><?= $category->name ?></button>
+                                                <button class="btn btn  button-categories" type="submit" style="font-size: 20px;" ><?= $category->name ?></button>
                                             </div>
                                         </form>
                                     </div>
@@ -73,7 +73,7 @@
                                             <form  method="POST" action="/products/viewprod">
                                                 <input type="hidden" name="id" value="<?= $product->id ?>">
                                                     <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
-                                                        <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                                        <img class="card-img-top rounded" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
                                                     </button> 
                                             </form>
                                         

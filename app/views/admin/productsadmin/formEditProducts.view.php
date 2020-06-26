@@ -87,15 +87,19 @@
 		    				<input type="text" name="description" value="<?= $product->description; ?>" class="form-control" id="description"  placeholder="NomDescrição do produto">
 		  				</div>
 
-						<div class="form-group col-sm-12 text-category">
-							<form action="admin/productsadmin/products/edit" method="POST" enctype="multipart/form-data">
-								<label for="name" >Imagem do Produto</label>
-								<input type="file" name="image">
-								
-								<input type="hidden" name="id" value="<?= $product->id ?>">
-								<button type="submit" name="btn" class="btn btn-success button-actions button-action-view">Atualizar</button>
-								<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit">Voltar</a>
-							</form>
+						<div class="form-group col-sm-12 d-flex justify-content-start">
+							<div class="text-category edit-image">
+								<form action="admin/productsadmin/products/edit" method="POST" enctype="multipart/form-data">
+									<label for="name" >Imagem do Produto</label>
+									<input type="file" name="image" value="<?= $product->image;?>">
+							</div>
+							</br>
+							<div class="d-flex justify-content-center buttons-submit-edit">
+									<input type="hidden" name="id" value="<?= $product->id ?>">
+									<button type="submit" name="btn" class="btn btn-success button-actions button-action-view">Atualizar</button>
+									<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit">Voltar</a>
+								</form>
+							</div>
 						</div>
 		    		</form>
 				</div>

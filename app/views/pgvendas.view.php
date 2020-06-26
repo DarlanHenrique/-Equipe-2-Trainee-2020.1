@@ -55,7 +55,7 @@
                                         <form method="POST" action="products/category">
                                             <input type="hidden" name="id" value="<?= $category->id ?>">
                                             <div>
-                                                <button class="btn btn  button-categories" type="submit"><?= $category->name ?></button>
+                                                <button class="btn btn  button-categories" type="submit" style="font-size: 20px;" ><?= $category->name ?></button>
                                             </div>
                                         </form>
                                     </div>

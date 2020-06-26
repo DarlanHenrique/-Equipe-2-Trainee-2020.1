@@ -45,16 +45,16 @@
                 <div class="col col1prdpg" class="col-2 py-0 px-0 ">
 
                     <nav id="navbar-exemplo3 " class="navbar navbar-light ">
-                        <div class="sidebar ">
+                        <div class="sidebar-view ">
 
                             <a class="nav-link text-dark" href="#item-1 ">  &#x025B8; Produtos </a>
                             <nav class="navbar navbar-light bg-transparent">
                                 <?php foreach ($categories as $category) : ?>
                                     <div>
-                                        <form method="POST" action="products/category">
+                                        <form method="POST" action="/products/category">
                                             <input type="hidden" name="id" value="<?= $category->id ?>">
-                                            <div>
-                                                <button class="btn btn  button-categories" type="submit"><?= $category->name ?></button>
+                                            <div class="font-buttons">
+                                                <button class="btn btn  button-categories" type="submit" style="font-size: 20px;"><?= $category->name ?></button>
                                             </div>
                                         </form>
                                     </div>
@@ -81,10 +81,21 @@
                                     <div class="card border-dark mb-3 " style="max-width: 18rem;">
                                         <div class="cardbodyprdpg">
                                             <div class="card-header bg-transparent border-dark cardtitleprdpg"><?= $product->name; ?></div>
-                                            <div class="card-body text-dark ">
-                                                <p class="card-text cardtxtprdpg"><?= $product->price; ?><p>
-                                                <p class="card-text cardtxtprdpg"><?= $product->gender; ?><p>
-                                                <p class="card-text cardtxtprdpg"><?= $product->description; ?></p>
+                                            <div class="card-body text-dark">
+                                                <p class="card-text cardtxtprdpg" style=" line-height: 32px ;"><?= $product->price; ?><p>
+                                                <p class="card-text cardtxtprdpg" style=" line-height: 32px ;">
+                                                <?php if ($product->gender == "1") : ?>
+                                                    Masculino
+
+                                                <?php elseif ($product->gender == "2") : ?>
+                                                    Feminino
+
+                                                <?php elseif ($product->gender == "3") : ?>
+                                                    Unissex
+                                                
+                                                <?php endif ?>
+                                                <p>
+                                                <p class="card-text cardtxtprdpg" style=" line-height: 32px ;"><?= $product->description; ?></p>
                                             </div>
                                         </div>
                                     </div>
