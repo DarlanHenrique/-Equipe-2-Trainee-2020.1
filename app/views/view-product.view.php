@@ -48,16 +48,17 @@
                         <div class="sidebar ">
 
                             <a class="nav-link text-dark" href="#item-1 ">  &#x025B8; Produtos </a>
-                            <nav class="nav nav-pills flex-column ">
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Blusas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Bermudas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Saias</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Vestidos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
+                            <nav class="navbar navbar-light bg-transparent">
+                                <?php foreach ($categories as $category) : ?>
+                                    <div>
+                                        <form method="POST" action="products/category">
+                                            <input type="hidden" name="id" value="<?= $category->id ?>">
+                                            <div>
+                                                <button class="btn btn  button-categories" type="submit"><?= $category->name ?></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                <?php endforeach; ?>
                             </nav>
 
                         </div>
@@ -72,7 +73,7 @@
 
                                 <div class="col col2prdpg ">
                                     <div class="cardprdpg ">
-                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
                                     </div>
                                 </div>
 

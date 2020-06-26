@@ -24,7 +24,7 @@
 
 <body>
     <header>
-      <?php require('includes/header.php'); ?>
+        <?php require('includes/header.php'); ?>
     </header>
 
     <main>
@@ -32,14 +32,6 @@
         <div class="body-change">
             <div class="promfolder">
                 <img class="prom" src="/../public/img/cupom.png" alt="Cupom FICAEMCASA">
-            </div>
-            <div class="searchprod">
-                <nav class="navbar navbar-light bg-transparent">
-                    <form class="form-inline">
-                        <input style="width: 200px; text-align: center;" class="form-control mr-sm-2" type="search" placeholder="Faça sua pesquisa!" aria-label="Pesquisar">
-                        <button style="width: 50px" class="btn btn-outline-black-50" type="submit">  &#8981  </button>
-                    </form>
-                </nav>
             </div>
 
             <div class="row mx-lg-n5 ">
@@ -52,7 +44,7 @@
                             <nav class="nav nav-pills flex-column ">
                                 <?php foreach ($categories as $category) : ?>
                                     <div>
-                                        <form method="POST" action="products/category">
+                                        <form method="POST" action="/products/category">
                                             <input type="hidden" name="id" value="<?= $category->id ?>">
                                             <div>
                                                 <button class="btn btn  button-categories" type="submit"><?= $category->name ?></button>
@@ -67,34 +59,40 @@
 
                 </div>
 
-                <div class="col py-3 px-lg-5 ">
-                    <div class="card-deck carddeckprdpg">
-                        <div class="row ">
-                            <?php foreach ($products as $product) : ?>    
-                                <div class="col">
-                                    <div class="cardprdpg">
-                                        <form  method="POST" action="/products/viewprod">
-                                            <input type="hidden" name="id" value="<?= $product->id ?>">
-                                                <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
-                                                    <img class="card-img-top rounded" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
-                                                </button> 
-                                        </form>
-                                       
-                                        <div class="card-body cardbodyprdpg">
-                                            <h5 class="card-title cardtitleprdpg"><?= $product->name; ?></h5>
-                                            <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
+                <?php if ( empty( $products ) ) { ?>
+                <div class="d-flex justify-content-center">
+                    <h2 class="cat-none">Nenhum produto listado nesta categoria</h2>
+                </div>
+                <?php } else { ?>
+                    <div class="col py-3 px-lg-5 ">
+                        <div class="card-deck carddeckprdpg">
+                            <div class="row ">
+                                <?php foreach ($products as $product) : ?>    
+                                    <div class="col">
+                                        <div class="cardprdpg">
+                                            <form  method="POST" action="/products/viewprod">
+                                                <input type="hidden" name="id" value="<?= $product->id ?>">
+                                                    <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
+                                                        <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                                    </button> 
+                                            </form>
+                                        
+                                            <div class="card-body cardbodyprdpg">
+                                                <h5 class="card-title cardtitleprdpg"><?= $product->name; ?></h5>
+                                                <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            <?php endforeach; ?>  
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>  
         </div>
-        </div>
+    </div>
     </main>
     <footer>
-      <?php require('includes/footer.php'); ?>
+        <?php require('includes/footer.php'); ?>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js "></script>
