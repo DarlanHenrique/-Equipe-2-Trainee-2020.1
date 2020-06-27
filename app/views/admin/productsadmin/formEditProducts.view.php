@@ -39,13 +39,42 @@
 		  				</div>
 
 						<div class="form-group col-sm-12 text-products edit-form">
-		    				<label for="name" > Genêro:</label>
-		    				<input type="text" name="gender" value="<?= $product->gender; ?>" class="form-control" id="gender"  placeholder="Genêro do produto">
-		  				</div>
+							<label for="name" >Genêro:</label>
+							<?php if($product->gender == "1") : ?>
+								<select class="form-control" name="gender" required ="required" id="gender">
+									<option disabled>Selecione um Genêro</option>
+									<option value="1" selected="selected" name ="gender">Masculino</option>
+									<option value="2" name="gender">Feminino</option>
+									<option value="3" name="gender">Unissex</option>
+								</select>
+							
+							<?php elseif($product->gender == "2") : ?>
+							<select class="form-control" name="gender" required ="required" id="gender">
+								<option disabled>Selecione um Genêro</option>
+								<option value="1" name ="gender">Masculino</option>
+								<option value="2" selected="selected" name="gender">Feminino</option>
+								<option value="3" name="gender">Unissex</option>
+							</select>
+
+							<?php elseif($product->gender == "3") : ?>
+							<select class="form-control" name="gender" required ="required" id="gender">
+								<option disabled>Selecione um Genêro</option>
+								<option value="1" name ="gender">Masculino</option>
+								<option value="2" name="gender">Feminino</option>
+								<option value="3" selected="selected" name="gender">Unissex</option>
+							</select>
+
+							<?php endif ?>
+						</div>
 
 						<div class="form-group col-sm-12 text-products edit-form">
-		    				<label for="name" > Categoria:</label>
-		    				<input type="text" name="category" value="<?= $product->category; ?>" class="form-control" id="category"  placeholder="Categoria do produto">
+							<label for="name" >Categoria:</label>
+								<select class="form-control" name="categories" required ="required" id="categories">
+										<option disabled>Selecione uma Categoria</option>
+									<?php foreach ($categories as $category) : ?>
+										<option value="<?= $category->id ?>" name="categories"> <?= $category->name ?> </option>
+									<?php endforeach ?>
+								</select>
 						</div>
 	
 						<div class="form-group col-sm-12 text-products edit-form">
@@ -58,9 +87,20 @@
 		    				<input type="text" name="description" value="<?= $product->description; ?>" class="form-control" id="description"  placeholder="NomDescrição do produto">
 		  				</div>
 
-						<input type="hidden" name="id" value="<?= $product->id ?>">
-						<button type="submit" name="btn" class="btn btn-success button-actions button-action-view">Atualizar</button>
-		    			<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit">Voltar</a>
+						<div class="form-group col-sm-12 d-flex justify-content-start">
+							<div class="text-category edit-image">
+								<form action="admin/productsadmin/products/edit" method="POST" enctype="multipart/form-data">
+									<label for="name" >Imagem do Produto</label>
+									<input type="file" name="image" value="<?= $product->image;?>">
+							</div>
+							</br>
+							<div class="d-flex justify-content-center buttons-submit-edit">
+									<input type="hidden" name="id" value="<?= $product->id ?>">
+									<button type="submit" name="btn" class="btn btn-success button-actions button-action-view">Atualizar</button>
+									<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit">Voltar</a>
+								</form>
+							</div>
+						</div>
 		    		</form>
 				</div>
 			</div>

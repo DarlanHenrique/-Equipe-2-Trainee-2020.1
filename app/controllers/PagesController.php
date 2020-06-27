@@ -27,13 +27,25 @@ class PagesController
 
         return view('admin/homeadm');
     }
+
   
       //Mostra pagina de produtos.
     public function products() {
 
         $products = App::get('database')->selectAll('products');
 
-        return view('pgvendas', compact('products'));
+        $categories = App::get('database')->selectAll('categories');
+
+        return view('pgvendas', compact('products','categories'));
+    }
+
+    public function category() {
+
+        $products = App::get('database')->searchCat('products', $_POST['id']);
+
+        $categories = App::get('database')->selectAll('categories');
+
+        return view('prodcat', compact('products','categories'));
     }
 
     //Mostra pagina do Produto.
@@ -41,7 +53,9 @@ class PagesController
 
         $product = App::get('database')->show('products', $_POST['id']);
 
-        return view('view-product', compact('product'));
+        $categories = App::get('database')->selectAll('categories');
+
+        return view('view-product', compact('product', 'categories'));
     }
 
 

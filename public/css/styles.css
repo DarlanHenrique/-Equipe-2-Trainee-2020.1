@@ -11,10 +11,13 @@
                     background: linear-gradient(#58D3F7, #FEFEFE)!important;
                     font-family: 'Amatic SC', cursive;
                     font-size: 50px;
+
                 }
-                
-                .container-header {
-                    width: 100%;
+                @media screen and (max-width: 1024px) {
+                    .search,
+                    .banner-header {
+                        display: none !important;
+                    }
                 }
                 
            
@@ -399,28 +402,6 @@ A adaptação é feita com um height: (pixelagem desejada)px; em uma classe da p
 o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
  Caso esteje em dúvida do funcionamento, aqui no css, apague o height na classe home-directrix e observe.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* INICIO CSS LISTING */
                 
                 .title-user {
@@ -539,16 +520,25 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                 .text-category {
                     text-align: start;
                 }
-                
+
                 .text-category>label {
                     margin-bottom: 5px;
                     margin-left: 20%;
                     font-weight: bold;
                 }
                 
+                .select-form {
+                    margin-left: 20%;
+                    width: 60%;
+                }
+
                 .text-category>input {
                     margin-left: 20%;
                     width: 60%;
+                }
+
+                .edit-image {
+                    margin-left: 25px;
                 }
                 /* FINAL CSS CREATE PRODUCTS */
                 
@@ -650,10 +640,23 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                 }
                 
                 .sidebar {
-                    font-size: 20px;
+                    font-size: 22px;
                     line-height: 12px;
                     padding-top: 15px;
+                    width: 150px;
                 }
+                
+                .sidebar-view { 
+                    font-size: 22px;
+                    line-height: 12px;
+                    padding-top: 15px;
+                    width: 140px;
+                }
+
+                .button-categories {
+                    background-color: white;
+                }
+
                 /*card produto*/
                 
                 .cardprdpg {
@@ -676,6 +679,16 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                     font-size: 22px;
                     line-height: 22px;
                 }
+
+                .cat-none {
+                    font-size: 30px;
+                    text-align: right;
+                }
+
+                .box-none {
+                    height: 100%;
+                }
+
                 /* FIM PAG DE PRODUTO */
                 /* INICIO RESPONSIVIDADE PAG DE VENDAS */
                 
@@ -709,7 +722,7 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                     .cardtxtprdpg {
                         font-size: 16px;
                         line-height: 12px;
-                    }
+                    } 
                     .descrprod {
                         padding-top: 0%;
                         width: 50%;
@@ -894,6 +907,7 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                 
                 .img-prod {
                     margin-bottom: 3%;
+                    border-radius: 30px;
                 }
                 
                 .none-prod {
@@ -934,6 +948,14 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                     margin-left: 20%;
                     width: 60%;
                 }
+
+                .buttons-submit-create {
+                    margin-top: 40px;
+                }
+
+                .buttons-submit-edit {
+                    margin-top: 100px;
+                }
                 /* FINAL CSS CREATE PRODUCTS */
                 
                 html,
@@ -963,10 +985,10 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                     width: 100%;
                 }
                 
-                @media screen and (max-width: 1024px) {
+                @media screen and (max-width: 1000px) {
                     .search,
                     .banner-header {
-                        display: none !important;
+                        display: none;
                     }
                 }
                 
@@ -1336,4 +1358,3 @@ o exemplo para pag. Home ADM é demonstrado na classe home-directrix.
                     margin-left: 20%;
                     width: 60%;
                 }
-

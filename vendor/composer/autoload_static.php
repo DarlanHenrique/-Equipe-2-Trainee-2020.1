@@ -21,7 +21,6 @@ class ComposerStaticInit9ee89db7e77fbb2c15f136caed5e7551
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'ComposerAutoloaderInit9ee89db7e77fbb2c15f136caed5e7551' => __DIR__ . '/..' . '/composer/autoload_real.php',
-        'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit9ee89db7e77fbb2c15f136caed5e7551' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'ErrorHandler' => __DIR__ . '/../..' . '/composer-setup.php',
         'HttpClient' => __DIR__ . '/../..' . '/composer-setup.php',

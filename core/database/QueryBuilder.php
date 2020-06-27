@@ -133,9 +133,19 @@ class QueryBuilder
     public function search($table, $search)
     {
         $sql = "SELECT * FROM " . $table . " WHERE name LIKE '%$search%'";
+        $qry = $this->pdo->prepare($sql);
+            $qry->execute();
+            return $qry->fetchAll(PDO::FETCH_CLASS);
+    }
            
+
+    public function searchCat($table, $id)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE categories = {$id}";
+
             $qry = $this->pdo->prepare($sql);
             $qry->execute();
             return $qry->fetchAll(PDO::FETCH_CLASS);
     }
+
 }

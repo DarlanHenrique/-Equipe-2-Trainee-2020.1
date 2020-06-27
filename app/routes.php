@@ -3,9 +3,10 @@
 //Pages Routes
 $router->get('', 'PagesController@home');
 $router->get('products', 'PagesController@products');
+$router->post('products/category', 'PagesController@category');
+$router->post('products/viewprod', 'PagesController@product');
 $router->get('about', 'PagesController@about');
 $router->get('contact', 'PagesController@contact');
-$router->post('products/viewprod', 'PagesController@product');
 $router->get('login', 'PagesController@login');
 
 
