@@ -31,13 +31,20 @@ $router->get('admin/productsadmin/products/edit','ProductsController@showFormPro
 //rota edit produtos
 $router->post('admin/productsadmin/products/edit', 'ProductsController@update');
 
+//rota lista de usuarios
 $router->get('admin/user', 'UsersController@index');
+
+//rota criar usuario
 $router->get('admin/user/create', 'UsersController@create');
 $router->post('admin/user', 'UsersController@store');
 
+//rota  deletar usuario
 $router->post('admin/user/delete', 'UsersController@delete');
+
+//rota mostrar usuario
 $router->post('admin/user/show', 'UsersController@show');
 
+//rota editar usuario
 $router->post('admin/user/edit', 'UsersController@update');
 $router->get('admin/user/edit','UsersController@showFormUserEdit');
 
@@ -57,3 +64,10 @@ $router->post('admin/categorias/delete', 'CategoriesController@delete');
 $router->get('admin/categorias/{id}', 'CategoriesController@edit');
 
 //Fim rota categorias
+
+//Rota pagina de login
+$router->get('admin/login', 'LoginController@login');
+$router->post('admin/login/check', 'LoginController@check');
+
+//Rota home administrativa
+$router->get('admin/home', 'LoginController@homeAdm');

@@ -13,9 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="../../public/css/reset.css">
-    <link rel="stylesheet" href="../../public/css/styles.css">
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/styles.css">
 
     <title>Da lã | Roupas Infantis</title>
       <meta name="description" content ="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
@@ -75,7 +74,13 @@
                     <img class="card-img-top" src="<?= $product->image ?>" alt="<?= $product->name; ?>">
                     <div class="card-body">
                       <h5 class="card-title product-name"><?= $product->name; ?></h5>
-                      <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
+                      <form  method="POST" action="/products/viewprod">
+                          <input type="hidden" name="id" value="<?= $product->id ?>">
+                              <button class="btn btn-outline-warning home-button col-sm-10" type="submit" styles="border-radius: 900px;">
+                                  <p class="home-button">Ver detalhes</p>
+                              </button> 
+                      </form>
+
                     </div>
                   </div>
                 </div>

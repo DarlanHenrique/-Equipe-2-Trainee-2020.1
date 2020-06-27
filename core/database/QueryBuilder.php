@@ -130,4 +130,36 @@ class QueryBuilder
         }
        
     }
+
+    public function selectUser()
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM users WHERE email = :email");
+
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
+
+    public function validateLogin(){
+        $sql = "SELECT * FROM " . $table . " WHERE email = :email";
+        $qry = $this->pdo->prepare($sql);
+        $qry->bindValue('email', $this->email);
+        $qry->execute();
+
+        if ($qry->rowCount()){
+            $result = $qry->fetch();
+
+            if ($result['password'] === $this->password){
+                $_SESSION['usr'] = $result['id'];
+                
+                return true;
+            }
+        }
+
+        throw new \Exception('Login inválido');
+
+
+    }
 }
+

@@ -371,6 +371,7 @@
                     }
                 }
                 /* FIM RESPONSIVIDADE HOME */
+
                 /* INICIO CONTATO */
                 
                 .font {
@@ -888,7 +889,7 @@ footer p {
     line-height: 23px;
 }
 
-.card {
+.cardwho {
     margin: 30px 5% 15% 5%;
     text-align: justify;
 }
@@ -2208,3 +2209,38 @@ footer p {
     margin-left: 20%;
     width: 60%;
 }
+/*fim Css Form-Categoria*/
+
+
+/*LOGIN*/
+
+.login-body{
+    position: relative;
+    height: 100vh;
+}
+.login-main{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+
+}
+.login-main h1{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.login-main form{
+    font-weight: 400;
+}
+.login-label{
+    font-size: "50px"!important;
+}
+.login-input{
+    margin-top: 10px !important;
+}
+.login-footer{
+    position: absolute;
+    bottom: 0;
+    width:100%
+}
+
+/*FIM DO LOGIN*/
