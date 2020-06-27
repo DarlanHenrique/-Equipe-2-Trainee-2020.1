@@ -13,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="/../../public/css/reset.css">
-    <link rel="stylesheet" href="/../../public/css/styles.css">
+    <link rel="stylesheet" href="/../public/css/reset.css">
+    <link rel="stylesheet" href="/../public/css/style.css">
+    <link rel="stylesheet" href="/../public/css/styles.css">
 
     <link rel="sortcut icon" href="/../public/img/Da_lã_Logo_2.png" type="image/x-icon">
 
@@ -28,7 +29,7 @@
   <body>
 
     <header>
-      <?php require('partials/header.php'); ?>
+      <?php include('includes/header.php'); ?>
     </header>
     <main>
 
@@ -80,28 +81,6 @@
                 </div>
               </div>
             </li>
-            <li class="d-xl-inline-block d-lg-inline-block d-md-block d-sm-block">
-              <div>
-                <div class="card product">
-                  <img class="card-img-top" src="/../public/img/roupa3.jpeg" alt="Macacão Lacinho">
-                  <div class="card-body">
-                    <h5 class="card-title product-name">Macacão Lacinho</h5>
-                    <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="d-xl-inline-block d-lg-inline-block d-md-block d-sm-block">
-              <div class="w-lg-100">
-                <div class="card product">
-                  <img class="card-img-top" src="/../public/img/roupa4.jpeg" alt="Macacão Animais">
-                  <div class="card-body">
-                    <h5 class="card-title product-name">Macacão Animais</h5>
-                    <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
-                  </div>
-                </div>
-              </div>
-            </li>
           </ul>
 
             <a href="pgvendas.html" class="btn btn-outline-warning more col-sm-10">Ver mais produtos &#10140;</a>
@@ -110,7 +89,7 @@
     </main>
 
     <footer>
-      <?php require('partials/footer.php'); ?>
+      <?php include('includes/footer.php'); ?>
     </footer>  
 
 

@@ -6,6 +6,8 @@ $router->get('products', 'PagesController@products');
 $router->get('about', 'PagesController@about');
 $router->get('contact', 'PagesController@contact');
 $router->post('products/viewprod', 'PagesController@product');
+$router->get('login', 'PagesController@login');
+
 
 //rota painel de controle
 $router->get('admin', 'PagesController@restrictArea');
@@ -38,4 +40,31 @@ $router->post('admin/user/show', 'UsersController@show');
 
 $router->post('admin/user/edit', 'UsersController@update');
 $router->get('admin/user/edit','UsersController@showFormUserEdit');
+
+//inicio rota categorias
+
+//rota leva ao formulario Adicionar Categoria
+$router->get('admin/categories/add', 'CategoriesController@showFormCategories');
+
+//rota leva ao formulario Editar Categoria
+$router->get('admin/categories/edit','CategoriesController@showFormCategoriesEdit');
+
+//rota leva ao index de categorias
+$router->get('admin/categories', 'CategoriesController@listAllCategories');
+
+//rota Insere dados no banco
+$router->post('admin/categories', 'CategoriesController@store');
+
+//Rota Remove dados no banco
+$router->post('admin/categories/delete', 'CategoriesController@delete');
+
+//rota edita dados no banco
+$router->post('admin/categories/edit', 'CategoriesController@update');
+
+//Fim rota categorias
+
+
+//rota pesquisa
+$router->get('search', 'PagesController@search');
+$router->post('search', 'PagesController@search');
 

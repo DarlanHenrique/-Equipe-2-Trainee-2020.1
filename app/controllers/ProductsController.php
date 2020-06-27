@@ -27,7 +27,7 @@ class ProductsController
             if(isset($_FILES['image'])){
                 $extensao = strtolower(substr($_FILES['image']['name'], -4));
                 $novo_nome = md5(time()) . $extensao;
-                $diretorio = "/assets/img/";
+                $diretorio = "/public/img/";
 
                 move_uploaded_file($_FILES['image']['tpm_name'], $diretorio.$novo_nome);
             }
@@ -85,4 +85,5 @@ class ProductsController
         return view('admin/productsadmin/formEditProducts', compact('product'));
     }
 
+    
 }

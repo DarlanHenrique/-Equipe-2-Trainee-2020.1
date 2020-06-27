@@ -14,26 +14,15 @@ class PagesController
     {
         $products = App::get('database')->selectLastThree('products');
 
-        return view('site/index', compact('products'));
+        return view('index', compact('products'));
+    }
+  
+    //mostra pagina de contato.
+    public function contact(){
+
+        return view('contato');
     }
 
-    /**
-     * Show the about page.
-     */
-    public function about()
-    {
-        $company = 'Laracasts';
-
-        return view('about', ['company' => $company]);
-    }
-
-    /**
-     * Show the contact page.
-     */
-    public function contact()
-    {
-        return view('contact');
-    }
     public function restrictArea(){
 
         return view('admin/homeadm');
@@ -48,7 +37,7 @@ class PagesController
     }
 
     //Mostra pagina do Produto.
-     public function product() {
+    public function product() {
 
         $product = App::get('database')->show('products', $_POST['id']);
 
@@ -60,6 +49,20 @@ class PagesController
     public function about() {
 
         return view('quemSomos');
+    }
+
+     //mostra pagina Quem somos.
+     public function login() {
+
+        return view('login');
+    }
+
+    public function search()
+    
+    {
+        $products = App::get('database')->search('products', $_POST['search']);
+
+        return view('pesquisa', compact('products'));
     }
 
 }

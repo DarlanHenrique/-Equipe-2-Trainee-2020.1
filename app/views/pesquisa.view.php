@@ -28,27 +28,29 @@
     </header>
 
     <main>
-        <div class="container">
+    <div class="container">
         <div class="body-change">
             <div class="promfolder">
                 <img class="prom" src="/../public/img/cupom.png" alt="Cupom FICAEMCASA">
             </div>
-
-            <nav class="navbar navbar-light bg-transparent">
-                <form class="form-inline" method='POST' action='/search'>
-                    <input style="width: 200px; text-align: center;" class="form-control mr-sm-2" type="search" placeholder="Faça sua pesquisa!" aria-label="Pesquisar">
-                    <button style="width: 50px" class="btn btn-outline-black-50 my-sm-0" type="submit">  &#8981  </button>
-                </form>
-            </nav>
+            <div class="searchprod">
+                <nav class="navbar navbar-light bg-transparent">
+                    <form class="form-inline" method='POST' action='/search'>
+                        <input name ='search' style="width: 200px; text-align: center;" class="form-control mr-sm-2" type="search" placeholder="Faça sua pesquisa!" aria-label="Pesquisar">
+                        <button href="" style="width: 50px" class="btn btn-outline-black-50" type="submit">  &#8981  </button>
+                    </form>
+                </nav>
+            </div>
 
             <div class="row mx-lg-n5 ">
-                <div class="col col1prdpg" class="col-2 py-0 px-0 ">
+                <div class="col1pv" class=".col- py-3 px-lg-5 ">
 
                     <nav id="navbar-exemplo3 " class="navbar navbar-light ">
                         <div class="sidebar ">
 
-                            <a class="nav-link text-dark" href="#item-1 ">  &#x025B8; Produtos </a>
+                            <a class="categorybar nav-link" href="#item-1 ">  &#x025B8; Produtos </a>
                             <nav class="nav nav-pills flex-column ">
+
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Blusas</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
@@ -58,6 +60,7 @@
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
+                            
                             </nav>
 
                         </div>
@@ -65,50 +68,32 @@
 
                 </div>
 
-                <div class="col-8 py-0 px-lg-0 ">
-                    <div class="carddeckprdpg">
-                        <div class="card-deck">
-                            <div class="row ">
-
-                                <div class="col col2prdpg ">
-                                    <div class="cardprdpg ">
-                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
-                                    </div>
-                                </div>
-
-                                <div class="col col3prdpg ">
-                                    <div class="card border-dark mb-3 " style="max-width: 18rem;">
-                                        <div class="cardbodyprdpg">
-                                            <div class="card-header bg-transparent border-dark cardtitleprdpg"><?= $product->name; ?></div>
-                                            <div class="card-body text-dark ">
-                                                <p class="card-text cardtxtprdpg"><?= $product->price; ?><p>
-                                                <p class="card-text cardtxtprdpg"><?= $product->gender; ?><p>
-                                                <p class="card-text cardtxtprdpg"><?= $product->description; ?></p>
-                                            </div>
+                <div class="col py-3 px-lg-5 ">
+                    <div class="card-deck carddeckprdpg">
+                        <div class="row ">
+                            <?php foreach ($products as $product) : ?>    
+                                <div class="col">
+                                    <div class="cardprdpg">
+                                        <form  method="POST" action="search">
+                                            <input type="hidden" name="search" value="<?= $product->name ?>">
+                                                <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
+                                                    <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                                </button> 
+                                        </form>
+                                       
+                                        <div class="card-body cardbodyprdpg">
+                                            <h5 class="card-title cardtitleprdpg"><?= $product->name; ?></h5>
+                                            <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-
+                            <?php endforeach; ?>  
                         </div>
                     </div>
-
-                    <div class="card border-dark mb-3 " style="max-width: 18rem;">
-                                    <div class="cardbodyprdpg">
-                                        <div class="card-body text-dark ">
-                                            <p class="card-text cardtxtprdpg"><?= $product->details; ?><p>
-                                        </div>
-                                    </div>
-                                </div>
                 </div>
-
-            </div>
-
         </div>
         </div>
     </main>
-    
     <footer>
       <?php require('includes/footer.php'); ?>
     </footer>
