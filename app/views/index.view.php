@@ -71,7 +71,7 @@
               <li class="d-inline-block">
                 <div class="p-0">
                   <div class="card product">
-                    <img class="card-img-top" src="<?= $product->image ?>" alt="<?= $product->name; ?>">
+                    <img class="card-img-top" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
                     <div class="card-body">
                       <h5 class="card-title product-name"><?= $product->name; ?></h5>
                       <form  method="POST" action="/products/viewprod">
