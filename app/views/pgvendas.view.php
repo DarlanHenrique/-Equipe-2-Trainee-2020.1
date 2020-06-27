@@ -2,6 +2,27 @@
 
 <html lang="pt-br">
 
+<?php 
+
+if (!empty($products)){
+    if (isset ($pagination)){
+        $limit = 12;
+        $numpage = ceil(count($products)/$limit);
+        $identification = array();
+        foreach ($products as $product){
+            array_push ($identification, $product->id);
+        }
+        $actuallypage = array_search ($pagination[0]->id, $identification);
+        $nextpage = $actuallypage + $limit;
+        if ($nextpage <= count($products)){
+            $exist = 1;
+        }
+        else {
+            $exist = 0;
+        }
+    }
+}
+?>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -51,15 +72,15 @@
                             <a class="categorybar nav-link" href="#item-1 ">  &#x025B8; Produtos </a>
                             <nav class="nav nav-pills flex-column ">
 
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Blusas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Bermudas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Saias</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Vestidos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Bermudas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Blusas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Bodies</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Calças</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Macacões</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-7 ">Pijamas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-8 ">Saias</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-9 ">Vestidos</a>
                             
                             </nav>
 
@@ -71,23 +92,27 @@
                 <div class="col py-3 px-lg-5 ">
                     <div class="card-deck carddeckprdpg">
                         <div class="row ">
-                            <?php foreach ($products as $product) : ?>    
-                                <div class="col">
-                                    <div class="cardprdpg">
-                                        <form  method="POST" action="/products/viewprod">
-                                            <input type="hidden" name="id" value="<?= $product->id ?>">
-                                                <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
-                                                    <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
-                                                </button> 
-                                        </form>
-                                       
-                                        <div class="card-body cardbodyprdpg">
-                                            <h5 class="card-title cardtitleprdpg"><?= $product->name; ?></h5>
-                                            <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
+                            <?php if (isset($products) && !empty($products)) : ?>
+                                <?php if (isset($pagination)) : ?>
+                                    <?php foreach ($pagination as $product) : ?>    
+                                        <div class="col">
+                                            <div class="cardprdpg">
+                                                <form  method="POST" action="/products/viewprod">
+                                                    <input type="hidden" name="id" value="<?= $product->id ?>">
+                                                        <button class="btn btn-outline-light border-0 prod-buttons" type="submit">
+                                                            <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                                        </button> 
+                                                </form>
+                                            
+                                                <div class="card-body cardbodyprdpg">
+                                                    <h5 class="card-title cardtitleprdpg"><?= $product->name; ?></h5>
+                                                    <p class="card-text cardtxtprdpg"><?= $product->price; ?></p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>  
+                                    <?php endforeach; ?>  
+                                <?php endif; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -103,17 +128,49 @@
                 </li>
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item">
-                    <div>
                     <a class="page-link" href="#" aria-label="Próximo">
                         <span aria-hidden="true">&raquo;</span>
                         <span class="sr-only">Próximo</span>
                     </a>
-                    </div>
                 </li>
             </ul>
         </nav>
+        
+        <nav>
+            <ul>
+                <li>
+                    <form method="GET" action="/products/pag">
+                        <?php if ($actuallypage == 0) : ?>
+                            <input type="hidden" name="pag" value="<?= $actuallypage; ?>">
+                        <?php else : ?>
+                            <input type="hidden" name="pag" value="<?= ($actuallypage - 12); ?>">
+                            <button type="submit"></button>
+                        <?php endif; ?>
+                    </form>
+                </li>
+                <?php for ($i=0; $i<=$numpage; $i++) : ?>
+                    <li>
+                        <form method="GET" action="/products/pag">
+                            <input type="hidden" name="pag" value="<?= ($i*12)-12; ?>">
+                            <button type="submit"><?= $i ?></button>
+                        </form>
+                    </li>
+                <?php endfor; ?>
+                <li>
+                    <form method="GET" action="/products/pag">
+                        <?php if ($exist == 1) : ?>
+                            <input type="hidden" name="pag" value="<?= ($actuallypage + 12); ?>">
+                            <button type="submit"></button>
+                        <?php else : ?>
+                            <input type="hidden" name="pag" value="<?= $actuallypage; ?>">
+                        <?php endif; ?>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+
+</div>
     </main>
     <footer>
       <?php require('partials/footer.php'); ?>

@@ -130,4 +130,14 @@ class QueryBuilder
         }
        
     }
+
+   public function pagination($table, $pag)
+   {    
+        $statement = $this->pdo->prepare("SELECT * FROM " . $table . " LIMIT {$pag}, 12");
+           
+            $statement->execute();
+            return $statement->fetchAll(PDO::FETCH_CLASS);
+   }
+
+ 
 }

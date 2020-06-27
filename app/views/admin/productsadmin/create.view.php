@@ -63,9 +63,10 @@
 							<form action="/admin/productsadmin/products/create" method="POST" enctype="multipart/form-data">
 								<label for="name" >Imagem do Produto</label>
 								<input type="file" required name="image">
-								
+								<div class="botaocreatprdpg">
 								<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
 								<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
+								</div>
 							</form>
 						</div>
 

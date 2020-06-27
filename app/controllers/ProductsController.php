@@ -24,13 +24,13 @@ class ProductsController
     }
     public function store()
         {
-            if(isset($_FILES['image'])){
-                $extensao = strtolower(substr($_FILES['image']['name'], -4));
-                $novo_nome = md5(time()) . $extensao;
-                $diretorio = "/assets/img/";
+            // if(isset($_FILES['image'])){
+            //     $extensao = strtolower(substr($_FILES['image']['name'], -4));
+            //     $novo_nome = md5(time()) . $extensao;
+            //     $diretorio = "/assets/img/";
 
-                move_uploaded_file($_FILES['image']['tpm_name'], $diretorio.$novo_nome);
-            }
+            //     move_uploaded_file($_FILES['image']['tpm_name'], $diretorio.$novo_nome);
+            // }
             // $url_image = isset($_POST["url_image"]) ? strip_tags(filter_input(INPUT_POST, "url_image")) : NULL;
 
             App::get('database')->insert('products', [

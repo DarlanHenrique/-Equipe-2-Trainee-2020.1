@@ -32,18 +32,28 @@ class PagesController
     public function products() {
 
         $products = App::get('database')->selectAll('products');
+        $pagination = App::get('database')->pagination('products', 0);
 
-        return view('pgvendas', compact('products'));
+        return view('pgvendas', compact('products', 'pagination'));
+    }
+
+    //pagination
+    public function pagination() {
+
+        $products = App::get('database')->selectAll('products');
+        $pagination = App::get('database')->pagination('products', 0);
+
+        return view('pgvendas', compact('products', 'pagination'));
     }
 
     //Mostra pagina do Produto.
     public function product() {
 
-        $product = App::get('database')->show('products', $_POST['id']);
+        $product = App::get('database')->show('products', $_POST['id']);        
 
+        
         return view('view-product', compact('product'));
     }
-
 
     //mostra pagina Quem somos.
     public function about() {

@@ -8,6 +8,7 @@ $router->get('contact', 'PagesController@contact');
 $router->post('products/viewprod', 'PagesController@product');
 $router->get('sobre', 'PagesController@about');
 $router->get('contato', 'PagesController@contact');
+$router->get('products/pag', 'PagesController@pagination');
 
 //rota painel de controle
 $router->get('admin', 'PagesController@restrictArea');

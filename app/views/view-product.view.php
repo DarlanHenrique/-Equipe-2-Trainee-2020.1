@@ -49,15 +49,15 @@
 
                             <a class="nav-link text-dark" href="#item-1 ">  &#x025B8; Produtos </a>
                             <nav class="nav nav-pills flex-column ">
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Blusas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Bermudas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Blusas</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
                                 <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Bermudas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Saias</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Vestidos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Conjuntos</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Macacões</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Pijamas</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Saias</a>
+                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Vestidos</a>
                             </nav>
 
                         </div>
