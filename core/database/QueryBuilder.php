@@ -141,23 +141,11 @@ class QueryBuilder
     }
 
 
-    public function validateLogin(){
-        $sql = "SELECT * FROM " . $table . " WHERE email = :email";
+    public function validateLogin($table,$email){
+        $sql = "SELECT * FROM " . $table . " WHERE email = '{$email}'";
         $qry = $this->pdo->prepare($sql);
-        $qry->bindValue('email', $this->email);
         $qry->execute();
-
-        if ($qry->rowCount()){
-            $result = $qry->fetch();
-
-            if ($result['password'] === $this->password){
-                $_SESSION['usr'] = $result['id'];
-                
-                return true;
-            }
-        }
-
-        throw new \Exception('Login inválido');
+        return $qry->fetch(PDO::FETCH_OBJ);
 
 
     }

@@ -68,6 +68,7 @@ $router->get('admin/categorias/{id}', 'CategoriesController@edit');
 //Rota pagina de login
 $router->get('admin/login', 'LoginController@login');
 $router->post('admin/login/check', 'LoginController@check');
+$router->post('admin/logout', 'LoginController@logout');
 
 //Rota home administrativa
 $router->get('admin/home', 'LoginController@homeAdm');

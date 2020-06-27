@@ -21,7 +21,7 @@
   </head>
   <body class="text-center login-body">
 
-  <?php require __DIR__ . '/../partials/navbar.php'; ?>
+  <?php require __DIR__ . '/includes/header.php'; ?>
     
     <main class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-md-8 offset-md-2 login-main">
       <div class="card">
@@ -45,7 +45,7 @@
     </main>
 
     <div class="login-footer">
-      <?php require __DIR__ . '/../partials/footer.php'; ?>    
+      <?php require __DIR__ . '/includes/footer.php'; ?>    
     </div>
 
     <!-- JavaScript (Opcional) -->

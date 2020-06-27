@@ -10,31 +10,41 @@ class LoginController
 {
     //Mostra pagina de login.
     public function login(){
-        
-        require  __DIR__ . "/../model/User.php";
 
-        return view_admin('login');
+        return view('login');
     }
     
     public function check(){
 
-        require  __DIR__ . "/../model/User.php";
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $user = App::get('database')->validateLogin('users',$email);
 
-        try{
-            $user = new User;
-            $user->setEmail($_POST['email']);
-            $user->setPassword($_POST['password']);
-            $user->validateLogin();
-
-            header('Location: home');
-        }catch(\Exception $e){
-            header('Location: login');
+        if (empty($user)){
+            $message = array('Login inválido');
+            return view('login', compact('message'));
         }
+        if($user->password != $password) { 
+            $message = array('Login inválido');
+            return view('login', compact('message'));
+        }
+        else{
+            session_start();
+            $_SESSION['email'] = $email;
+            return view_admin('homeadm');
+        }
+ 
     }
 
     public function homeAdm(){
 
         return view_admin('homeadm');
+    }
+
+    public function logout(){
+        session_start();
+        session_destroy();
+        return view_admin('login');
     }
 }
     

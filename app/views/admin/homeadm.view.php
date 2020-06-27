@@ -19,14 +19,14 @@
  <body>  
   <main>
 
-    <div class="container home-directrix">       
+    <div class="container home-directrix" align="center">       
 
       <div class="col-sm flex-center text-center">
         <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
       </div>
       <h1>Página Administrativa Da Lã</h1>
     
-      <div class="d-flex justify-content-center media-home">
+      <div class="d-flex justify-content-center media-home text-center">
         <div class="row mr-0 ml-0 d-flex">
           <div class="col-sm  pr-1">
             <div class="card text-center border-dark mb-3 bg-light mb-3 " style="width: 18rem;">
@@ -56,7 +56,10 @@
             </div>  
           </div>
         </div>
-      </div>                
+      </div> 
+          <form method='POST' action='/admin/logout' class= "homeadm-logout">
+            <button type="submit" class="btn btn-danger">Logout</button>
+          </form>               
     </div>
   </main>
 </body>
