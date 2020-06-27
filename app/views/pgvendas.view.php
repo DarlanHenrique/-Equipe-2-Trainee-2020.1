@@ -65,7 +65,7 @@
             </div>
 
             <div class="row mx-lg-n5 ">
-                <div class="col1pv" class=".col- py-3 px-lg-5 ">
+                <div class="col1pv" class="col py-3 px-lg-5 ">
 
                     <nav id="navbar-exemplo3 " class="navbar navbar-light ">
                         <div class="sidebar ">
@@ -89,13 +89,14 @@
 
                 </div>
 
-                <div class="col py-3 px-lg-5 ">
+                <div class="col py-3 px-lg-5 d-flex justify-content-center">
+
                     <div class="card-deck carddeckprdpg">
                         <div class="row ">
                             <?php if (isset($products) && !empty($products)) : ?>
                                 <?php if (isset($pagination)) : ?>
                                     <?php foreach ($pagination as $product) : ?>    
-                                        <div class="col">
+                                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
                                             <div class="cardprdpg">
                                                 <form  method="POST" action="/products/viewprod">
                                                     <input type="hidden" name="id" value="<?= $product->id ?>">
@@ -115,6 +116,7 @@
                             <?php endif; ?>
                         </div>
                     </div>
+
                 </div>
         </div>
         </div>
