@@ -16,7 +16,6 @@ class UsersController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
             $users = App::get('database')->selectAll('users');
             return view_admin_user('user', compact('users'));
         }
@@ -32,7 +31,6 @@ class UsersController
             return view('index');
             
         }else{
-            session_start();
             $users = App::get('database')->selectAll('users');
             return view_admin_user('createUser', compact('users'));
         }
@@ -67,7 +65,6 @@ class UsersController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
             $user = App::get('database')->show('users', $_POST['id']);
             return view_admin_user('usershow', compact('user'));
         }
@@ -92,8 +89,6 @@ class UsersController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
-
             $user = app::get('database')->show('users', $_GET['id']);
             return view('admin/user/formEditUser', compact('user'));
         }

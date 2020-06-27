@@ -14,8 +14,6 @@ class CategoriesController {
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
-
             $categories = App::get('database')->selectAll('categories');
             return view('admin/categories/categories', compact('categories'));
         }
@@ -59,7 +57,6 @@ class CategoriesController {
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
             return view('admin/categories/formCategories');
         }
     }
@@ -70,7 +67,6 @@ class CategoriesController {
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
             $category = app::get('database')->show('categories', $_GET['id']);
             return view('admin/categories/formEditCategories', compact('category'));
         }

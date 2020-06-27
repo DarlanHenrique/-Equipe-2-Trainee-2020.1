@@ -14,7 +14,6 @@ class LoginController
         if(!isset($_SESSION['email'])){
             return view('login');
         }else{
-            session_start();
             return view_admin('homeadm');
         }
     }
@@ -26,11 +25,11 @@ class LoginController
         $user = App::get('database')->validateLogin('users',$email);
 
         if (empty($user)){
-            $message = array('Login inválido');
+            echo "<script>alert('Digite um e-mail válido!');</script>";
             return view('login', compact('message'));
         }
         if($user->password != $password) { 
-            $message = array('Login inválido');
+            echo "<script>alert('Senha inválida!');</script>";
             return view('login', compact('message'));
         }
         else{
@@ -47,7 +46,6 @@ class LoginController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
             return view_admin('homeadm');
         }
     }

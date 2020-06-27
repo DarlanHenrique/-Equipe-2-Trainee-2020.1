@@ -68,7 +68,7 @@
                           </form>
                           <form method="POST" action="categories/delete">
                             <input type="hidden" name="id" value="<?= $category->id ?>">
-                            <button title="Excluir" class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
+                            <button title="Excluir"  class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
                           </form>
                         </div>
                       </td>

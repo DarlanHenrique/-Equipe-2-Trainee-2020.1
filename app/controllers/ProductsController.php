@@ -16,7 +16,6 @@ class ProductsController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
             $products = App::get('database')->selectAll('products');
             return view('admin/productsadmin/products', compact('products'));
         }
@@ -29,7 +28,6 @@ class ProductsController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
             $products = App::get('database')->selectAll('products');
             return view('admin/productsadmin/create', compact('products'));
         }
@@ -73,8 +71,6 @@ class ProductsController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
-        
             $product = App::get('database')->show('products', $_POST['id']);
             return view('admin/productsadmin/prod', compact('product'));
         }
@@ -102,7 +98,6 @@ class ProductsController
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
             return view('index');
         }else{
-            session_start();
 
             $product = app::get('database')->show('products', $_GET['id']);
             return view('admin/productsadmin/formEditProducts', compact('product'));
