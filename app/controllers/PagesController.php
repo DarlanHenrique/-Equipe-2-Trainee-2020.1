@@ -75,8 +75,8 @@ class PagesController
     
     {
         $products = App::get('database')->search('products', $_POST['search']);
-
-        return view('pesquisa', compact('products'));
+        $categories = App::get('database')->selectAll('categories');
+        return view('pesquisa', compact('products', 'categories'));
     }
 
 }

@@ -45,22 +45,21 @@
             <div class="row mx-lg-n5 ">
                 <div class="col1pv" class=".col- py-3 px-lg-5 ">
 
-                    <nav id="navbar-exemplo3 " class="navbar navbar-light ">
+                <nav id="navbar-exemplo3 " class="navbar navbar-light ">
                         <div class="sidebar ">
 
-                            <a class="categorybar nav-link" href="#item-1 ">  &#x025B8; Produtos </a>
-                            <nav class="nav nav-pills flex-column ">
-
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Blusas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Bermudas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Saias</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Vestidos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Macacões</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Pijamas</a>
-                            
+                            <a class="categorybar nav-link">  &#x025B8; Produtos </a>
+                            <nav class="nav nav-pills flex-column">
+                                <?php foreach ($categories as $category) : ?>
+                                    <div>
+                                        <form method="POST" action="products/category">
+                                            <input type="hidden" name="id" value="<?= $category->id ?>">
+                                            <div>
+                                                <button class="btn btn  button-categories" type="submit" style="font-size: 20px;" ><?= $category->name ?></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                <?php endforeach; ?>
                             </nav>
 
                         </div>
@@ -77,7 +76,7 @@
                                         <form  method="POST" action="search">
                                             <input type="hidden" name="search" value="<?= $product->name ?>">
                                                 <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
-                                                    <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                                    <img class="card-img-top rounded" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
                                                 </button> 
                                         </form>
                                        
