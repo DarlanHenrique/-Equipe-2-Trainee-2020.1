@@ -43,8 +43,9 @@ class PagesController
 
         $products = App::get('database')->selectAll('products');
         $pagination = App::get('database')->pagination('products', $_GET['pag']);
+        $categories = App::get('database')->selectAll('categories');
 
-        return view('pgvendas', compact('products', 'pagination'));
+        return view('pgvendas', compact('products', 'pagination', 'categories'));
     }
     
     //categoria
@@ -61,8 +62,9 @@ class PagesController
     public function product() {
 
         $product = App::get('database')->show('products', $_POST['id']);
+        $categories = App::get('database')->selectAll('categories');
 
-        return view('view-product', compact('product'));
+        return view('view-product', compact('product','categories'));
     }
 
 
