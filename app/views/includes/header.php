@@ -48,7 +48,7 @@
                   <a class="nav-link" href="/about">Quem somos</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/login">Entrar</a>
+                  <a class="nav-link" href="/admin/login">Entrar</a>
                 </li>
             </ul>
           </div>      
@@ -59,7 +59,7 @@
         </div>            
       </nav>
 
-      <img class="banner-header" src="/../../../public/img/cabecalho.jpg" alt="Banner do Site">
+      <img class="banner-header" src="/../../../public/img/cabecalho.png" alt="Banner do Site">
     </header>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>

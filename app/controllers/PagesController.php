@@ -24,28 +24,19 @@ class PagesController
     }
 
     public function restrictArea(){
-
-        return view('admin/homeadm');
+        //if(!isset($_SESSION)){
+        //    header("Location: index.view.php");;
+        //}else{
+            return view('admin/homeadm');
+        //}
     }
-
   
       //Mostra pagina de produtos.
     public function products() {
 
         $products = App::get('database')->selectAll('products');
 
-        $categories = App::get('database')->selectAll('categories');
-
-        return view('pgvendas', compact('products','categories'));
-    }
-
-    public function category() {
-
-        $products = App::get('database')->searchCat('products', $_POST['id']);
-
-        $categories = App::get('database')->selectAll('categories');
-
-        return view('prodcat', compact('products','categories'));
+        return view('pgvendas', compact('products'));
     }
 
     //Mostra pagina do Produto.
@@ -53,9 +44,7 @@ class PagesController
 
         $product = App::get('database')->show('products', $_POST['id']);
 
-        $categories = App::get('database')->selectAll('categories');
-
-        return view('view-product', compact('product', 'categories'));
+        return view('view-product', compact('product'));
     }
 
 
@@ -63,12 +52,6 @@ class PagesController
     public function about() {
 
         return view('quemSomos');
-    }
-
-     //mostra pagina Quem somos.
-     public function login() {
-
-        return view('login');
     }
 
 }

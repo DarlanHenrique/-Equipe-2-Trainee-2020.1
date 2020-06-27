@@ -26,7 +26,7 @@
 		    	    <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
 		    	</div>
 		    	<div class="col-sm-12 col-lg-12 ">
-		    		<form name="formAddCategory" action="/admin/categories" onsubmit="MudaDePagina()" method="POST">
+		    		<form name="formAddCategory" action="/admin/categories"  method="POST">
 						<div class="form-group col-sm-12 text-category">
 		    				<label for="name" >Nome:</label>
 		    				<input type="text" name="name" class="form-control" required ="required" id="name"  placeholder="Nome da Categoria">

@@ -131,13 +131,23 @@ class QueryBuilder
        
     }
 
-    public function searchCat($table, $id)
+    public function selectUser()
     {
-        $sql = "SELECT * FROM " . $table . " WHERE categories = {$id}";
+        $statement = $this->pdo->prepare("SELECT * FROM users WHERE email = :email");
 
-            $qry = $this->pdo->prepare($sql);
-            $qry->execute();
-            return $qry->fetchAll(PDO::FETCH_CLASS);
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_CLASS);
     }
 
+
+    public function validateLogin($table,$email){
+        $sql = "SELECT * FROM " . $table . " WHERE email = '{$email}'";
+        $qry = $this->pdo->prepare($sql);
+        $qry->execute();
+        return $qry->fetch(PDO::FETCH_OBJ);
+
+
+    }
 }
+

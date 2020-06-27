@@ -11,25 +11,35 @@ class ProductsController
      */
     public function index()
     {
-        $products = App::get('database')->selectAll('products');
-
-        return view('admin/productsadmin/products', compact('products'));
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            session_start();
+            $products = App::get('database')->selectAll('products');
+            return view('admin/productsadmin/products', compact('products'));
+        }
     }
 
     public function create()
-    {
-        $products = App::get('database')->selectAll('products');
-
-        $categories = App::get('database')->selectAll('categories');
-
-        return view('admin/productsadmin/create', compact('products', 'categories'));
+    {   
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            session_start();
+            $products = App::get('database')->selectAll('products');
+            return view('admin/productsadmin/create', compact('products'));
+        }
     }
     public function store()
         {
             if(isset($_FILES['image'])){
                 $extensao = strtolower(substr($_FILES['image']['name'], -4));
                 $novo_nome = md5(time()) . $extensao;
-                $diretorio = "/public/img/";
+                $diretorio = "/assets/img/";
 
                 move_uploaded_file($_FILES['image']['tpm_name'], $diretorio.$novo_nome);
             }
@@ -39,7 +49,7 @@ class ProductsController
                     'name' => $_POST['name'],
                     'price' => $_POST['price'],
                     'gender' => $_POST['gender'],
-                    'categories' => $_POST['categories'],
+                    'category' => $_POST['category'],
                     'details' => $_POST['details'],
                     'description' => $_POST['description'],
                     'image' => $_POST['image']
@@ -57,11 +67,17 @@ class ProductsController
     }
 
     public function show()
-    
     {
-        $product = App::get('database')->show('products', $_POST['id']);
-
-        return view('admin/productsadmin/prod', compact('product'));
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            session_start();
+        
+            $product = App::get('database')->show('products', $_POST['id']);
+            return view('admin/productsadmin/prod', compact('product'));
+        }
     }
 
     public function update(){
@@ -70,10 +86,9 @@ class ProductsController
                 'name' => $_POST['name'],
                 'price' => $_POST['price'],
                 'gender' => $_POST['gender'],
-                'categories' => $_POST['categories'],
+                'category' => $_POST['category'],
                 'details' => $_POST['details'],
                 'description' => $_POST['description'],
-                'image' => $_POST['image'],
             ], 
             $id = $_POST['id']
         );
@@ -82,12 +97,16 @@ class ProductsController
     }
 
     public function showFormProductsEdit(){
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            session_start();
 
-        $product = app::get('database')->show('products', $_GET['id']);
-
-        $categories = App::get('database')->selectAll('categories');
-
-        return view('admin/productsadmin/formEditProducts', compact('product', 'categories'));
+            $product = app::get('database')->show('products', $_GET['id']);
+            return view('admin/productsadmin/formEditProducts', compact('product'));
+        }
     }
 
 }

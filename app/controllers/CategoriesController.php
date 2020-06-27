@@ -9,12 +9,16 @@ class CategoriesController {
      * Show all categories.
      */
     public function listAllCategories() {
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            session_start();
 
-        $categories = App::get('database')->selectAll('categories');
-
-        
-
-        return view('admin/categories/categories', compact('categories'));
+            $categories = App::get('database')->selectAll('categories');
+            return view('admin/categories/categories', compact('categories'));
+        }
     }
 
 
@@ -50,15 +54,26 @@ class CategoriesController {
 
     //mostra Formulario de categorias.
     public function showFormCategories(){
-
-        return view('admin/categories/formCategories');
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            session_start();
+            return view('admin/categories/formCategories');
+        }
     }
 
     public function showFormCategoriesEdit(){
-
-        $category = app::get('database')->show('categories', $_GET['id']);
-
-        return view('admin/categories/formEditCategories', compact('category'));
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            session_start();
+            $category = app::get('database')->show('categories', $_GET['id']);
+            return view('admin/categories/formEditCategories', compact('category'));
+        }
     }
 
     

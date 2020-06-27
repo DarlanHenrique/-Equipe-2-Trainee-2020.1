@@ -36,8 +36,8 @@
         <h1>Produto <?= '#' . $product->id; ?></h1>
     </div>
 
-    <div class="col-sm flex-center">
-        <img class="img-prod" src="/../../public/img/<?= $product->image ?>" width="250" height="250" alt="Produto <?= '#' . $product->id; ?>">
+    <div class="col-sm flex-center img-prod">
+        <img src="<?= $product->image; ?>" width="250" height="250" alt="Produto <?= '#' . $product->id; ?>">
     </div>
 
     <div class="row table-prod" >
@@ -63,52 +63,8 @@
                         <td><?= '#' . $product->id; ?></td>
                         <td><?= $product->name; ?></td>
                         <td><?= $product->price; ?></td>
-                        <td>
-
-                            <?php if ($product->gender == "1") : ?>
-                                Masculino
-
-                            <?php elseif ($product->gender == "2") : ?>
-                                Feminino
-
-                            <?php elseif ($product->gender == "3") : ?>
-                                Unissex
-                            
-                            <?php endif ?>
-
-                        </td>
-                        <td>
-
-                            <?php if ($product->categories == "1") : ?>
-                                Bermudas
-
-                            <?php elseif ($product->categories == "2") : ?>
-                                Blusas
-
-                            <?php elseif ($product->categories == "3") : ?>
-                                Bodies
-
-                            <?php elseif ($product->categories == "4") : ?>
-                                Calças
-
-                            <?php elseif ($product->categories == "5") : ?> 
-                                Conjuntos
-
-                            <?php elseif ($product->categories == "6") : ?> 
-                                Macacões
-
-                            <?php elseif ($product->categories == "7") : ?> 
-                                Pijamas
-
-                            <?php elseif ($product->categories == "8") : ?>
-                                Saias
-
-                            <?php elseif ($product->categories == "9") : ?>
-                                Vestidos
-
-                            <?php endif ?>
-
-                        </td>
+                        <td><?= $product->gender; ?></td>
+                        <td><?= $product->category; ?></td>
                         <td><?= $product->details; ?></td>
                         <td><?= $product->description; ?></td>
                     </tr>
