@@ -24,7 +24,7 @@
 
 <body>
     <header>
-      <?php require('partials/header.php'); ?>
+      <?php require('includes/header.php'); ?>
     </header>
 
     <main>
@@ -47,17 +47,18 @@
                     <nav id="navbar-exemplo3 " class="navbar navbar-light ">
                         <div class="sidebar ">
 
-                            <a class="nav-link text-dark" href="#item-1 ">  &#x025B8; Produtos </a>
+                            <a class="categorybar nav-link">  &#x025B8; Produtos </a>
                             <nav class="nav nav-pills flex-column ">
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Bermudas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-3 ">Blusas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Bodies</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Calças</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Conjuntos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Macacões</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-2-4 ">Pijamas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Saias</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Vestidos</a>
+                                <?php foreach ($categories as $category) : ?>
+                                    <div>
+                                        <form method="POST" action="products/category">
+                                            <input type="hidden" name="id" value="<?= $category->id ?>">
+                                            <div>
+                                                <button class="btn btn  button-categories" type="submit" style="font-size: 20px;" ><?= $category->name ?></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                <?php endforeach; ?>
                             </nav>
 
                         </div>
@@ -72,7 +73,7 @@
 
                                 <div class="col col2prdpg ">
                                     <div class="cardprdpg ">
-                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
                                     </div>
                                 </div>
 
@@ -80,10 +81,21 @@
                                     <div class="card border-dark mb-3 " style="max-width: 18rem;">
                                         <div class="cardbodyprdpg">
                                             <div class="card-header bg-transparent border-dark cardtitleprdpg"><?= $product->name; ?></div>
-                                            <div class="card-body text-dark ">
-                                                <p class="card-text cardtxtprdpg"><?= $product->price; ?><p>
-                                                <p class="card-text cardtxtprdpg"><?= $product->gender; ?><p>
-                                                <p class="card-text cardtxtprdpg"><?= $product->description; ?></p>
+                                            <div class="card-body text-dark">
+                                                <p class="card-text cardtxtprdpg" style=" line-height: 32px ;"><?= $product->price; ?><p>
+                                                <p class="card-text cardtxtprdpg" style=" line-height: 32px ;">
+                                                <?php if ($product->gender == "1") : ?>
+                                                    Masculino
+
+                                                <?php elseif ($product->gender == "2") : ?>
+                                                    Feminino
+
+                                                <?php elseif ($product->gender == "3") : ?>
+                                                    Unissex
+                                                
+                                                <?php endif ?>
+                                                <p>
+                                                <p class="card-text cardtxtprdpg" style=" line-height: 32px ;"><?= $product->description; ?></p>
                                             </div>
                                         </div>
                                     </div>
@@ -110,7 +122,7 @@
     </main>
     
     <footer>
-      <?php require('partials/footer.php'); ?>
+      <?php require('includes/footer.php'); ?>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js "></script>

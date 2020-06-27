@@ -131,13 +131,20 @@ class QueryBuilder
        
     }
 
-   public function pagination($table, $pag)
-   {    
-        $statement = $this->pdo->prepare("SELECT * FROM " . $table . " LIMIT {$pag}, 12");
-           
-            $statement->execute();
-            return $statement->fetchAll(PDO::FETCH_CLASS);
-   }
-
+    public function pagination($table, $parameters)
+    {
+         $statement = $this->pdo->prepare("SELECT * FROM " . $table . " LIMIT {$parameters}, 8");
  
+             $statement->execute();
+             return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
+
+   public function searchCat($table, $id)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE categories = {$id}";
+
+            $qry = $this->pdo->prepare($sql);
+            $qry->execute();
+            return $qry->fetchAll(PDO::FETCH_CLASS);
+    }
 }

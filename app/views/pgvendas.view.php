@@ -4,24 +4,25 @@
 
 <?php 
 
-if (!empty($products)){
-    if (isset ($pagination)){
-        $limit = 12;
-        $numpage = ceil(count($products)/$limit);
-        $identification = array();
-        foreach ($products as $product){
-            array_push ($identification, $product->id);
-        }
-        $actuallypage = array_search ($pagination[0]->id, $identification);
-        $nextpage = $actuallypage + $limit;
-        if ($nextpage <= count($products)){
-            $exist = 1;
-        }
-        else {
-            $exist = 0;
+    if (!empty($products)){
+        if (isset ($pagination)){
+            $limit = 8;
+            $prod_count = count($products);
+            $numpage = ceil( $prod_count / $limit);
+            $identification = array();
+            foreach ($products as $product){
+                array_push ($identification, $product->id);
+            }
+            $actuallypage = array_search ($pagination[0]->id, $identification);
+            $nextpage = $actuallypage + $limit;
+            if ($nextpage <= count($products)){
+                $exist = 1;
+            }
+            else {
+                $exist = 0;
+            }
         }
     }
-}
 ?>
 <head>
     <meta charset="utf-8">
@@ -45,7 +46,7 @@ if (!empty($products)){
 
 <body>
     <header>
-      <?php require('partials/header.php'); ?>
+      <?php require('includes/header.php'); ?>
     </header>
 
     <main>
@@ -69,19 +70,18 @@ if (!empty($products)){
                     <nav id="navbar-exemplo3 " class="navbar navbar-light ">
                         <div class="sidebar ">
 
-                            <a class="categorybar nav-link" href="#item-1 ">  &#x025B8; Produtos </a>
+                            <a class="categorybar nav-link">  &#x025B8; Produtos </a>
                             <nav class="nav nav-pills flex-column ">
-
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-1 ">Bermudas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-2 ">Blusas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-3 ">Bodies</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-4 ">Calças</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-5 ">Conjuntos</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-6 ">Macacões</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-7 ">Pijamas</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-8 ">Saias</a>
-                                <a class="nav-link text-dark ml-3 my-1 " href="#item-1-9 ">Vestidos</a>
-                            
+                                <?php foreach ($categories as $category) : ?>
+                                    <div>
+                                        <form method="POST" action="products/category">
+                                            <input type="hidden" name="id" value="<?= $category->id ?>">
+                                            <div>
+                                                <button class="btn btn  button-categories" type="submit" style="font-size: 20px;" ><?= $category->name ?></button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                <?php endforeach; ?>
                             </nav>
 
                         </div>
@@ -99,8 +99,8 @@ if (!empty($products)){
                                             <div class="cardprdpg">
                                                 <form  method="POST" action="/products/viewprod">
                                                     <input type="hidden" name="id" value="<?= $product->id ?>">
-                                                        <button class="btn btn-outline-light border-0 prod-buttons" type="submit">
-                                                            <img class="card-img-top rounded" src="/../../public/img/roupa3.jpeg" alt="<?= $product->name; ?>">
+                                                        <button class="btn btn-outline-light border-0 prod-buttons" type="submit" styles="border-radius: 900px;">
+                                                            <img class="card-img-top rounded" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
                                                         </button> 
                                                 </form>
                                             
@@ -121,49 +121,38 @@ if (!empty($products)){
         <nav aria-label="Navegação de página exemplo">
             <ul class="pagprdpg pagination justify-content-end">
                 <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Anterior">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Próximo">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Próximo</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        
-        <nav>
-            <ul>
-                <li>
                     <form method="GET" action="/products/pag">
                         <?php if ($actuallypage == 0) : ?>
-                            <input type="hidden" name="pag" value="<?= $actuallypage; ?>">
+                            <input type="hidden" name="pag" value="<?= $actuallypage; ?>" />
                         <?php else : ?>
-                            <input type="hidden" name="pag" value="<?= ($actuallypage - 12); ?>">
-                            <button type="submit"></button>
+                            <input type="hidden" name="pag" value="<?= ($actuallypage - $limit); ?>" />
+                            <button class="page-link" href="#" aria-label="Anterior">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Anterior</span>
+                            </button>
                         <?php endif; ?>
                     </form>
                 </li>
-                <?php for ($i=0; $i<=$numpage; $i++) : ?>
-                    <li>
+
+                <?php for ($i=1; $i <= $numpage; $i++) : ?>
+                    <li class="page-item">
                         <form method="GET" action="/products/pag">
-                            <input type="hidden" name="pag" value="<?= ($i*12)-12; ?>">
-                            <button type="submit"><?= $i ?></button>
+                            <input type="hidden" name="pag" value="<?= ($i*$limit)- $limit; ?>" />
+                            <button type="submit" class="page-link"><?= $i ?></button>
                         </form>
                     </li>
                 <?php endfor; ?>
-                <li>
+
+                <li class="page-item">
                     <form method="GET" action="/products/pag">
                         <?php if ($exist == 1) : ?>
-                            <input type="hidden" name="pag" value="<?= ($actuallypage + 12); ?>">
-                            <button type="submit"></button>
+                            <input type="hidden" name="pag" value="<?= ($actuallypage + $limit); ?>" />
+                            <button class="page-link" href="#" aria-label="Próximo">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Próximo</span>
+                            </button>
                         <?php else : ?>
-                            <input type="hidden" name="pag" value="<?= $actuallypage; ?>">
+                            <input type="hidden" name="pag" value="<?= $actuallypage; ?>" />
                         <?php endif; ?>
                     </form>
                 </li>
@@ -173,7 +162,7 @@ if (!empty($products)){
 </div>
     </main>
     <footer>
-      <?php require('partials/footer.php'); ?>
+      <?php require('includes/footer.php'); ?>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js "></script>

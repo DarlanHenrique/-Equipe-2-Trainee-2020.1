@@ -39,14 +39,25 @@
 								<label for="price">Preço do Produto:</label>
 								<input type="text" name="price" class="form-control" required id="price" placeholder="Insira o Preço">
 						</div>
-						<div class="form-group col-sm-12 text-category">
-								<label for="gender">Genero do Produto:</label>
-								<input type="text" name="gender" class="form-control" required id="gender" placeholder="Insira o Genero">
-						</div>
 
 						<div class="form-group col-sm-12 text-category">
-								<label for="category">Categoria do Produto:</label>
-								<input type="text" name="category" class="form-control" required id="category" placeholder="Insira a Categoria">
+							<label for="name">Insira o Genêro:</label>
+								<select class="form-control select-form" name="gender" required ="required" id="gender">
+									<option disabled selected>Selecione um Genêro</option>
+									<option value="1" name ="gender">Masculino</option>
+									<option value="2" name="gender">Feminino</option>
+									<option value="3" name="gender">Unissex</option>
+								</select>
+						</div>
+						
+						<div class="form-group col-sm-12 text-category">
+							<label for="name">Insira a Categoria:</label>
+								<select class="form-control select-form" name="categories" required ="required" id="categories">
+									<option disabled selected>Selecione uma Categoria</option>
+									<?php foreach ($categories as $category) : ?>	
+										<option value=" <?= $category->id ?> " name="categories"><?= $category->name ?></option>
+									<?php endforeach ?>
+								</select>
 						</div>
 
 						<div class="form-group col-sm-12 text-category">
@@ -63,13 +74,13 @@
 							<form action="/admin/productsadmin/products/create" method="POST" enctype="multipart/form-data">
 								<label for="name" >Imagem do Produto</label>
 								<input type="file" required name="image">
-								<div class="botaocreatprdpg">
-								<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
-								<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
+
+								<div class="d-flex justify-content-center buttons-submit-create">
+									<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
+									<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
 								</div>
 							</form>
 						</div>
-
                     
 		    		</form>
 				</div>

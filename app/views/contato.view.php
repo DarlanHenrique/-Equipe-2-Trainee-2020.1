@@ -24,7 +24,7 @@
     <body>
         <!-- Inicio Header-->
         <header>
-            <?php require('partials/header.php'); ?>
+            <?php require('includes/header.php'); ?>
         </header>
         <!-- Final Header-->
         <main class="font-contact">
@@ -75,7 +75,7 @@
         </main>
         <!--Inicio Footer-->
         <footer>
-            <?php require('partials/footer.php'); ?>
+            <?php require('includes/footer.php'); ?>
         </footer>
         <!--Final Footer-->
     
