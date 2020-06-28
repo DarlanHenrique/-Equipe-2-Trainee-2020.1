@@ -52,8 +52,8 @@
                 </li>
             </ul>
           </div>      
-          <form class="form-inline search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+          <form class="form-inline search" method='POST' action='/search'>
+            <input name='search' class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
             <button type="submit" class="btn btn-outline-dark">&#8981</button>
           </form>
         </div>            

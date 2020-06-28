@@ -68,8 +68,6 @@
           </form>               
     </div>
   </main>
-  <footer>
-    <?php include('../includes/header.php'); ?>
-  </footer>
+ 
 </body>
 

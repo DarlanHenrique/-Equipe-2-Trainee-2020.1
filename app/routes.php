@@ -76,3 +76,8 @@ $router->post('admin/logout', 'LoginController@logout');
 
 //Rota home administrativa
 $router->get('admin/home', 'LoginController@homeAdm');
+
+//rota pesquisa
+$router->get('search', 'PagesController@search');
+$router->post('search', 'PagesController@search');
+

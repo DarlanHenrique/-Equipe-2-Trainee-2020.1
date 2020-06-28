@@ -83,4 +83,12 @@ class PagesController
         return view('login');
     }
 
+    public function search()
+    
+    {
+        $products = App::get('database')->search('products', $_POST['search']);
+        $categories = App::get('database')->selectAll('categories');
+        return view('pesquisa', compact('products', 'categories'));
+    }
+
 }

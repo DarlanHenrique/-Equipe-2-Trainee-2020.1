@@ -93,13 +93,9 @@
       </div>
     </main>
 
-<<<<<<< HEAD
     <footer>
       <?php include('includes/footer.php'); ?>
     </footer>  
-=======
-    <?php include('includes/footer.php'); ?>
->>>>>>> master
 
 
     <!-- JavaScript (Opcional) -->

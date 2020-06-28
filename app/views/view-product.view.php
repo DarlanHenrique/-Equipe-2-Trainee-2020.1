@@ -35,7 +35,7 @@
             </div>
 
             <nav class="navbar navbar-light bg-transparent">
-                <form class="form-inline">
+                <form class="form-inline" method='POST' action='/search'>
                     <input style="width: 200px; text-align: center;" class="form-control mr-sm-2" type="search" placeholder="Faça sua pesquisa!" aria-label="Pesquisar">
                     <button style="width: 50px" class="btn btn-outline-black-50 my-sm-0" type="submit">  &#8981  </button>
                 </form>
