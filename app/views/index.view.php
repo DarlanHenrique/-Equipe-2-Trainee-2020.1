@@ -13,11 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="/../public/css/reset.css">
-    <link rel="stylesheet" href="/../public/css/style.css">
-    <link rel="stylesheet" href="/../public/css/styles.css">
-
-    <link rel="sortcut icon" href="/../public/img/Da_lã_Logo_2.png" type="image/x-icon">
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <link rel="stylesheet" href="../public/css/styles.css">
 
     <title>Da lã | Roupas Infantis</title>
       <meta name="description" content ="O melhor da moda infantil você encontra aqui na Da Lã, loja online de roupas infantis.">
@@ -28,15 +25,15 @@
 
   <body>
 
-    <header>
-      <?php include('includes/header.php'); ?>
-    </header>
+  <?php include('includes/header.php'); ?>
+
+
     <main>
 
       <div class="home-main" align="center">
 
-        <img class="side-clouds float-right col-2" src="/../public/img/clouds-right.png">
-        <img class="side-clouds float-left col-2" src="/../public/img/clouds-left.png">
+        <img class="side-clouds float-right col-2" src="../../public/img/clouds-right.png">
+        <img class="side-clouds float-left col-2" src="../../public/img/clouds-left.png">
 
         <div id="carouselExampleIndicators" class="carousel slide home-carousel col-xl-8 col-lg-8 col-md-9 col-sm-12 p-0 mt-xl-50" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -46,13 +43,13 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-100" src="/../public/img/carousel1.jpg" alt="Dois meninos e duas meninas">
+              <img class="d-block w-100" src="../../public/img/carousel1.jpg" alt="Dois meninos e duas meninas">
             </div>
             <div class="carousel-item">
-              <img class="d-block w-100" src="/../public/img/carousel2.jpg" alt="Duas meninas e dois meninos">
+              <img class="d-block w-100" src="../../public/img/carousel2.jpg" alt="Duas meninas e dois meninos">
             </div>
             <div class="carousel-item item-carrossel">
-              <img class="d-block w-100" src="/../public/img/carousel3.jpg" alt="Uma menina e um menino">
+              <img class="d-block w-100" src="../../public/img/carousel3.jpg" alt="Uma menina e um menino">
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -70,17 +67,25 @@
           <h1>Nossos últimos produtos:</h1>
 
           <ul>
-            <li class="d-inline-block">
-              <div class="p-0">
-                <div class="card product">
-                  <img class="card-img-top" src="/../public/img/roupa2.jpeg" alt="Body de Animais">
-                  <div class="card-body">
-                    <h5 class="card-title product-name">Body de Animais</h5>
-                    <a href="#" class="btn btn-outline-warning home-button col-sm-10">Ver detalhes</a>
+            <?php foreach ($products as $product) : ?>
+              <li class="d-inline-block">
+                <div class="p-0">
+                  <div class="card product">
+                    <img class="card-img-top" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
+                    <div class="card-body">
+                      <h5 class="card-title product-name"><?= $product->name; ?></h5>
+                      <form  method="POST" action="/products/viewprod">
+                          <input type="hidden" name="id" value="<?= $product->id ?>">
+                              <button class="btn btn-outline-warning home-button col-sm-10" type="submit" styles="border-radius: 900px;">
+                                  <a class="home-button">Ver detalhes</a>
+                              </button> 
+                      </form>
+
+                    </div>
                   </div>
                 </div>
-              </div>
-            </li>
+              </li>
+            <?php endforeach; ?>
           </ul>
 
             <a href="pgvendas.html" class="btn btn-outline-warning more col-sm-10">Ver mais produtos &#10140;</a>
@@ -88,9 +93,13 @@
       </div>
     </main>
 
+<<<<<<< HEAD
     <footer>
       <?php include('includes/footer.php'); ?>
     </footer>  
+=======
+    <?php include('includes/footer.php'); ?>
+>>>>>>> master
 
 
     <!-- JavaScript (Opcional) -->
@@ -100,3 +109,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
+
+

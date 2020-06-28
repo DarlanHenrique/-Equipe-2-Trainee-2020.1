@@ -147,4 +147,13 @@ class QueryBuilder
             $qry->execute();
             return $qry->fetchAll(PDO::FETCH_CLASS);
     }
+
+    public function validateLogin($table,$email){
+        $sql = "SELECT * FROM " . $table . " WHERE email = '{$email}'";
+        $qry = $this->pdo->prepare($sql);
+        $qry->execute();
+        return $qry->fetch(PDO::FETCH_OBJ);
+
+    }
 }
+

@@ -24,8 +24,11 @@ class PagesController
     }
 
     public function restrictArea(){
-
-        return view('admin/homeadm');
+        //if(!isset($_SESSION)){
+        //    header("Location: index.view.php");;
+        //}else{
+            return view('admin/homeadm');
+        //}
     }
   
       //Mostra pagina de produtos.

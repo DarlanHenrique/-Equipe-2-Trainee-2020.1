@@ -36,7 +36,7 @@
     <div class="container mt-5">
         <nav>
             <div>
-            <a class="back-menu" href="/admin"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
+            <a class="back-menu" href="/admin/home"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
             </div>
         </nav>
 

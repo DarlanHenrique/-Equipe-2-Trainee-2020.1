@@ -21,7 +21,7 @@
         <div class="container mt-5">
             <nav>
                 <div>
-                <a class="back-menu" title="Menu" href="/admin"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
+                <a class="back-menu" title="Menu" href="/admin/home"><i class="fas fa-angle-left"></i> Voltar ao Menu</a>
                 </div>
             </nav>
             <div class="col-sm flex-center text-center">

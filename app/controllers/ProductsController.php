@@ -11,16 +11,26 @@ class ProductsController
      */
     public function index()
     {
-        $products = App::get('database')->selectAll('products');
-
-        return view('admin/productsadmin/products', compact('products'));
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            $products = App::get('database')->selectAll('products');
+            return view('admin/productsadmin/products', compact('products'));
+        }
     }
 
     public function create()
-    {
-        $products = App::get('database')->selectAll('products');
-
-        return view('admin/productsadmin/create', compact('products'));
+    {   
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            $products = App::get('database')->selectAll('products');
+            return view('admin/productsadmin/create', compact('products'));
+        }
     }
     public function store()
         {
@@ -55,11 +65,15 @@ class ProductsController
     }
 
     public function show()
-    
     {
-        $product = App::get('database')->show('products', $_POST['id']);
-
-        return view('admin/productsadmin/prod', compact('product'));
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
+            $product = App::get('database')->show('products', $_POST['id']);
+            return view('admin/productsadmin/prod', compact('product'));
+        }
     }
 
     public function update(){
@@ -80,10 +94,15 @@ class ProductsController
     }
 
     public function showFormProductsEdit(){
+        session_start();
+        if(!isset($_SESSION['email'])){
+            echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
+            return view('index');
+        }else{
 
-        $product = app::get('database')->show('products', $_GET['id']);
-
-        return view('admin/productsadmin/formEditProducts', compact('product'));
+            $product = app::get('database')->show('products', $_GET['id']);
+            return view('admin/productsadmin/formEditProducts', compact('product'));
+        }
     }
 
 }
