@@ -46,7 +46,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="login-footer">
       <?php require __DIR__ . '/includes/footer.php'; ?>    
     </footer>
 
