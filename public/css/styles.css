@@ -1058,45 +1058,50 @@ body {
 }
 /* FIM CONTATO */
                
-                /* MAIN  ADMINISTRATIVE PAGE */
-                
-                .home-directrix {
-                    font-family: 'Montserrat', sans-serif;
-                    height: 800px;
-                    /* Footer no fim da página, explico no fim do css. */
-                }
-                
-                .home-directrix h1 {
-                    font-size: 30px;
-                    text-align: center;
-                    padding-bottom: 50px;
-                    padding-top: 10px;
-                }
-                
-                .home-directrix h5 {
-                    font-size: 18px;
-                }
-                /* Responsive Main */
-                
-                @media screen and (max-width: 425px) {
-                    .media-home {
-                        margin-left: 35px;
-                    }
-                }
-                
-                @media screen and (max-width: 375px) {
-                    .media-home {
-                        margin-left: 12px;
-                    }
-                }
-                
-                @media screen and (max-width: 320px) {
-                    .media-home {
-                        margin-left: 0px;
-                        margin-right: 6px;
-                    }
-                }
-                /* END OF MAIN ADMINISTRATIVE PAGE */
+/* MAIN  ADMINISTRATIVE PAGE */
+
+.home-directrix {
+    font-family: 'Montserrat', sans-serif;
+    height: 800px;
+    /* Footer no fim da página, explico no fim do css. */
+}
+
+.home-directrix h1 {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.home-directrix h5 {
+    font-size: 18px;
+}
+
+.homeadm-logout{
+    margin-top: 80px;
+    margin-left: 8px;
+}
+/* Responsive Main */
+
+@media screen and (max-width: 425px) {
+    .media-home {
+        margin-left: 35px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .media-home {
+        margin-left: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .media-home {
+        margin-left: 0px;
+        margin-right: 6px;
+    }
+}
+/* END OF MAIN ADMINISTRATIVE PAGE */
 
 /*Inicio Css Form-Categoria*/
 
@@ -1115,3 +1120,36 @@ body {
     width: 60%;
 }
 /* fim css Form-Categoria */
+
+/*LOGIN*/
+
+.login-body{
+    position: relative;
+    height: 100vh;
+}
+.login-main{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+
+}
+.login-main h1{
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.login-main form{
+    font-weight: 400;
+}
+.login-label{
+    font-size: "50px"!important;
+}
+.login-input{
+    margin-top: 10px !important;
+}
+.login-footer{
+    position: absolute;
+    bottom: 0;
+    width:100%
+}
+
+/*FIM DO LOGIN*/
