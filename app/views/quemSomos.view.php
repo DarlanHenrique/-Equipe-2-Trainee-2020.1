@@ -51,7 +51,7 @@
                         de 2021 planejamos abrir filiais em cada uma das regiões do país, e estamos estudando para que até o final de 2023, possamos ter, ao menos, uma filial em cada estado do país.</p>
                 </div>
             </div>
-            <div class="card border-0 mb-3">
+            <div class="card cardwho border-0 mb-3">
                 <img class="card-img-top3" src="/../public/img/valores-az.png" alt="Valores">
                 <div class="card-body puzzle">
                     <p class="card-text1" style='color: rgb(0, 110, 255)'>Utilizamos tags de Papel Semente para nossos produtos, além de usarmos linhas e produtos feitos só com algodão orgânico e sustentável (naturalmente hipoalergênico) e fibra natural que deixa a pele respirar e permite uma regulação térmica

@@ -1,5 +1,4 @@
 
-
 /* INICIO CSS LISTING */
 .main-user {
     width: 100%;
@@ -77,6 +76,33 @@
     color: #dc3545;
     background-color: white;
 }
+
+.buttons-back {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.image-edit {
+    text-align: start;
+}
+
+.text-category {
+    text-align: start;
+}
+
+.image-edit>label {
+    margin-bottom: 5px;
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+
+.image-edit>input {
+    margin-left: 10%;
+    width: 60%;
+}
+
+
 /**/
 
 /* Fim Css View User */
@@ -144,11 +170,6 @@
     width: 60%;
 }
 
-.edit-image {
-    margin-left: 25px;
-}
-
-
 /* FINAL CSS CREATE PRODUCTS */
 
 html,
@@ -198,7 +219,7 @@ body {
     line-height: 23px;
 }
 
-.card {
+.cardwho {
     margin: 30px 5% 15% 5%;
     text-align: justify;
 }
@@ -288,6 +309,32 @@ body {
     line-height: 22px;
 }
 
+.cat-none {
+    margin-left: 250px;
+}
+
+@media (max-width: 1024px) {
+    .cat-none {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cat-none {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .cat-none {
+        margin-left: 0px;
+        font-size: 120% !important;
+        width: 20%;
+        text-align: center !important;
+    }
+
+}
+
 
 /* FIM PAG DE PRODUTO */
 
@@ -345,7 +392,7 @@ body {
 
 @media (max-width: 320px) {
     .cardprdpg {
-        width: 120px;
+        width: 105px !important;
     }
 }
 
@@ -488,9 +535,6 @@ body {
                     width: 60%;
                 }
 
-                .edit-image {
-                    margin-left: 25px;
-                }
                 /* FINAL CSS CREATE PRODUCTS */
                 
                 html,
@@ -507,69 +551,7 @@ body {
                     font-family: 'Amatic SC', cursive;
                     background-color: white;
                 }
-                /*  CSS QUEM SOMOS */
-                
-                .all {
-                    font-family: 'Montserrat', sans-serif;
-                    width: 100%;
-                    line-height: 22px;
-                }
-                
-                .who {
-                    text-align: center;
-                    font-size: 20px;
-                    line-height: 30px;
-                }
-                
-                .who h1 {
-                    padding-top: 3%;
-                    padding-bottom: 2%;
-                    font-family: 'Amatic SC', cursive;
-                    font-size: 66px;
-                    text-align: center;
-                }
-                
-                .who p {
-                    margin: 25px 20% 15px 20%;
-                }
-                
-                .puzzle p {
-                    font-size: 19px;
-                    line-height: 23px;
-                }
-                
-                .card {
-                    margin: 30px 5% 15% 5%;
-                    text-align: justify;
-                }
-                
-                .card-img-top1 {
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 80%;
-                    height: auto;
-                }
-                
-                .card-img-top2 {
-                    margin-left: auto;
-                    margin-right: auto;
-                    margin-bottom: 15px;
-                    width: 60%;
-                    height: auto;
-                }
-                
-                .card-img-top3 {
-                    margin-left: auto;
-                    margin-right: auto;
-                    width: 80%;
-                    height: auto;
-                }
-                
-                .card-text1 {
-                    font-size: 16px;
-                    font-weight: 30px;
-                }
-                /*  FIM CSS QUEM SOMOS */
+               
                 /* INICIO PAG DE VENDAS */
                 /*card promoção*/
                 
@@ -822,10 +804,10 @@ body {
                     width: 100%;
                 }
                 
-                @media screen and (max-width: 1000px) {
+                @media screen and (max-width: 1024px) {
                     .search,
                     .banner-header {
-                        display: none;
+                        display: none !important;
                     }
                 }
                 
@@ -992,6 +974,7 @@ body {
                     .product-name {
                         font-size: 14px !important;
                         margin: 0;
+                        
                     }
                     .home-button {
                         font-size: 12px !important;
@@ -1012,6 +995,7 @@ body {
                     .product-name {
                         font-size: 12px !important;
                         margin: 0;
+                        font-family: 'Amatic SC', cursive;
                     }
                     .home-button {
                         font-size: 10px !important;
