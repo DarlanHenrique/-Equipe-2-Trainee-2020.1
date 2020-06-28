@@ -14,7 +14,7 @@ class UsersController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
             $users = App::get('database')->selectAll('users');
             return view_admin_user('user', compact('users'));
@@ -25,12 +25,14 @@ class UsersController
      * Show create users page.
      */
     public function create()
-    {
+    {   
+        session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
             
         }else{
+            $category = app::get('database')->selectAll('categories');
             $users = App::get('database')->selectAll('users');
             return view_admin_user('createUser', compact('users'));
         }
@@ -63,7 +65,7 @@ class UsersController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
             $user = App::get('database')->show('users', $_POST['id']);
             return view_admin_user('usershow', compact('user'));
@@ -87,7 +89,7 @@ class UsersController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
             $user = app::get('database')->show('users', $_GET['id']);
             return view('admin/user/formEditUser', compact('user'));

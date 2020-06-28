@@ -14,7 +14,7 @@ class ProductsController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
             $products = App::get('database')->selectAll('products');
             return view('admin/productsadmin/products', compact('products'));
@@ -26,7 +26,7 @@ class ProductsController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
             $products = App::get('database')->selectAll('products');
             return view('admin/productsadmin/create', compact('products'));
@@ -69,7 +69,7 @@ class ProductsController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
             $product = App::get('database')->show('products', $_POST['id']);
             return view('admin/productsadmin/prod', compact('product'));
@@ -97,7 +97,7 @@ class ProductsController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
 
             $product = app::get('database')->show('products', $_GET['id']);

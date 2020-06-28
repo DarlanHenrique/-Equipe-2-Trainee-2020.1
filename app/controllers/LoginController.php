@@ -44,7 +44,7 @@ class LoginController
         session_start();
         if(!isset($_SESSION['email'])){
             echo "<script>alert('Você precisa estar logado para acessar essa página!');</script>";
-            return view('index');
+            return view('login');
         }else{
             return view_admin('homeadm');
         }
