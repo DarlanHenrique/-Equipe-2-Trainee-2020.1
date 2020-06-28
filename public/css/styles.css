@@ -198,10 +198,7 @@ body {
     line-height: 23px;
 }
 
-.card {
-    margin: 30px 5% 15% 5%;
-    text-align: justify;
-}
+
 
 .card-img-top1 {
     margin-left: auto;
@@ -538,10 +535,7 @@ body {
                     line-height: 23px;
                 }
                 
-                .card {
-                    margin: 30px 5% 15% 5%;
-                    text-align: justify;
-                }
+                
                 
                 .card-img-top1 {
                     margin-left: auto;
@@ -948,6 +942,12 @@ body {
                 @media(min-width: 1049px) {
                     .home-main {
                         max-height: 1300px;
+                    }
+                }
+
+                @media(min-width: 1600px) {
+                    .home-main {
+                        max-height: 1450px;
                     }
                 }
                 
