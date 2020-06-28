@@ -88,7 +88,7 @@
             <?php endforeach; ?>
           </ul>
 
-            <a href="pgvendas.html" class="btn btn-outline-warning more col-sm-10">Ver mais produtos &#10140;</a>
+            <a href="/products" class="btn btn-outline-warning more col-sm-10">Ver mais produtos &#10140;</a>
         </div>
       </div>
     </main>

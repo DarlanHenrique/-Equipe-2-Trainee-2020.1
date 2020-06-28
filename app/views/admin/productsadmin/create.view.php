@@ -20,72 +20,77 @@
 </head>
 
 <main>
-	<div class=" text-center">
-	  	<div class="card-body font-user ">
-	  		<h1 class="title-user">Adicionar Produto</h1>
-	  		<div class="col-sm flex-center text-center card-title">
-	    	    <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
-	    	</div>
-	    	<div class="col-sm-12 col-lg-12 ">
-                
-                <form method="POST" action="/admin/productsadmin/products/create">
-                
-					<div class="form-group col-sm-12 text-category">
-						<label for="name" >Nome do Produto</label>
-						<input type="text" name="name" class="form-control" required id="name"  placeholder="Insira o Nome">
-					</div>
-					
-					<div class="form-group col-sm-12 text-category">
-						<label for="price">Preço do Produto:</label>
-						<input type="text" name="price" class="form-control" required id="price" placeholder="Insira o Preço">
-					</div>
-					<div class="form-group col-sm-12 text-category">
-						<label for="name">Insira o Genêro:</label>
-							<select class="form-control select-form" name="gender" required ="required" id="gender">
-								<option disabled selected>Selecione um Genêro</option>
-								<option value="1" name ="gender">Masculino</option>
-								<option value="2" name="gender">Feminino</option>
-								<option value="3" name="gender">Unissex</option>
-							</select>
-					</div>
-					
-					<div class="form-group col-sm-12 text-category">
-						<label for="name">Insira a Categoria:</label>
-							<select class="form-control select-form" name="categories" required ="required" id="categories">
-								<option disabled selected>Selecione uma Categoria</option>
-								<?php foreach ($categories as $category) : ?>	
-									<option value=" <?= $category->id ?> " name="categories"><?= $category->name ?></option>
-								<?php endforeach ?>
-							</select>
-					</div>
-					<div class="form-group col-sm-12 text-category">
-							<label for="details">Detalhes do Produto:</label>
-							<input type="text" name="details" class="form-control" required id="details" placeholder="Insira os Detalhes">
-					</div>
+		<div class=" text-center">
+		  	<div class="card-body font-user ">
+		  		<h1 class="title-user">Adicionar Produto</h1>
+		  		<div class="col-sm flex-center text-center card-title">
+		    	    <img src="/../../public/img/Da_lã_Logo_2.png" width="135" height="90" alt="Logotipo Da Lã">
+		    	</div>
+		    	<div class="col-sm-12 col-lg-12 ">
+                    
+                    <form method="POST" action="/admin/productsadmin/products/create">
+                    
+						<div class="form-group col-sm-12 text-category">
+								<label for="name" >Nome do Produto</label>
+								<input type="text" name="name" class="form-control" required id="name"  placeholder="Insira o Nome">
+						</div>
 						
-					<div class="form-group col-sm-12 text-category">
-						<label for="description">Descrição do Produto:</label>
-						<input type="text" name="description" class="form-control" required id="description" placeholder="Insira a Descrição">
-					</div>
-					<div class="form-group col-sm-12 text-category">
-						<form action="/admin/productsadmin/products/create" method="POST" enctype="multipart/form-data">
-							<label for="name" >Imagem do Produto</label>
-							<input type="file" required name="image">
-							<div class="d-flex justify-content-center buttons-submit-create">
-								<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
-								<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
-							</div>
-						</form>
-					</div>
-	    		</form>
+						<div class="form-group col-sm-12 text-category">
+								<label for="price">Preço do Produto:</label>
+								<input type="text" name="price" class="form-control" required id="price" placeholder="Insira o Preço">
+						</div>
+
+						<div class="form-group col-sm-12 text-category">
+							<label for="name">Insira o Genêro:</label>
+								<select class="form-control select-form" name="gender" required ="required" id="gender">
+									<option disabled selected>Selecione um Genêro</option>
+									<option value="1" name ="gender">Masculino</option>
+									<option value="2" name="gender">Feminino</option>
+									<option value="3" name="gender">Unissex</option>
+								</select>
+						</div>
+						
+						<div class="form-group col-sm-12 text-category">
+							<label for="name">Insira a Categoria:</label>
+								<select class="form-control select-form" name="categories" required ="required" id="categories">
+									<option disabled selected>Selecione uma Categoria</option>
+									<?php foreach ($categories as $category) : ?>	
+										<option value=" <?= $category->id ?> " name="categories"><?= $category->name ?></option>
+									<?php endforeach ?>
+								</select>
+						</div>
+
+						<div class="form-group col-sm-12 text-category">
+								<label for="details">Detalhes do Produto:</label>
+								<input type="text" name="details" class="form-control" required id="details" placeholder="Insira os Detalhes">
+						</div>
+							
+						<div class="form-group col-sm-12 text-category">
+								<label for="description">Descrição do Produto:</label>
+								<input type="text" name="description" class="form-control" required id="description" placeholder="Insira a Descrição">
+						</div>
+
+						<div class="form-group col-sm-12 text-category">
+							<form action="/admin/productsadmin/products/create" method="POST" enctype="multipart/form-data">
+								<label for="name" >Imagem do Produto</label>
+								<input type="file" required name="image">
+								
+								<br>
+								<div class="buttons-back">
+									<button type="submit" name="btn" class="btn btn-success button-actions button-action-view" >Adicionar</button>
+									<a href="/admin/productsadmin/products" class="btn btn-warning button-actions button-action-edit"> Voltar </a>
+								</div>
+							</form>
+						</div>
+		    		</form>
+				</div>
 			</div>
 		</div>
-	</div>
 </main>
 
 <script src="../../../public/js/jquery-3.5.1.slim.min.js" ></script>
 <script src="../../../public/js/popper.min.js"></script>
-<script src="../../../public/js/bootstrap.min.js" ></script>
+<script src="../../../public/js/bootstrap.min.js" ></script>	
 	
 </body>
 

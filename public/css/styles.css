@@ -1,5 +1,4 @@
 
-
 /* INICIO CSS LISTING */
 .main-user {
     width: 100%;
@@ -77,6 +76,33 @@
     color: #dc3545;
     background-color: white;
 }
+
+.buttons-back {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.image-edit {
+    text-align: start;
+}
+
+.text-category {
+    text-align: start;
+}
+
+.image-edit>label {
+    margin-bottom: 5px;
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+
+.image-edit>input {
+    margin-left: 10%;
+    width: 60%;
+}
+
+
 /**/
 
 /* Fim Css View User */
@@ -144,11 +170,6 @@
     width: 60%;
 }
 
-.edit-image {
-    margin-left: 25px;
-}
-
-
 /* FINAL CSS CREATE PRODUCTS */
 
 html,
@@ -198,7 +219,10 @@ body {
     line-height: 23px;
 }
 
-
+.cardwho {
+    margin: 30px 5% 15% 5%;
+    text-align: justify;
+}
 
 .card-img-top1 {
     margin-left: auto;
@@ -285,6 +309,32 @@ body {
     line-height: 22px;
 }
 
+.cat-none {
+    margin-left: 250px;
+}
+
+@media (max-width: 1024px) {
+    .cat-none {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cat-none {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 550px) {
+    .cat-none {
+        margin-left: 0px;
+        font-size: 120% !important;
+        width: 20%;
+        text-align: center !important;
+    }
+
+}
+
 
 /* FIM PAG DE PRODUTO */
 
@@ -342,7 +392,7 @@ body {
 
 @media (max-width: 320px) {
     .cardprdpg {
-        width: 120px;
+        width: 105px !important;
     }
 }
 
@@ -485,9 +535,6 @@ body {
                     width: 60%;
                 }
 
-                .edit-image {
-                    margin-left: 25px;
-                }
                 /* FINAL CSS CREATE PRODUCTS */
                 
                 html,
@@ -816,10 +863,10 @@ body {
                     width: 100%;
                 }
                 
-                @media screen and (max-width: 1000px) {
+                @media screen and (max-width: 1024px) {
                     .search,
                     .banner-header {
-                        display: none;
+                        display: none !important;
                     }
                 }
                 
@@ -992,6 +1039,7 @@ body {
                     .product-name {
                         font-size: 14px !important;
                         margin: 0;
+                        
                     }
                     .home-button {
                         font-size: 12px !important;
@@ -1012,6 +1060,7 @@ body {
                     .product-name {
                         font-size: 12px !important;
                         margin: 0;
+                        font-family: 'Amatic SC', cursive;
                     }
                     .home-button {
                         font-size: 10px !important;
