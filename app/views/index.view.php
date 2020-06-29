@@ -77,7 +77,7 @@
                       <form  method="POST" action="/products/viewprod">
                           <input type="hidden" name="id" value="<?= $product->id ?>">
                               <button class="btn btn-outline-warning home-button col-sm-10" type="submit" styles="border-radius: 900px;">
-                                  <a class="home-button">Ver detalhes</a>
+                                  <a>Ver detalhes</a>
                               </button> 
                       </form>
 
