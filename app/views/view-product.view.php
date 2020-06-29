@@ -83,6 +83,7 @@
                                             <div class="card-header bg-transparent border-dark cardtitleprdpg"><?= $product->name; ?></div>
                                             <div class="card-body text-dark">
                                                 <p class="card-text cardtxtprdpg" style=" line-height: 32px ;"><?= $product->price; ?><p>
+                                                </br>
                                                 <p class="card-text cardtxtprdpg" style=" line-height: 32px ;">
                                                 <?php if ($product->gender == "1") : ?>
                                                     Masculino
@@ -95,6 +96,7 @@
                                                 
                                                 <?php endif; ?>
                                                 <p>
+                                                </br>
                                                 <p class="card-text cardtxtprdpg" style=" line-height: 32px ;"><?= $product->description; ?></p>
                                             </div>
                                         </div>

@@ -26,7 +26,7 @@ class LoginController
 
         if (empty($user)){
             echo "<script>alert('Digite um e-mail válido!');</script>";
-            return view('login', compact('message'));
+            return view('login');
         }
         if($user->password != $password) { 
             echo "<script>alert('Senha inválida!');</script>";

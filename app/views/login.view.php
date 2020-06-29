@@ -21,13 +21,47 @@
   </head>
   <body class="text-center login-body">
     <header>
-      <?php require __DIR__ . '/includes/header.php'; ?>
+    <nav class="navbar navbar-expand-lg navbar-light header-directrix">
+          <div class="container container-header">
+            <a class="navbar-brand" href="#" alt="Logotipo da Da Lã">
+              <img class="logo" src="/../../../public/img/Da_lã_Logo_2.png" width="90" height="60" class="d-inline-block align-top" alt="Logotipo Da Lã." >
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSite">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSite">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Início</a>
+                </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/products">Produtos</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/contact">Contato</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/about">Quem somos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/admin/login">Entrar</a>
+                  </li>
+              </ul>
+            </div>
+            <form class="form-inline search" method='POST' action='/search'>
+              <input name='search' class="form-control mr-sm-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+              <button type="submit" class="btn btn-outline-dark">&#8981</button>
+            </form>
+          </div>
+        </nav>
     </header>
   
     
     <main class="col-xl-4 offset-xl-4 col-lg-6 offset-lg-3 col-md-8 offset-md-2 login-main">
       <div class="card">
-        <div class="card-body">
+        <div class="card-body card-login">
           <h1>Login Administrativo</h1>
           <form method="POST" action="/admin/login/check">
               <div class="form-group">

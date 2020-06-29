@@ -62,11 +62,11 @@
                       <td><?= $category->name; ?></td>
                       <td>
                         <div class="button-align">
-                          <form method="GET" action="categories/edit">
+                          <form method="GET" action="categories/edit" style="display: inline-block;">
                             <input type="hidden" name="id" value="<?= $category->id ?>">
                             <button title="Editar" class="btn btn-warning button-actions button-action-edit"><span class="fas fa-pen"></span></button>
                           </form>
-                          <form method="POST" action="categories/delete">
+                          <form method="POST" action="categories/delete" style="display: inline-block;">
                             <input type="hidden" name="id" value="<?= $category->id ?>">
                             <button title="Excluir"  class="btn btn-danger button-actions button-action-delete"><span class="fas fa-trash"></span></button>
                           </form>
