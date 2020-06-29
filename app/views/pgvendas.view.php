@@ -89,7 +89,7 @@
 
                 </div>
 
-                <div class="col py-3 px-lg-5 d-flex justify-content-center">
+                <div class="col py-3 px-lg-5 products">
 
                     <div class="card-deck carddeckprdpg">
                         <div class="row ">

@@ -66,22 +66,25 @@
 
                 </div>
 
-                <div class="col-8 py-0 px-lg-0 ">
+                <div class="col-8 py-0 px-lg-0">
                     <div class="carddeckprdpg">
                         <div class="card-deck">
-                            <div class="row ">
+                            <div class="row">
 
                                 <div class="col col2prdpg ">
-                                    <div class="cardprdpg ">
-                                        <img class="card-img-top cardimgprdpg d-flex justify-content-center" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
-                                    </div>
+                                    <div class="card-img">
+                                        <div class="cardprdpg">
+                                            <img class="card-img-top cardimgprdpg" src="/../../public/img/<?= $product->image ?>" alt="<?= $product->name; ?>">
+                                        </div>
+                                    </div>    
+                                </br>
                                 </div>
 
                                 <div class="col col3prdpg ">
                                     <div class="card border-dark mb-3 " style="max-width: 18rem;">
                                         <div class="cardbodyprdpg">
                                             <div class="card-header bg-transparent border-dark cardtitleprdpg"><?= $product->name; ?></div>
-                                            <div class="card-body text-dark">
+                                            <div class="card-body text-dark ">
                                                 <p class="card-text cardtxtprdpg" style=" line-height: 32px ;"><?= $product->price; ?><p>
                                                 </br>
                                                 <p class="card-text cardtxtprdpg" style=" line-height: 32px ;">
@@ -108,9 +111,9 @@
                         </div>
                     </div>
 
-                    <div class="card border-dark mb-3 " style="max-width: 18rem;">
+                    <div class="card border-dark mb-3 card-aling " style="max-width: 18rem;">
                                     <div class="cardbodyprdpg">
-                                        <div class="card-body text-dark ">
+                                        <div class="card-body text-dark">
                                             <p class="card-text cardtxtprdpg"><?= $product->details; ?><p>
                                         </div>
                                     </div>
@@ -120,6 +123,10 @@
             </div>
 
         </div>
+        </div>
+
+        <div class="exit-prod">
+            <a title="Menu" href="/products"><i class="fas fa-angle-left"></i> Voltar aos Produtos</a>
         </div>
     </main>
     
